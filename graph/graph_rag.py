@@ -3,10 +3,14 @@ import networkx as nx
 from build_graph import enterprise_graph
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
 
 api_key = os.getenv("OPENAI_API_KEY")
+
+if not api_key:
+    api_key = st.secrets["OPENAI_API_KEY"]
 
 client = OpenAI(api_key=api_key)
 

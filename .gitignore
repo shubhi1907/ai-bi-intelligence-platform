@@ -5,3 +5,4 @@ __pycache__/
 .ipynb_checkpoints/
 chroma/
 .DS_Store
+.streamlit/secrets.toml
