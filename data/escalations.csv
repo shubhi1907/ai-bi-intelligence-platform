@@ -1,0 +1,301 @@
+escalation_id,deal_id,escalation_date,escalation_source,severity,escalation_reason,executive_owner,resolution_status,escalation_notes
+ESC-101,DEAL-1056,2026-03-28,Customer Executive,Critical,Repeated integration failures,Michelle Fowler DDS,Resolved,Executive leadership requested immediate remediation plan.
+ESC-102,DEAL-1119,2026-04-15,VP Customer Success,Critical,Security review delays,Joseph Weaver,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-103,DEAL-1162,2026-03-18,Customer Executive,Critical,Security review delays,Charles Smith,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-104,DEAL-1066,2026-03-04,VP Customer Success,Critical,Repeated integration failures,Katherine Fitzgerald,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-105,DEAL-1142,2026-04-24,Customer Executive,Critical,Repeated integration failures,Ryan Jackson,Open,Executive leadership requested immediate remediation plan.
+ESC-106,DEAL-1128,2026-04-06,Implementation Director,Critical,Repeated integration failures,Robert Mckinney,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-107,DEAL-1075,2026-03-09,Customer Executive,High,Security review delays,Gavin Rodriguez,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-108,DEAL-1069,2026-03-15,VP Customer Success,Critical,Security review delays,Christian Wallace,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-109,DEAL-1068,2026-04-20,VP Customer Success,Critical,Missed milestone,Thomas Harvey,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-110,DEAL-1101,2026-03-19,Implementation Director,High,Missed milestone,Robert Ware,Resolved,Executive leadership requested immediate remediation plan.
+ESC-111,DEAL-1197,2026-03-08,VP Customer Success,High,Security review delays,Caitlin Taylor,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-112,DEAL-1184,2026-04-02,Customer Executive,High,Missed milestone,Kimberly Miller,Open,Executive leadership requested immediate remediation plan.
+ESC-113,DEAL-1069,2026-04-06,VP Customer Success,High,Repeated integration failures,Laura Stewart,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-114,DEAL-1019,2026-03-18,Customer Executive,High,Repeated integration failures,Mrs. Sarah Liu,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-115,DEAL-1101,2026-04-05,Implementation Director,High,Security review delays,Kelly Morrison,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-116,DEAL-1101,2026-03-16,VP Customer Success,High,Security review delays,Stephanie Clements,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-117,DEAL-1070,2026-04-28,VP Customer Success,High,Security review delays,Stephanie Brown,Open,Escalation triggered due to critical SLA breaches.
+ESC-118,DEAL-1075,2026-03-07,Customer Executive,High,Missed milestone,Ashley Hutchinson,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-119,DEAL-1043,2026-03-06,Customer Executive,High,Repeated integration failures,George Rodriguez,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-120,DEAL-1012,2026-03-07,Implementation Director,High,Security review delays,Bianca Oliver,Open,Escalation triggered due to critical SLA breaches.
+ESC-121,DEAL-1039,2026-03-26,Customer Executive,Critical,Repeated integration failures,Vanessa Johnson,Resolved,Executive leadership requested immediate remediation plan.
+ESC-122,DEAL-1137,2026-03-14,VP Customer Success,Critical,Security review delays,Brett Beck,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-123,DEAL-1068,2026-04-08,Customer Executive,Critical,Missed milestone,Donald Ryan,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-124,DEAL-1082,2026-04-19,Customer Executive,High,Repeated integration failures,Desiree Moore,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-125,DEAL-1069,2026-03-19,VP Customer Success,Critical,Security review delays,Stephanie Dean,Resolved,Executive leadership requested immediate remediation plan.
+ESC-126,DEAL-1197,2026-03-16,Customer Executive,Critical,Security review delays,Tammie Strong,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-127,DEAL-1126,2026-03-25,VP Customer Success,High,Security review delays,Nicole Grant,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-128,DEAL-1019,2026-04-22,Implementation Director,High,Missed milestone,Matthew Singh,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-129,DEAL-1082,2026-03-25,Implementation Director,Critical,Repeated integration failures,Melissa Gomez,Open,Escalation triggered due to critical SLA breaches.
+ESC-130,DEAL-1104,2026-03-06,Customer Executive,Critical,Missed milestone,Andrea Miller,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-131,DEAL-1198,2026-03-07,VP Customer Success,Critical,Security review delays,Joyce Esparza,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-132,DEAL-1075,2026-03-14,Customer Executive,High,Missed milestone,Diane Butler,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-133,DEAL-1066,2026-04-23,Implementation Director,Critical,Security review delays,Jeffrey Watkins,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-134,DEAL-1162,2026-04-02,Customer Executive,High,Repeated integration failures,Jonathan Williams,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-135,DEAL-1101,2026-04-29,Customer Executive,High,Missed milestone,Christopher Allen,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-136,DEAL-1073,2026-03-09,Implementation Director,High,Security review delays,Matthew Klein,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-137,DEAL-1162,2026-03-21,Customer Executive,Critical,Repeated integration failures,Elizabeth Hoffman,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-138,DEAL-1119,2026-03-03,VP Customer Success,High,Missed milestone,Brendan Baird,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-139,DEAL-1141,2026-03-14,Implementation Director,Critical,Security review delays,Karla Peck,Open,Executive leadership requested immediate remediation plan.
+ESC-140,DEAL-1075,2026-03-03,VP Customer Success,Critical,Repeated integration failures,Phyllis Clark,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-141,DEAL-1126,2026-03-21,VP Customer Success,Critical,Security review delays,Toni Hayes,Open,Escalation triggered due to critical SLA breaches.
+ESC-142,DEAL-1003,2026-04-08,VP Customer Success,Critical,Missed milestone,Stacey Faulkner,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-143,DEAL-1198,2026-04-13,Customer Executive,Critical,Repeated integration failures,Charles Fowler,Open,Executive leadership requested immediate remediation plan.
+ESC-144,DEAL-1162,2026-03-18,Implementation Director,Critical,Missed milestone,Anthony Reid,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-145,DEAL-1012,2026-03-28,VP Customer Success,High,Repeated integration failures,Jordan Shannon MD,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-146,DEAL-1065,2026-04-01,Implementation Director,High,Repeated integration failures,Marc Sandoval,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-147,DEAL-1198,2026-03-17,Customer Executive,High,Repeated integration failures,Ann Roberts,Open,Executive leadership requested immediate remediation plan.
+ESC-148,DEAL-1118,2026-03-21,VP Customer Success,Critical,Missed milestone,Sheila Rocha,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-149,DEAL-1066,2026-03-28,Implementation Director,High,Security review delays,Alyssa Sims,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-150,DEAL-1104,2026-03-31,Customer Executive,Critical,Security review delays,Anthony Zuniga,Resolved,Executive leadership requested immediate remediation plan.
+ESC-151,DEAL-1200,2026-04-18,VP Customer Success,High,Security review delays,Mr. Noah West MD,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-152,DEAL-1066,2026-04-09,Customer Executive,High,Repeated integration failures,Nicole Figueroa,Resolved,Executive leadership requested immediate remediation plan.
+ESC-153,DEAL-1012,2026-03-12,Implementation Director,High,Missed milestone,Dakota Sullivan,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-154,DEAL-1118,2026-03-31,Customer Executive,High,Security review delays,James Rivera,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-155,DEAL-1184,2026-03-05,Implementation Director,Critical,Missed milestone,Teresa Foley,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-156,DEAL-1073,2026-03-23,Implementation Director,High,Repeated integration failures,Kimberly Rodriguez,Resolved,Executive leadership requested immediate remediation plan.
+ESC-157,DEAL-1128,2026-04-19,Customer Executive,Critical,Missed milestone,Christina Garza,Resolved,Executive leadership requested immediate remediation plan.
+ESC-158,DEAL-1070,2026-03-03,VP Customer Success,High,Repeated integration failures,Jessica Elliott,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-159,DEAL-1068,2026-04-15,Customer Executive,Critical,Missed milestone,Daniel Colon,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-160,DEAL-1012,2026-04-15,Implementation Director,Critical,Repeated integration failures,Patrick Meyer,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-161,DEAL-1019,2026-04-04,VP Customer Success,Critical,Security review delays,Lisa Martin,Resolved,Executive leadership requested immediate remediation plan.
+ESC-162,DEAL-1036,2026-04-21,Customer Executive,Critical,Repeated integration failures,Yvonne Herrera,Open,Escalation triggered due to critical SLA breaches.
+ESC-163,DEAL-1198,2026-03-25,Implementation Director,Critical,Repeated integration failures,Tiffany Jones,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-164,DEAL-1101,2026-03-21,Customer Executive,Critical,Security review delays,Christine Morris,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-165,DEAL-1162,2026-04-10,Implementation Director,High,Repeated integration failures,Kathleen Brown,Resolved,Executive leadership requested immediate remediation plan.
+ESC-166,DEAL-1184,2026-04-16,Implementation Director,High,Security review delays,Jose Cline,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-167,DEAL-1019,2026-04-06,Customer Executive,Critical,Repeated integration failures,Miranda Burns,Resolved,Executive leadership requested immediate remediation plan.
+ESC-168,DEAL-1162,2026-03-07,Customer Executive,High,Missed milestone,Anthony Hoover,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-169,DEAL-1141,2026-04-18,Implementation Director,Critical,Repeated integration failures,Valerie Anderson,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-170,DEAL-1087,2026-03-16,VP Customer Success,Critical,Missed milestone,Sean Chapman,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-171,DEAL-1197,2026-03-08,Implementation Director,Critical,Security review delays,Mario Jensen,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-172,DEAL-1184,2026-04-09,Implementation Director,High,Repeated integration failures,Jennifer Hahn,Resolved,Executive leadership requested immediate remediation plan.
+ESC-173,DEAL-1137,2026-04-20,VP Customer Success,High,Missed milestone,Christina Chavez,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-174,DEAL-1119,2026-04-09,VP Customer Success,High,Missed milestone,Andrew Sparks,Resolved,Executive leadership requested immediate remediation plan.
+ESC-175,DEAL-1139,2026-03-27,VP Customer Success,High,Repeated integration failures,Kirk Garcia,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-176,DEAL-1034,2026-03-09,Implementation Director,Critical,Repeated integration failures,Kathleen Vasquez,Open,Executive leadership requested immediate remediation plan.
+ESC-177,DEAL-1128,2026-03-28,Implementation Director,High,Security review delays,Mary Williams,Open,Executive leadership requested immediate remediation plan.
+ESC-178,DEAL-1043,2026-04-07,VP Customer Success,High,Missed milestone,Tracy Bright,Open,Escalation triggered due to critical SLA breaches.
+ESC-179,DEAL-1101,2026-03-31,VP Customer Success,Critical,Missed milestone,Nathan Chambers,Open,Executive leadership requested immediate remediation plan.
+ESC-180,DEAL-1082,2026-04-13,Implementation Director,Critical,Missed milestone,Christian Reyes,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-181,DEAL-1128,2026-03-16,Implementation Director,Critical,Security review delays,Teresa Trujillo,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-182,DEAL-1073,2026-04-05,VP Customer Success,Critical,Repeated integration failures,Kevin Nichols,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-183,DEAL-1069,2026-03-18,Implementation Director,High,Security review delays,Jason Jensen,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-184,DEAL-1034,2026-03-27,VP Customer Success,High,Security review delays,Drew Clayton,Open,Executive leadership requested immediate remediation plan.
+ESC-185,DEAL-1087,2026-03-12,Implementation Director,Critical,Security review delays,Mark Escobar,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-186,DEAL-1184,2026-04-16,Implementation Director,High,Security review delays,Scott Wilson,Open,Executive leadership requested immediate remediation plan.
+ESC-187,DEAL-1139,2026-03-06,VP Customer Success,Critical,Missed milestone,Gabrielle Smith,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-188,DEAL-1141,2026-04-02,Implementation Director,High,Missed milestone,Jeffrey Flores,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-189,DEAL-1006,2026-04-17,Customer Executive,High,Missed milestone,Erica Moore,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-190,DEAL-1069,2026-03-17,Customer Executive,Critical,Repeated integration failures,Christopher Smith,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-191,DEAL-1142,2026-04-19,Implementation Director,High,Security review delays,Norman Wheeler,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-192,DEAL-1128,2026-04-07,VP Customer Success,Critical,Security review delays,Karen Cervantes,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-193,DEAL-1019,2026-04-27,VP Customer Success,High,Repeated integration failures,Diana Coffey,Resolved,Executive leadership requested immediate remediation plan.
+ESC-194,DEAL-1137,2026-04-24,VP Customer Success,High,Missed milestone,Raymond Harper,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-195,DEAL-1087,2026-04-26,Customer Executive,Critical,Missed milestone,Diane Bradshaw,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-196,DEAL-1043,2026-03-14,Implementation Director,High,Repeated integration failures,Anthony Griffith,Open,Executive leadership requested immediate remediation plan.
+ESC-197,DEAL-1068,2026-04-06,VP Customer Success,Critical,Security review delays,Devon Carson,Open,Executive leadership requested immediate remediation plan.
+ESC-198,DEAL-1019,2026-04-30,Implementation Director,Critical,Repeated integration failures,Rhonda Jones,Resolved,Executive leadership requested immediate remediation plan.
+ESC-199,DEAL-1039,2026-04-22,VP Customer Success,High,Repeated integration failures,David Vasquez,Open,Escalation triggered due to critical SLA breaches.
+ESC-200,DEAL-1068,2026-03-13,Customer Executive,High,Missed milestone,Elizabeth Goodman,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-201,DEAL-1162,2026-03-03,Implementation Director,High,Missed milestone,Zachary Hester,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-202,DEAL-1087,2026-03-09,VP Customer Success,Critical,Missed milestone,Tiffany Newman,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-203,DEAL-1087,2026-03-03,Implementation Director,Critical,Repeated integration failures,Kimberly Martin,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-204,DEAL-1176,2026-03-09,Implementation Director,Critical,Missed milestone,Jonathan Underwood,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-205,DEAL-1068,2026-04-09,Customer Executive,High,Missed milestone,Danielle Baker,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-206,DEAL-1101,2026-03-10,Implementation Director,High,Repeated integration failures,Amanda Cervantes,Resolved,Executive leadership requested immediate remediation plan.
+ESC-207,DEAL-1126,2026-04-06,Customer Executive,High,Repeated integration failures,Natasha Harrison,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-208,DEAL-1006,2026-03-31,Implementation Director,High,Repeated integration failures,Heidi Snyder,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-209,DEAL-1092,2026-04-28,Customer Executive,Critical,Repeated integration failures,Stefanie Hernandez,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-210,DEAL-1137,2026-03-04,Implementation Director,Critical,Security review delays,Justin Rogers,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-211,DEAL-1200,2026-03-13,Customer Executive,High,Security review delays,Richard Lee,Resolved,Executive leadership requested immediate remediation plan.
+ESC-212,DEAL-1068,2026-03-19,Implementation Director,High,Repeated integration failures,Alexander Grant,Resolved,Executive leadership requested immediate remediation plan.
+ESC-213,DEAL-1012,2026-03-13,Customer Executive,Critical,Security review delays,Alejandra Hill,Resolved,Executive leadership requested immediate remediation plan.
+ESC-214,DEAL-1069,2026-03-25,VP Customer Success,Critical,Repeated integration failures,Mrs. Terry Mclaughlin DDS,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-215,DEAL-1006,2026-03-05,Customer Executive,High,Missed milestone,Hannah Golden,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-216,DEAL-1034,2026-03-22,VP Customer Success,Critical,Missed milestone,Janet Bass,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-217,DEAL-1104,2026-04-15,Implementation Director,Critical,Missed milestone,Kevin Orozco,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-218,DEAL-1126,2026-03-08,VP Customer Success,Critical,Security review delays,Ashley Bryant,Resolved,Executive leadership requested immediate remediation plan.
+ESC-219,DEAL-1013,2026-03-10,VP Customer Success,Critical,Repeated integration failures,Patricia Hernandez,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-220,DEAL-1036,2026-03-16,VP Customer Success,Critical,Missed milestone,Reginald Ray,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-221,DEAL-1043,2026-03-16,Customer Executive,High,Security review delays,Brittany Roberts,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-222,DEAL-1162,2026-03-11,Customer Executive,Critical,Missed milestone,Joseph Holland,Open,Escalation triggered due to critical SLA breaches.
+ESC-223,DEAL-1139,2026-04-11,Customer Executive,Critical,Missed milestone,Jackson Barnes,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-224,DEAL-1036,2026-03-15,Customer Executive,High,Repeated integration failures,John Bryant,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-225,DEAL-1176,2026-04-18,Implementation Director,Critical,Repeated integration failures,Michelle Rice,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-226,DEAL-1012,2026-03-13,Customer Executive,Critical,Security review delays,Melissa Martinez,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-227,DEAL-1092,2026-04-04,Customer Executive,Critical,Security review delays,James Waters,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-228,DEAL-1139,2026-04-11,Implementation Director,Critical,Missed milestone,Alicia Gray,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-229,DEAL-1013,2026-03-06,Implementation Director,Critical,Repeated integration failures,Marcus Glenn,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-230,DEAL-1142,2026-04-14,Customer Executive,High,Repeated integration failures,Shane Ferguson,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-231,DEAL-1069,2026-03-19,Implementation Director,High,Security review delays,Brittany Gray,Open,Escalation triggered due to critical SLA breaches.
+ESC-232,DEAL-1137,2026-03-21,Implementation Director,High,Repeated integration failures,Chelsea Rodriguez,Open,Executive leadership requested immediate remediation plan.
+ESC-233,DEAL-1075,2026-04-23,Implementation Director,Critical,Missed milestone,Lynn Massey,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-234,DEAL-1104,2026-03-19,Implementation Director,High,Security review delays,Justin Good,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-235,DEAL-1104,2026-03-16,Customer Executive,Critical,Repeated integration failures,Paul Poole,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-236,DEAL-1013,2026-04-14,VP Customer Success,Critical,Repeated integration failures,Andrea Mcintyre,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-237,DEAL-1092,2026-03-19,Implementation Director,High,Security review delays,Jack Powers,Open,Escalation triggered due to critical SLA breaches.
+ESC-238,DEAL-1141,2026-04-02,VP Customer Success,High,Repeated integration failures,Tina Hanson,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-239,DEAL-1119,2026-03-20,VP Customer Success,High,Security review delays,Timothy Miller,Open,Executive leadership requested immediate remediation plan.
+ESC-240,DEAL-1092,2026-03-11,Customer Executive,High,Missed milestone,Tiffany Hoover,Resolved,Executive leadership requested immediate remediation plan.
+ESC-241,DEAL-1065,2026-04-02,Customer Executive,Critical,Missed milestone,Martin Mcintyre,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-242,DEAL-1092,2026-03-16,Implementation Director,High,Repeated integration failures,Jessica Gallegos,Open,Escalation triggered due to critical SLA breaches.
+ESC-243,DEAL-1043,2026-03-25,Customer Executive,High,Missed milestone,Tiffany Fritz,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-244,DEAL-1075,2026-04-30,VP Customer Success,Critical,Repeated integration failures,Scott Barber,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-245,DEAL-1197,2026-03-23,Customer Executive,Critical,Security review delays,Susan Boyd,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-246,DEAL-1198,2026-03-15,VP Customer Success,High,Missed milestone,Bernard York,Open,Escalation triggered due to critical SLA breaches.
+ESC-247,DEAL-1176,2026-04-11,Customer Executive,High,Missed milestone,Stephen Rodriguez,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-248,DEAL-1082,2026-04-23,VP Customer Success,High,Missed milestone,Angela Wilson,Open,Executive leadership requested immediate remediation plan.
+ESC-249,DEAL-1012,2026-03-15,Implementation Director,High,Security review delays,William Brown,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-250,DEAL-1075,2026-04-19,Customer Executive,Critical,Security review delays,Mr. Matthew Mendoza Jr.,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-251,DEAL-1197,2026-03-10,VP Customer Success,Critical,Security review delays,David Smith,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-252,DEAL-1197,2026-04-03,VP Customer Success,Critical,Repeated integration failures,Jordan Copeland,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-253,DEAL-1092,2026-03-12,Customer Executive,High,Repeated integration failures,Jason Barnes,Open,Executive leadership requested immediate remediation plan.
+ESC-254,DEAL-1141,2026-03-21,VP Customer Success,Critical,Repeated integration failures,Christopher Mitchell,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-255,DEAL-1139,2026-04-08,VP Customer Success,Critical,Missed milestone,Brandon Gonzalez,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-256,DEAL-1176,2026-04-15,VP Customer Success,Critical,Missed milestone,Maria Douglas,Open,Escalation triggered due to critical SLA breaches.
+ESC-257,DEAL-1069,2026-03-29,Customer Executive,Critical,Missed milestone,Sabrina Cummings,Resolved,Executive leadership requested immediate remediation plan.
+ESC-258,DEAL-1141,2026-03-04,VP Customer Success,Critical,Missed milestone,Christopher Brown,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-259,DEAL-1034,2026-04-23,VP Customer Success,Critical,Missed milestone,Blake Gilbert,Resolved,Executive leadership requested immediate remediation plan.
+ESC-260,DEAL-1066,2026-03-02,Customer Executive,High,Repeated integration failures,Patrick Lawrence,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-261,DEAL-1141,2026-04-08,Customer Executive,Critical,Missed milestone,Jonathon Lucero,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-262,DEAL-1070,2026-04-01,Implementation Director,Critical,Repeated integration failures,Mike Good,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-263,DEAL-1070,2026-03-23,Customer Executive,High,Repeated integration failures,Michele Berry,Open,Executive leadership requested immediate remediation plan.
+ESC-264,DEAL-1073,2026-03-10,Implementation Director,Critical,Security review delays,Keith Oconnell,Open,Executive leadership requested immediate remediation plan.
+ESC-265,DEAL-1056,2026-04-20,Customer Executive,High,Repeated integration failures,Lee Gomez,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-266,DEAL-1118,2026-03-14,Customer Executive,High,Security review delays,Logan Taylor,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-267,DEAL-1092,2026-04-23,VP Customer Success,Critical,Security review delays,Sabrina Ford,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-268,DEAL-1013,2026-03-19,Implementation Director,Critical,Repeated integration failures,Jessica Clark,Resolved,Executive leadership requested immediate remediation plan.
+ESC-269,DEAL-1184,2026-04-14,Customer Executive,Critical,Repeated integration failures,Amy Frederick,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-270,DEAL-1126,2026-03-11,Implementation Director,High,Repeated integration failures,Vincent Pena,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-271,DEAL-1200,2026-03-18,Implementation Director,Critical,Missed milestone,David Smith,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-272,DEAL-1073,2026-03-13,Implementation Director,Critical,Security review delays,Kathryn Willis,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-273,DEAL-1036,2026-03-24,VP Customer Success,Critical,Security review delays,Dorothy Goodwin,Open,Escalation triggered due to critical SLA breaches.
+ESC-274,DEAL-1197,2026-04-23,Implementation Director,High,Repeated integration failures,Matthew Cortez,Resolved,Executive leadership requested immediate remediation plan.
+ESC-275,DEAL-1137,2026-04-21,Customer Executive,High,Repeated integration failures,Aaron Bates,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-276,DEAL-1101,2026-04-23,VP Customer Success,High,Missed milestone,Joseph Woods,Resolved,Executive leadership requested immediate remediation plan.
+ESC-277,DEAL-1118,2026-04-06,VP Customer Success,High,Missed milestone,Leah Bridges,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-278,DEAL-1198,2026-03-17,Customer Executive,Critical,Security review delays,Jon Rodriguez,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-279,DEAL-1034,2026-03-13,VP Customer Success,High,Missed milestone,Jessica Fry,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-280,DEAL-1184,2026-03-12,VP Customer Success,High,Security review delays,Lisa Best,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-281,DEAL-1034,2026-04-18,Implementation Director,High,Repeated integration failures,Amy Boyle,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-282,DEAL-1039,2026-03-04,VP Customer Success,Critical,Missed milestone,Todd Welch,Resolved,Executive leadership requested immediate remediation plan.
+ESC-283,DEAL-1066,2026-03-23,Customer Executive,Critical,Missed milestone,Sabrina Mcpherson,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-284,DEAL-1019,2026-03-04,Customer Executive,Critical,Security review delays,Ashley Newton,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-285,DEAL-1003,2026-04-21,VP Customer Success,Critical,Missed milestone,Donald Steele,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-286,DEAL-1128,2026-04-01,Implementation Director,High,Security review delays,Tonya Townsend,Open,Escalation triggered due to critical SLA breaches.
+ESC-287,DEAL-1092,2026-04-22,Implementation Director,Critical,Missed milestone,Joseph Carlson,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-288,DEAL-1003,2026-03-19,Implementation Director,High,Security review delays,Cody Kemp,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-289,DEAL-1176,2026-04-21,Implementation Director,High,Missed milestone,Casey Townsend,Resolved,Executive leadership requested immediate remediation plan.
+ESC-290,DEAL-1073,2026-03-18,Customer Executive,Critical,Repeated integration failures,Steven Moore,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-291,DEAL-1043,2026-04-30,Customer Executive,High,Missed milestone,Robert Taylor,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-292,DEAL-1092,2026-04-20,Implementation Director,High,Repeated integration failures,Wanda Suarez,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-293,DEAL-1075,2026-04-24,Customer Executive,High,Repeated integration failures,Scott Murphy,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-294,DEAL-1013,2026-03-16,Implementation Director,Critical,Repeated integration failures,Tyler Jackson,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-295,DEAL-1019,2026-03-26,Implementation Director,Critical,Security review delays,Scott Garcia,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-296,DEAL-1019,2026-03-08,Implementation Director,Critical,Security review delays,Angela Lambert,Open,Executive leadership requested immediate remediation plan.
+ESC-297,DEAL-1006,2026-04-28,Implementation Director,Critical,Repeated integration failures,Ronald Henderson V,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-298,DEAL-1068,2026-04-03,Customer Executive,High,Missed milestone,Lindsay Garrett,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-299,DEAL-1118,2026-03-24,VP Customer Success,Critical,Missed milestone,Nicole Beard,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-300,DEAL-1176,2026-04-12,Customer Executive,Critical,Missed milestone,Mr. Tyler Cuevas,Open,Executive leadership requested immediate remediation plan.
+ESC-301,DEAL-1006,2026-03-04,VP Customer Success,Critical,Security review delays,Lisa Park,Open,Executive leadership requested immediate remediation plan.
+ESC-302,DEAL-1137,2026-03-11,VP Customer Success,Critical,Missed milestone,Keith Smith,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-303,DEAL-1126,2026-03-13,Implementation Director,High,Security review delays,Ryan Hatfield,Resolved,Executive leadership requested immediate remediation plan.
+ESC-304,DEAL-1068,2026-04-22,VP Customer Success,High,Missed milestone,Christopher Vega,Open,Executive leadership requested immediate remediation plan.
+ESC-305,DEAL-1104,2026-03-06,Customer Executive,Critical,Security review delays,Richard Graves,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-306,DEAL-1142,2026-03-19,Customer Executive,High,Repeated integration failures,Derek Anderson,Resolved,Executive leadership requested immediate remediation plan.
+ESC-307,DEAL-1118,2026-03-18,Implementation Director,Critical,Repeated integration failures,Anthony Carr,Resolved,Executive leadership requested immediate remediation plan.
+ESC-308,DEAL-1013,2026-03-24,Customer Executive,High,Missed milestone,John Rice,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-309,DEAL-1162,2026-04-07,VP Customer Success,High,Missed milestone,Paul Thompson,Open,Escalation triggered due to critical SLA breaches.
+ESC-310,DEAL-1013,2026-04-14,VP Customer Success,Critical,Repeated integration failures,Matthew Moreno,Open,Executive leadership requested immediate remediation plan.
+ESC-311,DEAL-1066,2026-03-18,VP Customer Success,High,Security review delays,Andrew Anthony,Resolved,Executive leadership requested immediate remediation plan.
+ESC-312,DEAL-1075,2026-04-03,VP Customer Success,Critical,Missed milestone,Anthony Estrada,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-313,DEAL-1012,2026-04-21,VP Customer Success,Critical,Repeated integration failures,Michael Daniels,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-314,DEAL-1056,2026-04-14,Customer Executive,High,Security review delays,Anna Sullivan,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-315,DEAL-1137,2026-03-25,Customer Executive,Critical,Repeated integration failures,Katrina Jones,Open,Escalation triggered due to critical SLA breaches.
+ESC-316,DEAL-1176,2026-03-16,Customer Executive,High,Security review delays,Kimberly Nichols,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-317,DEAL-1075,2026-04-02,Customer Executive,Critical,Repeated integration failures,Lindsay Craig,Resolved,Executive leadership requested immediate remediation plan.
+ESC-318,DEAL-1082,2026-03-11,Customer Executive,High,Repeated integration failures,Daniel Odonnell,Open,Executive leadership requested immediate remediation plan.
+ESC-319,DEAL-1069,2026-04-03,Implementation Director,Critical,Security review delays,Kristen Adams,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-320,DEAL-1092,2026-03-17,Implementation Director,Critical,Security review delays,Todd Russell,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-321,DEAL-1068,2026-03-20,Customer Executive,High,Repeated integration failures,Karen Chambers,Open,Executive leadership requested immediate remediation plan.
+ESC-322,DEAL-1006,2026-04-03,Customer Executive,High,Repeated integration failures,Cesar Young,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-323,DEAL-1128,2026-04-10,Implementation Director,High,Missed milestone,Christopher Owens,Open,Escalation triggered due to critical SLA breaches.
+ESC-324,DEAL-1075,2026-04-25,VP Customer Success,High,Missed milestone,Cheryl Webster,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-325,DEAL-1104,2026-04-08,Implementation Director,Critical,Security review delays,James Blake,Resolved,Executive leadership requested immediate remediation plan.
+ESC-326,DEAL-1104,2026-03-21,Customer Executive,High,Missed milestone,Jennifer Garcia,Open,Escalation triggered due to critical SLA breaches.
+ESC-327,DEAL-1065,2026-03-24,Implementation Director,High,Missed milestone,Courtney Gardner,Resolved,Executive leadership requested immediate remediation plan.
+ESC-328,DEAL-1003,2026-03-29,Implementation Director,High,Missed milestone,Michael Rios,Resolved,Executive leadership requested immediate remediation plan.
+ESC-329,DEAL-1043,2026-03-18,Customer Executive,High,Missed milestone,Margaret Moore,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-330,DEAL-1162,2026-04-11,Implementation Director,High,Security review delays,Jason Cooper,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-331,DEAL-1069,2026-04-16,VP Customer Success,High,Missed milestone,Jamie Schwartz,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-332,DEAL-1101,2026-03-07,Implementation Director,Critical,Missed milestone,Amanda Cisneros,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-333,DEAL-1128,2026-04-06,VP Customer Success,Critical,Security review delays,Melissa Gonzalez,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-334,DEAL-1068,2026-03-25,VP Customer Success,Critical,Security review delays,Cassandra Martinez,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-335,DEAL-1092,2026-04-26,Implementation Director,High,Security review delays,Tina Barrett,Resolved,Executive leadership requested immediate remediation plan.
+ESC-336,DEAL-1198,2026-03-14,Implementation Director,Critical,Security review delays,Brittney Russell,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-337,DEAL-1092,2026-03-10,VP Customer Success,Critical,Security review delays,Isaac Carroll,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-338,DEAL-1065,2026-03-14,Implementation Director,Critical,Repeated integration failures,Derek Tucker,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-339,DEAL-1176,2026-04-11,VP Customer Success,Critical,Missed milestone,Edward Lopez,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-340,DEAL-1034,2026-03-03,Implementation Director,Critical,Missed milestone,Jacob Morris,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-341,DEAL-1128,2026-04-19,Customer Executive,High,Repeated integration failures,Jessica Cameron,Open,Escalation triggered due to critical SLA breaches.
+ESC-342,DEAL-1012,2026-03-03,Implementation Director,High,Missed milestone,Rhonda Cole,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-343,DEAL-1039,2026-04-05,VP Customer Success,High,Repeated integration failures,Nicole Sanchez,Resolved,Executive leadership requested immediate remediation plan.
+ESC-344,DEAL-1142,2026-03-08,Customer Executive,Critical,Security review delays,Amy Mendoza,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-345,DEAL-1039,2026-03-09,Customer Executive,Critical,Missed milestone,Mary Morales,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-346,DEAL-1082,2026-03-30,VP Customer Success,Critical,Repeated integration failures,Joseph Gutierrez,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-347,DEAL-1139,2026-04-26,VP Customer Success,Critical,Security review delays,April Miller,Open,Executive leadership requested immediate remediation plan.
+ESC-348,DEAL-1118,2026-04-03,Customer Executive,Critical,Missed milestone,Jason Terry,Open,Escalation triggered due to critical SLA breaches.
+ESC-349,DEAL-1073,2026-03-31,VP Customer Success,Critical,Repeated integration failures,Christine Rodriguez,Open,Escalation triggered due to critical SLA breaches.
+ESC-350,DEAL-1069,2026-04-20,Customer Executive,Critical,Security review delays,Sharon Phillips,Resolved,Executive leadership requested immediate remediation plan.
+ESC-351,DEAL-1139,2026-04-03,VP Customer Success,High,Repeated integration failures,Nicole Sanchez,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-352,DEAL-1056,2026-03-03,Customer Executive,High,Missed milestone,Joe Aguilar,Resolved,Executive leadership requested immediate remediation plan.
+ESC-353,DEAL-1176,2026-04-06,VP Customer Success,High,Repeated integration failures,Steven Thompson,Resolved,Executive leadership requested immediate remediation plan.
+ESC-354,DEAL-1141,2026-04-18,VP Customer Success,Critical,Security review delays,Michelle Brown,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-355,DEAL-1065,2026-04-21,VP Customer Success,High,Missed milestone,Zachary Williams,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-356,DEAL-1036,2026-03-19,VP Customer Success,Critical,Repeated integration failures,Dawn Smith,Resolved,Executive leadership requested immediate remediation plan.
+ESC-357,DEAL-1069,2026-03-27,Implementation Director,High,Repeated integration failures,Jonathan Johnson,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-358,DEAL-1036,2026-03-05,VP Customer Success,High,Repeated integration failures,Amanda Jones,Open,Executive leadership requested immediate remediation plan.
+ESC-359,DEAL-1065,2026-04-21,Implementation Director,High,Security review delays,Aimee Wood,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-360,DEAL-1034,2026-03-26,Implementation Director,Critical,Security review delays,Jonathan Griffin,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-361,DEAL-1137,2026-03-16,VP Customer Success,Critical,Repeated integration failures,Leonard Mason,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-362,DEAL-1139,2026-03-19,Implementation Director,Critical,Missed milestone,Troy Boyd,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-363,DEAL-1142,2026-04-26,Customer Executive,High,Missed milestone,Hannah Ballard,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-364,DEAL-1075,2026-03-17,VP Customer Success,High,Security review delays,Gregory Mosley,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-365,DEAL-1128,2026-04-02,Implementation Director,Critical,Security review delays,Jacob Livingston,Open,Escalation triggered due to critical SLA breaches.
+ESC-366,DEAL-1142,2026-03-13,Implementation Director,High,Security review delays,Joshua House,Open,Executive leadership requested immediate remediation plan.
+ESC-367,DEAL-1070,2026-03-29,Implementation Director,Critical,Repeated integration failures,Lauren Patton,Open,Executive leadership requested immediate remediation plan.
+ESC-368,DEAL-1082,2026-03-30,Customer Executive,High,Security review delays,Lori Potter,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-369,DEAL-1092,2026-03-07,Implementation Director,Critical,Security review delays,Stephanie Phelps,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-370,DEAL-1162,2026-03-06,VP Customer Success,High,Repeated integration failures,Rebecca Jones,Open,Executive leadership requested immediate remediation plan.
+ESC-371,DEAL-1043,2026-03-18,Customer Executive,Critical,Repeated integration failures,Thomas James,Open,Executive leadership requested immediate remediation plan.
+ESC-372,DEAL-1118,2026-04-21,Customer Executive,High,Missed milestone,Amber Ortega,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-373,DEAL-1104,2026-03-02,Implementation Director,High,Security review delays,Ronald Williams,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-374,DEAL-1200,2026-03-26,Customer Executive,High,Security review delays,Laura Weber,Open,Executive leadership requested immediate remediation plan.
+ESC-375,DEAL-1141,2026-04-22,Implementation Director,Critical,Missed milestone,Glenn Schaefer,Open,Escalation triggered due to critical SLA breaches.
+ESC-376,DEAL-1039,2026-04-16,Customer Executive,High,Repeated integration failures,Suzanne Martin,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-377,DEAL-1066,2026-03-04,VP Customer Success,Critical,Missed milestone,Laura Long,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-378,DEAL-1198,2026-03-10,Implementation Director,Critical,Repeated integration failures,Corey Sanchez,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-379,DEAL-1142,2026-03-03,Customer Executive,Critical,Missed milestone,Micheal Hayes,Open,Escalation triggered due to critical SLA breaches.
+ESC-380,DEAL-1104,2026-03-15,Customer Executive,High,Missed milestone,Mark Walsh,Resolved,Executive leadership requested immediate remediation plan.
+ESC-381,DEAL-1139,2026-04-18,VP Customer Success,High,Repeated integration failures,Tara Collins,Resolved,Customer CIO expressed concern over repeated implementation delays.
+ESC-382,DEAL-1118,2026-04-14,Implementation Director,Critical,Security review delays,William Gonzalez,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-383,DEAL-1101,2026-04-11,VP Customer Success,High,Repeated integration failures,Leah Thomas,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-384,DEAL-1197,2026-03-11,Customer Executive,High,Repeated integration failures,Rick Stokes,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-385,DEAL-1082,2026-04-04,Implementation Director,Critical,Repeated integration failures,Andrew Jackson,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-386,DEAL-1034,2026-03-17,Implementation Director,Critical,Repeated integration failures,Jacob Khan,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-387,DEAL-1087,2026-04-27,Customer Executive,High,Missed milestone,John Salazar,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-388,DEAL-1087,2026-04-01,Implementation Director,Critical,Missed milestone,Angela Hayes,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-389,DEAL-1069,2026-04-17,VP Customer Success,High,Security review delays,Sarah Frey,Monitoring,Customer CIO expressed concern over repeated implementation delays.
+ESC-390,DEAL-1142,2026-03-05,Customer Executive,High,Repeated integration failures,Stephanie Harper MD,Open,Executive leadership requested immediate remediation plan.
+ESC-391,DEAL-1082,2026-03-06,Implementation Director,High,Repeated integration failures,Abigail Perry,Open,Customer CIO expressed concern over repeated implementation delays.
+ESC-392,DEAL-1073,2026-03-02,Implementation Director,Critical,Missed milestone,Jeffrey Shaw,Resolved,Executive leadership requested immediate remediation plan.
+ESC-393,DEAL-1162,2026-03-04,Customer Executive,Critical,Missed milestone,Sarah Webb,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-394,DEAL-1082,2026-03-16,VP Customer Success,Critical,Repeated integration failures,Joy Waller,Resolved,Executive leadership requested immediate remediation plan.
+ESC-395,DEAL-1012,2026-04-26,Implementation Director,High,Security review delays,Karla Rodriguez,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-396,DEAL-1137,2026-04-10,Customer Executive,Critical,Repeated integration failures,Jacob Davies,Resolved,Escalation triggered due to critical SLA breaches.
+ESC-397,DEAL-1082,2026-04-26,Implementation Director,High,Security review delays,Kathy Davis,Resolved,Executive leadership requested immediate remediation plan.
+ESC-398,DEAL-1128,2026-04-17,Implementation Director,High,Missed milestone,Janet Henderson,Monitoring,Executive leadership requested immediate remediation plan.
+ESC-399,DEAL-1184,2026-04-08,VP Customer Success,Critical,Repeated integration failures,Jacob Cooke,Monitoring,Escalation triggered due to critical SLA breaches.
+ESC-400,DEAL-1104,2026-03-19,Customer Executive,High,Repeated integration failures,Marco Holmes,Resolved,Executive leadership requested immediate remediation plan.

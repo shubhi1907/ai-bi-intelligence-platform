@@ -1,0 +1,201 @@
+deal_id,customer_id,project_name,project_type,project_status,health_profile,implementation_phase,kickoff_date,planned_go_live,estimated_delay_days,project_manager,technical_lead,health_score,executive_visibility,open_blockers,budget_utilization_pct,ticket_count,escalation_count,risk_count,risk_score,risk_level
+DEAL-1001,CUST-004,Brown-Porter API Modernization,ERP Integration,Yellow,At-Risk,Discovery,2026-02-12,2026-11-08,14,Jennifer Fox,Nicholas Cochran,78,Critical,3,72,28,0.0,2.0,121.4,High
+DEAL-1002,CUST-034,Crosby-Rowland ERP Integration,CRM Implementation,Green,Healthy,Discovery,2025-12-02,2026-09-20,4,David Castillo,Cindy Benton,85,Medium,0,65,12,0.0,5.0,67.3,Low
+DEAL-1003,CUST-008,Sanchez LLC CRM Implementation,ERP Integration,Red,Critical,UAT,2026-02-16,2026-12-01,57,Megan Sandoval,Kelly Collins,22,High,11,56,45,4.0,3.0,400.29999999999995,Critical
+DEAL-1004,CUST-014,Wilson Inc Data Migration,Cloud Migration,Yellow,At-Risk,Testing,2026-02-24,2026-10-19,11,Mary Buckley,Ashley Peterson,63,High,4,88,22,0.0,5.0,151.3,High
+DEAL-1005,CUST-005,Hamilton LLC ERP Integration,CRM Implementation,Green,Healthy,Build,2026-03-14,2026-11-18,4,Carolyn Carter,Kevin Ingram,83,High,2,48,11,0.0,8.0,99.4,Medium
+DEAL-1006,CUST-023,Cross LLC Cloud Migration,Data Migration,Red,Critical,Go-Live,2025-11-15,2026-09-11,36,Sean Orr,Mr. Sean Hall Jr.,38,High,13,79,66,6.0,2.0,426.8,Critical
+DEAL-1007,CUST-042,May-Watkins Workflow Automation,ERP Integration,Green,Healthy,Build,2026-02-06,2026-08-12,5,Cindy Price,Tommy Mullins,89,Low,2,96,12,0.0,3.0,69.3,Low
+DEAL-1008,CUST-007,Mueller-Cohen CRM Implementation,Cloud Migration,Yellow,At-Risk,Testing,2026-03-13,2026-09-01,8,Isaac Barry,Christopher Mitchell,64,High,5,72,37,0.0,3.0,166.9,High
+DEAL-1009,CUST-032,Stewart PLC API Modernization,ERP Integration,Green,Healthy,Discovery,2026-03-29,2026-10-20,0,Alan Armstrong,Timothy Bradley,93,Medium,0,80,11,0.0,4.0,45.6,Low
+DEAL-1010,CUST-017,Rogers-Padilla CRM Implementation,ERP Integration,Green,Healthy,Discovery,2026-01-25,2026-06-13,3,Adam Miller,Michael Chen,93,Medium,2,74,13,0.0,3.0,63.2,Low
+DEAL-1011,CUST-003,Parker Inc Data Migration,Cloud Migration,Yellow,At-Risk,Discovery,2025-12-15,2026-07-01,15,Nicole Mitchell,Mackenzie Brennan,59,High,7,97,31,0.0,4.0,193.8,Critical
+DEAL-1012,CUST-003,Parker Inc API Modernization,CRM Implementation,Red,Critical,UAT,2025-11-28,2026-09-02,34,Anthony Williams,David James,26,Medium,11,55,45,10.0,3.0,457.5,Critical
+DEAL-1013,CUST-011,"Benson, Murphy and Chapman Cloud Migration",Workflow Automation,Red,Critical,Testing,2026-02-06,2026-09-19,32,David Young,Susan Farmer,21,Medium,14,57,52,7.0,3.0,451.09999999999997,Critical
+DEAL-1014,CUST-011,"Benson, Murphy and Chapman Data Migration",Cloud Migration,Yellow,At-Risk,Build,2026-03-05,2026-10-28,7,Wanda Hendricks,Jordan Hutchinson,56,High,6,59,33,0.0,3.0,178.10000000000002,High
+DEAL-1015,CUST-015,Carpenter Group API Modernization,API Modernization,Green,Healthy,Discovery,2026-03-03,2026-09-10,5,Kenneth Nguyen,Amber Campbell,92,High,0,81,10,0.0,5.0,56.4,Low
+DEAL-1016,CUST-033,Obrien-Moses ERP Integration,API Modernization,Green,Healthy,Build,2026-03-01,2026-11-24,4,Hannah Clark,Cheryl Silva,80,High,1,42,16,0.0,6.0,92.8,Medium
+DEAL-1017,CUST-007,Mueller-Cohen CRM Implementation,CRM Implementation,Yellow,At-Risk,Discovery,2025-12-12,2026-07-18,11,David Rich,Brittney House,68,Medium,5,56,27,0.0,8.0,175.29999999999998,High
+DEAL-1018,CUST-003,Parker Inc Workflow Automation,Workflow Automation,Yellow,At-Risk,Build,2026-01-24,2026-08-25,6,Taylor Jenkins,Cassandra Kirk,72,Critical,7,44,27,0.0,5.0,165.1,High
+DEAL-1019,CUST-043,"Gray, Williams and Hester Workflow Automation",API Modernization,Red,Critical,Go-Live,2026-02-10,2026-08-28,60,Emily Stout,Donna Schneider,27,Critical,13,60,47,9.0,5.0,501.4,Critical
+DEAL-1020,CUST-026,"Duffy, Castro and Sanchez Data Migration",Workflow Automation,Yellow,At-Risk,UAT,2025-11-15,2026-09-04,14,George Mcintyre,Steven Dennis,61,Medium,4,79,23,0.0,2.0,144.0,High
+DEAL-1021,CUST-037,Thompson and Sons API Modernization,Cloud Migration,Green,Healthy,UAT,2025-12-11,2026-09-05,4,Shannon Rogers,Lindsey Johnson,89,High,0,69,11,0.0,3.0,50.599999999999994,Low
+DEAL-1022,CUST-029,Bryant-Moreno Workflow Automation,Cloud Migration,Green,Healthy,Discovery,2026-02-03,2026-08-14,1,Krystal Allen,Nathan Ellis,95,High,2,45,10,0.0,5.0,63.7,Low
+DEAL-1023,CUST-049,"Hines, Cobb and Cook Cloud Migration",ERP Integration,Green,Healthy,Discovery,2025-12-06,2026-06-06,2,John Hubbard,Debra Morales,86,Critical,0,79,9,0.0,8.0,74.1,Medium
+DEAL-1024,CUST-050,Lopez PLC Cloud Migration,Workflow Automation,Green,Healthy,UAT,2026-02-19,2026-10-23,3,Jessica Castillo,Todd Jackson,98,Critical,2,55,10,0.0,5.0,62.2,Low
+DEAL-1025,CUST-010,"Jones, Brock and Brown Data Migration",Cloud Migration,Yellow,At-Risk,Build,2025-12-03,2026-09-27,6,Donna Mejia,Bonnie Sanchez,79,Critical,3,43,29,0.0,4.0,122.0,High
+DEAL-1026,CUST-036,Martin-Russell Data Migration,Workflow Automation,Green,Healthy,Go-Live,2026-02-01,2026-10-22,0,Ryan Valdez,Ronald Ward,84,High,1,88,13,0.0,3.0,63.3,Low
+DEAL-1027,CUST-029,Bryant-Moreno CRM Implementation,Data Migration,Yellow,At-Risk,Build,2026-03-31,2026-11-27,17,Eric Contreras,Brian Yu,68,Critical,7,56,31,0.0,1.0,169.5,High
+DEAL-1028,CUST-049,"Hines, Cobb and Cook Data Migration",Workflow Automation,Green,Healthy,Build,2026-01-09,2026-07-18,5,Stephanie Baker,Aaron Larsen,96,Critical,1,44,14,0.0,6.0,70.2,Medium
+DEAL-1029,CUST-046,"Alexander, Travis and Bush CRM Implementation",ERP Integration,Green,Healthy,Build,2026-01-11,2026-06-18,2,Cameron Collins,Teresa Robinson,90,Medium,1,64,10,0.0,6.0,68.4,Low
+DEAL-1030,CUST-045,Ortiz LLC Data Migration,API Modernization,Green,Healthy,Go-Live,2026-02-25,2026-10-22,1,Sean Davis,Ryan Cruz,93,Critical,0,43,11,0.0,8.0,66.8,Low
+DEAL-1031,CUST-014,Wilson Inc ERP Integration,CRM Implementation,Yellow,At-Risk,UAT,2026-02-20,2026-10-20,12,Timothy Peterson,Joseph Allen,77,Low,7,62,35,0.0,2.0,162.8,High
+DEAL-1032,CUST-020,Nguyen LLC Workflow Automation,Workflow Automation,Yellow,At-Risk,Go-Live,2026-02-23,2026-11-24,19,Cheryl Erickson,Peter Harrington,72,Medium,6,71,30,0.0,5.0,177.20000000000002,High
+DEAL-1033,CUST-015,Carpenter Group API Modernization,Workflow Automation,Green,Healthy,UAT,2025-12-27,2026-06-07,3,Yvonne Simmons,Amy Herrera,92,Critical,0,98,14,0.0,1.0,40.0,Low
+DEAL-1034,CUST-009,Saunders PLC CRM Implementation,CRM Implementation,Red,Critical,Discovery,2025-11-15,2026-04-05,55,Stephen Gonzalez,Donna Willis,45,Critical,8,48,57,9.0,7.0,457.0,Critical
+DEAL-1035,CUST-030,"Weaver, Bryant and Ramirez Cloud Migration",Data Migration,Green,Healthy,Testing,2025-11-11,2026-06-05,2,Dakota Johnson,Barbara Leonard,90,Critical,1,57,20,0.0,1.0,58.4,Low
+DEAL-1036,CUST-049,"Hines, Cobb and Cook Data Migration",ERP Integration,Red,Critical,Go-Live,2025-12-24,2026-05-06,47,Jerry Johnson,Andrew Wilkerson,25,High,12,54,53,6.0,1.0,424.4,Critical
+DEAL-1037,CUST-042,May-Watkins Cloud Migration,Cloud Migration,Green,Healthy,Discovery,2026-01-21,2026-10-27,5,Ashley Williams,Debra Hernandez,80,Medium,0,55,12,0.0,6.0,80.0,Medium
+DEAL-1038,CUST-009,Saunders PLC Data Migration,Workflow Automation,Green,Healthy,Testing,2025-12-26,2026-07-28,0,Suzanne White,Nicole Nichols,86,Medium,2,78,14,0.0,4.0,75.2,Medium
+DEAL-1039,CUST-039,"Hale, Harper and Smith ERP Integration",CRM Implementation,Red,Critical,Discovery,2026-02-07,2026-08-25,28,Melanie Vasquez,Michelle May,39,Critical,10,65,52,6.0,5.0,385.90000000000003,Critical
+DEAL-1040,CUST-046,"Alexander, Travis and Bush ERP Integration",Workflow Automation,Green,Healthy,Testing,2025-12-05,2026-09-26,4,Nicholas Dean,Amanda Hill,87,Low,2,90,16,0.0,6.0,91.7,Medium
+DEAL-1041,CUST-037,Thompson and Sons Workflow Automation,API Modernization,Yellow,At-Risk,Discovery,2026-03-02,2026-11-06,11,Kenneth Padilla,Timothy Suarez,68,High,7,40,33,0.0,1.0,165.3,High
+DEAL-1042,CUST-027,"Steele, Campbell and Heath Workflow Automation",Data Migration,Yellow,At-Risk,Build,2025-12-28,2026-08-16,7,Jennifer Peters,Danielle Phillips,66,Medium,6,86,31,0.0,8.0,187.10000000000002,Critical
+DEAL-1043,CUST-034,Crosby-Rowland Data Migration,Workflow Automation,Red,Critical,Go-Live,2026-02-28,2026-09-04,38,Xavier Jacobs,Daniel Smith,49,High,15,94,47,8.0,7.0,457.40000000000003,Critical
+DEAL-1044,CUST-016,"Banks, Fields and Mcconnell Cloud Migration",Data Migration,Yellow,At-Risk,Go-Live,2026-01-22,2026-10-25,7,Destiny Estes,James Daniel,69,Critical,5,61,29,0.0,2.0,142.20000000000002,High
+DEAL-1045,CUST-002,"Castro, King and Martin Cloud Migration",API Modernization,Green,Healthy,Testing,2025-12-01,2026-06-26,2,Alison Foster,Javier Hill,95,High,0,96,11,0.0,6.0,55.4,Low
+DEAL-1046,CUST-039,"Hale, Harper and Smith CRM Implementation",Cloud Migration,Yellow,At-Risk,Discovery,2026-03-25,2026-09-22,10,Jesse Ramirez,Matthew Kramer,55,Critical,7,71,36,0.0,6.0,210.5,Critical
+DEAL-1047,CUST-036,Martin-Russell Workflow Automation,Data Migration,Yellow,At-Risk,UAT,2026-03-14,2026-07-16,17,Natalie Mathis,Amy Booker,75,Low,6,58,26,0.0,1.0,144.9,High
+DEAL-1048,CUST-015,Carpenter Group API Modernization,Data Migration,Green,Healthy,Go-Live,2026-02-13,2026-10-26,1,Alexis Burton,Stephanie Jackson,98,High,1,67,14,0.0,3.0,47.800000000000004,Low
+DEAL-1049,CUST-048,Hill-Hanson API Modernization,API Modernization,Yellow,At-Risk,Build,2025-12-20,2026-05-19,11,Jeffrey Nelson,Alexis Coleman,63,Medium,6,60,20,0.0,6.0,169.3,High
+DEAL-1050,CUST-008,Sanchez LLC Cloud Migration,Workflow Automation,Yellow,At-Risk,UAT,2025-12-09,2026-06-17,18,James Curry,Robin Gamble,61,High,4,46,35,0.0,4.0,176.8,High
+DEAL-1051,CUST-013,"Taylor, Hoffman and Barnes ERP Integration",Workflow Automation,Green,Healthy,Go-Live,2026-01-23,2026-06-24,2,Curtis Howell,Bradley Ramos,89,High,0,42,11,0.0,5.0,58.2,Low
+DEAL-1052,CUST-004,Brown-Porter Data Migration,ERP Integration,Yellow,At-Risk,Discovery,2025-11-14,2026-08-07,17,Anthony Flores,Don Miranda,75,High,4,70,39,0.0,3.0,158.4,High
+DEAL-1053,CUST-031,"Moore, West and Fischer Data Migration",ERP Integration,Green,Healthy,Discovery,2026-01-16,2026-08-26,1,Ashley Shaffer,Wayne Sparks,88,Critical,0,44,12,0.0,1.0,39.8,Low
+DEAL-1054,CUST-037,Thompson and Sons CRM Implementation,API Modernization,Yellow,At-Risk,Discovery,2026-03-06,2026-09-05,6,Jonathan Jones,Jason Collins,59,Low,4,75,33,0.0,4.0,162.0,High
+DEAL-1055,CUST-049,"Hines, Cobb and Cook CRM Implementation",Data Migration,Green,Healthy,UAT,2026-01-03,2026-08-24,4,Samantha Hall,Nicole Berry,87,High,2,95,13,0.0,1.0,62.2,Low
+DEAL-1056,CUST-038,Nelson-Carey Cloud Migration,Workflow Automation,Red,Critical,Build,2026-02-02,2026-08-08,40,Donna Blevins,Brianna Brown,26,Low,8,50,51,4.0,3.0,359.7,Critical
+DEAL-1057,CUST-016,"Banks, Fields and Mcconnell Data Migration",Data Migration,Green,Healthy,Go-Live,2026-02-11,2026-10-09,0,Angela Tucker,Russell Whitaker,80,High,0,42,15,0.0,4.0,68.5,Low
+DEAL-1058,CUST-015,Carpenter Group ERP Integration,Workflow Automation,Green,Healthy,Build,2026-03-22,2026-09-25,2,Emily Contreras,Katie Sweeney,94,Medium,2,67,14,0.0,6.0,77.2,Medium
+DEAL-1059,CUST-008,Sanchez LLC Cloud Migration,ERP Integration,Green,Healthy,Discovery,2026-01-30,2026-07-11,5,Christy Moore,Nancy Foster,88,High,0,78,8,0.0,9.0,78.6,Medium
+DEAL-1060,CUST-048,Hill-Hanson ERP Integration,Data Migration,Yellow,At-Risk,Testing,2026-02-19,2026-12-15,20,Veronica Stevenson,Dr. Mia Brown DVM,69,Critical,5,57,31,0.0,2.0,160.8,High
+DEAL-1061,CUST-033,Obrien-Moses Data Migration,Workflow Automation,Green,Healthy,Testing,2026-03-03,2026-12-02,3,Ashley Knight,Lance Boyer,81,High,0,41,12,0.0,5.0,71.3,Medium
+DEAL-1062,CUST-006,Rodriguez-Little ERP Integration,Workflow Automation,Green,Healthy,Testing,2026-02-15,2026-11-09,5,Jennifer Cobb,Nina Bradford,98,Low,2,88,10,0.0,5.0,64.6,Low
+DEAL-1063,CUST-049,"Hines, Cobb and Cook API Modernization",Cloud Migration,Green,Healthy,Go-Live,2025-12-01,2026-07-20,4,Karen Paul,Shannon Maldonado,94,Critical,2,45,20,0.0,2.0,68.6,Low
+DEAL-1064,CUST-031,"Moore, West and Fischer Cloud Migration",API Modernization,Green,Healthy,UAT,2026-03-10,2027-01-01,2,Brenda Jimenez,Rhonda Ruiz,83,Critical,1,58,16,0.0,4.0,76.5,Medium
+DEAL-1065,CUST-043,"Gray, Williams and Hester ERP Integration",API Modernization,Red,Critical,Testing,2026-03-14,2026-10-02,56,Ryan Morse,Rachael Hamilton,49,Low,8,89,50,6.0,2.0,372.5,Critical
+DEAL-1066,CUST-026,"Duffy, Castro and Sanchez ERP Integration",Cloud Migration,Red,Critical,Go-Live,2026-01-12,2026-08-12,21,Matthew Munoz,Thomas Watson,46,Critical,15,80,54,8.0,3.0,431.4,Critical
+DEAL-1067,CUST-029,Bryant-Moreno Cloud Migration,API Modernization,Yellow,At-Risk,UAT,2026-01-12,2026-11-06,9,James Cook,Craig Powell,72,Critical,5,47,24,0.0,8.0,163.2,High
+DEAL-1068,CUST-002,"Castro, King and Martin API Modernization",CRM Implementation,Red,Critical,Discovery,2026-01-03,2026-09-21,59,John Cohen,Jason Williams,30,Critical,11,45,40,11.0,4.0,494.8,Critical
+DEAL-1069,CUST-015,Carpenter Group Workflow Automation,Cloud Migration,Red,Critical,UAT,2026-03-12,2026-09-22,28,Catherine Taylor,Nicholas Hart,27,High,15,66,54,13.0,4.0,544.5,Critical
+DEAL-1070,CUST-031,"Moore, West and Fischer Data Migration",Cloud Migration,Red,Critical,Go-Live,2025-11-06,2026-07-14,36,Andrea Thompson,Lauren Lee,29,Medium,15,95,59,5.0,7.0,454.0,Critical
+DEAL-1071,CUST-005,Hamilton LLC API Modernization,ERP Integration,Green,Healthy,Testing,2026-03-06,2026-09-18,3,Lisa Ross,Wendy Johnson,96,Critical,1,95,4,0.0,6.0,52.800000000000004,Low
+DEAL-1072,CUST-010,"Jones, Brock and Brown CRM Implementation",CRM Implementation,Green,Healthy,UAT,2025-12-10,2026-08-03,3,Stephanie Jones,Amy Gonzalez,90,High,1,95,14,0.0,2.0,55.6,Low
+DEAL-1073,CUST-013,"Taylor, Hoffman and Barnes Data Migration",ERP Integration,Red,Critical,Testing,2026-02-10,2026-10-09,36,Christopher Kirk,Victoria Hunter,34,Critical,14,64,50,8.0,2.0,446.0,Critical
+DEAL-1074,CUST-043,"Gray, Williams and Hester ERP Integration",Cloud Migration,Yellow,At-Risk,Go-Live,2025-12-11,2026-09-08,16,Ms. Nancy Davis,Brett Randolph,70,High,4,95,37,0.0,2.0,155.7,High
+DEAL-1075,CUST-007,Mueller-Cohen Data Migration,ERP Integration,Red,Critical,Build,2026-02-24,2026-10-06,49,Kathryn Phelps,Mark Michael,53,Medium,9,44,52,12.0,2.0,459.90000000000003,Critical
+DEAL-1076,CUST-031,"Moore, West and Fischer Workflow Automation",Data Migration,Yellow,At-Risk,Discovery,2025-12-29,2026-07-21,10,Christopher Rogers,Maureen Boone,74,Critical,5,60,39,0.0,5.0,169.3,High
+DEAL-1077,CUST-041,Guerra-Velasquez ERP Integration,CRM Implementation,Yellow,At-Risk,Discovery,2026-02-15,2026-08-14,18,Emily Shepard,Valerie Norris,72,High,6,54,32,0.0,3.0,169.0,High
+DEAL-1078,CUST-048,Hill-Hanson Data Migration,Cloud Migration,Green,Healthy,Testing,2026-02-28,2026-07-05,0,Erin Hebert,Kathleen Wood,83,Low,2,60,14,0.0,3.0,74.1,Medium
+DEAL-1079,CUST-004,Brown-Porter Cloud Migration,CRM Implementation,Green,Healthy,UAT,2026-03-04,2026-11-23,2,Marcus Ortiz MD,Kelly Roberts,84,Medium,1,50,14,0.0,4.0,72.2,Medium
+DEAL-1080,CUST-012,"Robles, Richards and Adkins Data Migration",CRM Implementation,Green,Healthy,Build,2026-02-05,2026-08-03,3,Jeff Martin,Jeffrey Moss,87,Critical,2,80,16,0.0,4.0,80.5,Medium
+DEAL-1081,CUST-017,Rogers-Padilla API Modernization,Workflow Automation,Green,Healthy,Go-Live,2026-02-22,2026-08-01,5,Arthur White,Nicholas Ramirez,94,Low,0,68,14,0.0,4.0,54.8,Low
+DEAL-1082,CUST-023,Cross LLC Data Migration,API Modernization,Red,Critical,Build,2026-01-07,2026-08-13,40,Dr. Allison Sanders,Jamie Massey,36,Critical,14,46,68,11.0,2.0,520.2,Critical
+DEAL-1083,CUST-016,"Banks, Fields and Mcconnell Workflow Automation",API Modernization,Green,Healthy,Discovery,2025-12-20,2026-10-04,2,Zachary Wheeler,Jessica Owens,89,Critical,2,57,5,0.0,4.0,60.2,Low
+DEAL-1084,CUST-001,Garrison-Martinez Workflow Automation,Data Migration,Yellow,At-Risk,Testing,2025-12-18,2026-06-14,16,Juan Johnson,Timothy Bell,74,High,3,54,34,0.0,3.0,143.0,High
+DEAL-1085,CUST-041,Guerra-Velasquez Workflow Automation,ERP Integration,Green,Healthy,Discovery,2026-01-10,2026-07-28,2,Jose Roberson,Curtis Murphy,84,Critical,2,42,12,0.0,2.0,67.2,Low
+DEAL-1086,CUST-038,Nelson-Carey API Modernization,Workflow Automation,Green,Healthy,UAT,2026-02-07,2026-07-21,1,Joseph Small,Andrew Griffith,89,Medium,0,48,16,0.0,3.0,54.5,Low
+DEAL-1087,CUST-035,Hebert Inc API Modernization,Data Migration,Red,Critical,Testing,2025-11-28,2026-06-22,44,Lori Hall,Russell Smith,30,Low,12,69,50,7.0,4.0,439.8,Critical
+DEAL-1088,CUST-005,Hamilton LLC CRM Implementation,API Modernization,Green,Healthy,Discovery,2025-12-10,2026-07-19,1,Rose Oconnor,Eric Silva,92,Low,2,56,9,0.0,4.0,61.1,Low
+DEAL-1089,CUST-035,Hebert Inc CRM Implementation,Data Migration,Green,Healthy,Testing,2026-02-19,2026-07-16,2,Joseph Hess,Andrew Solis,88,Medium,2,70,11,0.0,4.0,70.5,Medium
+DEAL-1090,CUST-002,"Castro, King and Martin Cloud Migration",Workflow Automation,Yellow,At-Risk,Discovery,2025-11-22,2026-08-31,14,Jennifer Everett,Michael Thomas,74,Critical,5,98,26,0.0,1.0,134.6,High
+DEAL-1091,CUST-045,Ortiz LLC ERP Integration,ERP Integration,Green,Healthy,Testing,2025-12-14,2026-08-17,3,Derek Valenzuela,Richard Lowe,84,Low,0,46,12,0.0,2.0,52.400000000000006,Low
+DEAL-1092,CUST-016,"Banks, Fields and Mcconnell API Modernization",Workflow Automation,Red,Critical,Go-Live,2026-03-28,2026-11-10,29,Craig Holmes,Danielle Vazquez,49,Medium,14,96,66,13.0,4.0,527.1,Critical
+DEAL-1093,CUST-027,"Steele, Campbell and Heath Data Migration",API Modernization,Yellow,At-Risk,Discovery,2026-03-30,2027-01-20,19,Kelly Mooney,Adam Roberson,74,High,6,53,36,0.0,7.0,193.60000000000002,Critical
+DEAL-1094,CUST-029,Bryant-Moreno Workflow Automation,API Modernization,Green,Healthy,Go-Live,2026-01-24,2026-11-05,1,Deborah Hanna,James Lester,83,High,1,43,18,0.0,5.0,83.30000000000001,Medium
+DEAL-1095,CUST-026,"Duffy, Castro and Sanchez Workflow Automation",Cloud Migration,Green,Healthy,Go-Live,2026-03-24,2026-07-27,0,Michael Johnson,Jonathan Cook,82,Low,1,90,8,0.0,2.0,53.400000000000006,Low
+DEAL-1096,CUST-022,"Mendez, Mcintosh and Russell ERP Integration",CRM Implementation,Green,Healthy,Build,2026-03-30,2026-12-25,1,Melanie Kennedy,Kathryn Grant,86,Medium,2,92,10,0.0,4.0,70.4,Medium
+DEAL-1097,CUST-015,Carpenter Group API Modernization,Cloud Migration,Green,Healthy,Build,2025-12-31,2026-09-15,1,Jeffrey Hernandez,Tony Sherman DDS,80,High,2,91,10,0.0,6.0,88.2,Medium
+DEAL-1098,CUST-012,"Robles, Richards and Adkins API Modernization",Cloud Migration,Green,Healthy,Go-Live,2026-01-08,2026-07-29,0,Eric Rivers,Ryan Mercado,80,Low,0,51,10,0.0,2.0,51.0,Low
+DEAL-1099,CUST-017,Rogers-Padilla ERP Integration,Workflow Automation,Green,Healthy,Discovery,2026-01-26,2026-09-24,5,Vanessa Campbell,Micheal Guerrero,96,Critical,1,89,16,0.0,4.0,63.2,Low
+DEAL-1100,CUST-024,Gardner PLC Cloud Migration,CRM Implementation,Green,Healthy,Discovery,2025-12-03,2026-09-17,0,Jeremy Murray,Sarah Barrett,96,High,1,69,12,0.0,4.0,51.2,Low
+DEAL-1101,CUST-042,May-Watkins Data Migration,Workflow Automation,Red,Critical,Discovery,2026-01-14,2026-09-16,24,Savannah Harrington,Pamela Pierce,45,Critical,15,44,51,10.0,5.0,471.8,Critical
+DEAL-1102,CUST-006,Rodriguez-Little API Modernization,CRM Implementation,Green,Healthy,Go-Live,2025-11-22,2026-08-09,1,Matthew Nguyen,Brian Cordova,84,High,0,64,16,0.0,4.0,66.0,Low
+DEAL-1103,CUST-039,"Hale, Harper and Smith ERP Integration",Workflow Automation,Green,Healthy,Discovery,2025-11-28,2026-09-11,3,Michael Underwood,Amy Patrick,93,Medium,2,67,14,0.0,3.0,64.7,Low
+DEAL-1104,CUST-029,Bryant-Moreno Data Migration,Data Migration,Red,Critical,Discovery,2026-03-31,2026-10-17,47,Kathy Park,Kevin Campbell,49,Critical,13,60,59,11.0,3.0,495.2,Critical
+DEAL-1105,CUST-043,"Gray, Williams and Hester ERP Integration",ERP Integration,Green,Healthy,Discovery,2026-02-13,2026-07-06,1,Tony Carlson,Grace Mcconnell,95,Critical,2,46,14,0.0,3.0,59.7,Low
+DEAL-1106,CUST-048,Hill-Hanson ERP Integration,CRM Implementation,Yellow,At-Risk,Go-Live,2026-03-14,2026-12-02,18,Aaron Thompson,Anthony Williams,72,High,4,82,24,0.0,8.0,166.0,High
+DEAL-1107,CUST-008,Sanchez LLC API Modernization,CRM Implementation,Green,Healthy,Testing,2026-01-03,2026-08-01,5,Bryan Lam,Helen Gardner,81,Low,1,76,11,0.0,7.0,90.2,Medium
+DEAL-1108,CUST-033,Obrien-Moses ERP Integration,API Modernization,Green,Healthy,Go-Live,2026-03-10,2026-10-10,5,Austin Webb,Austin Spears,87,Low,1,88,16,0.0,3.0,69.9,Low
+DEAL-1109,CUST-018,"Smith, Austin and Johnson CRM Implementation",CRM Implementation,Yellow,At-Risk,Go-Live,2026-01-31,2026-06-06,18,Christina Valencia,Curtis Reynolds,72,High,6,41,29,0.0,1.0,154.5,High
+DEAL-1110,CUST-012,"Robles, Richards and Adkins ERP Integration",Cloud Migration,Green,Healthy,Build,2025-12-31,2026-09-21,2,Brian Barry,Raymond Munoz,91,Critical,1,44,15,0.0,7.0,79.60000000000001,Medium
+DEAL-1111,CUST-010,"Jones, Brock and Brown CRM Implementation",Cloud Migration,Yellow,At-Risk,UAT,2026-02-27,2026-10-12,6,Timothy Watson,James Reed,78,Critical,3,61,30,0.0,5.0,129.8,High
+DEAL-1112,CUST-011,"Benson, Murphy and Chapman CRM Implementation",ERP Integration,Green,Healthy,Discovery,2026-02-08,2026-07-17,5,Joe Ford,Tammy Smith,98,Medium,1,88,7,0.0,3.0,42.1,Low
+DEAL-1113,CUST-040,Chapman Ltd Workflow Automation,Data Migration,Green,Healthy,UAT,2026-02-16,2026-11-18,0,Micheal Wilkinson,Ashley Webb,94,Critical,1,66,13,0.0,3.0,50.3,Low
+DEAL-1114,CUST-018,"Smith, Austin and Johnson Data Migration",ERP Integration,Green,Healthy,Testing,2026-03-30,2027-01-17,4,Alexis Foster,Ronald Greer,91,Critical,0,73,10,0.0,3.0,46.5,Low
+DEAL-1115,CUST-043,"Gray, Williams and Hester ERP Integration",Cloud Migration,Green,Healthy,Testing,2026-03-11,2026-09-01,1,Crystal Wallace,Christopher Edwards,81,Medium,1,88,17,0.0,2.0,69.4,Low
+DEAL-1116,CUST-017,Rogers-Padilla Workflow Automation,Data Migration,Green,Healthy,Build,2025-12-09,2026-05-11,0,Tony Hunt,Sherri Gentry,95,Critical,0,74,6,0.0,3.0,30.5,Low
+DEAL-1117,CUST-046,"Alexander, Travis and Bush ERP Integration",Data Migration,Green,Healthy,Discovery,2026-01-17,2026-09-05,4,Christopher Lee,Dr. James Erickson,91,Low,2,69,8,0.0,3.0,59.5,Low
+DEAL-1118,CUST-005,Hamilton LLC Workflow Automation,Workflow Automation,Red,Critical,UAT,2025-12-08,2026-06-20,57,David Cohen,Jacob Owens,45,Low,14,65,48,9.0,4.0,478.9,Critical
+DEAL-1119,CUST-002,"Castro, King and Martin ERP Integration",Data Migration,Red,Critical,Discovery,2025-11-28,2026-05-29,31,Mandy Copeland,Jacqueline Jensen,43,Critical,15,77,62,4.0,2.0,394.3,Critical
+DEAL-1120,CUST-026,"Duffy, Castro and Sanchez Cloud Migration",API Modernization,Green,Healthy,Build,2025-11-07,2026-03-26,3,Vanessa Howard,Victor Anderson,90,Low,1,73,14,0.0,4.0,65.6,Low
+DEAL-1121,CUST-033,Obrien-Moses Cloud Migration,ERP Integration,Green,Healthy,Build,2025-11-06,2026-05-10,2,Barbara Long,Colton Clark MD,84,Medium,1,51,7,0.0,8.0,81.7,Medium
+DEAL-1122,CUST-039,"Hale, Harper and Smith Workflow Automation",Data Migration,Green,Healthy,UAT,2026-03-31,2026-12-20,5,James Fields,Anita Young,85,Critical,0,83,12,0.0,5.0,68.5,Low
+DEAL-1123,CUST-037,Thompson and Sons API Modernization,Cloud Migration,Yellow,At-Risk,UAT,2026-03-06,2026-07-21,15,Jerry Williams,Tyler Nunez,75,Critical,5,68,25,0.0,5.0,153.0,High
+DEAL-1124,CUST-041,Guerra-Velasquez API Modernization,CRM Implementation,Green,Healthy,Discovery,2026-03-03,2026-09-18,2,Ashley Wilkerson,Thomas Gonzalez III,81,Critical,2,68,15,0.0,2.0,75.6,Medium
+DEAL-1125,CUST-003,Parker Inc CRM Implementation,CRM Implementation,Green,Healthy,Go-Live,2026-01-09,2026-08-15,2,Robert Walker,Yolanda White,82,Critical,0,77,10,0.0,3.0,55.8,Low
+DEAL-1126,CUST-036,Martin-Russell API Modernization,CRM Implementation,Red,Critical,UAT,2026-02-18,2026-10-24,23,Matthew Ramirez,Terri Brown,32,Medium,15,43,47,6.0,8.0,436.5,Critical
+DEAL-1127,CUST-029,Bryant-Moreno CRM Implementation,Workflow Automation,Green,Healthy,Build,2025-11-07,2026-03-17,2,Melissa Russell,Tracey Taylor,82,Medium,2,85,12,0.0,3.0,74.8,Medium
+DEAL-1128,CUST-029,Bryant-Moreno API Modernization,API Modernization,Red,Critical,UAT,2026-03-18,2026-10-28,54,Toni Wagner,Nicholas Lewis,43,High,10,83,56,11.0,5.0,492.90000000000003,Critical
+DEAL-1129,CUST-039,"Hale, Harper and Smith ERP Integration",API Modernization,Green,Healthy,Discovery,2025-12-16,2026-09-04,5,Miguel Jones,Angela Palmer,90,Critical,2,58,11,0.0,3.0,66.5,Low
+DEAL-1130,CUST-017,Rogers-Padilla API Modernization,ERP Integration,Yellow,At-Risk,Go-Live,2026-03-01,2026-12-15,16,Matthew Mcintyre,Daniel Hawkins,59,Medium,7,98,28,0.0,3.0,185.5,Critical
+DEAL-1131,CUST-023,Cross LLC Cloud Migration,CRM Implementation,Green,Healthy,Discovery,2025-12-12,2026-06-29,5,Amy James,Sonia Cabrera,92,Critical,2,81,9,0.0,5.0,70.9,Medium
+DEAL-1132,CUST-022,"Mendez, Mcintosh and Russell Workflow Automation",Workflow Automation,Yellow,At-Risk,UAT,2026-02-09,2026-10-17,16,Mrs. Jennifer Thompson,Mary Vasquez,57,High,7,41,30,0.0,2.0,186.1,Critical
+DEAL-1133,CUST-024,Gardner PLC Cloud Migration,Cloud Migration,Green,Healthy,Build,2026-01-08,2026-06-16,1,Ms. Tammy Silva,Amanda Williams,95,Low,1,58,10,0.0,4.0,50.7,Low
+DEAL-1134,CUST-007,Mueller-Cohen ERP Integration,Workflow Automation,Green,Healthy,Testing,2025-12-17,2026-09-21,4,Joseph Jones,Debbie Carpenter,96,Medium,2,78,10,0.0,4.0,61.0,Low
+DEAL-1135,CUST-025,Shannon-Nichols Workflow Automation,Data Migration,Green,Healthy,Discovery,2025-12-16,2026-07-29,1,Justin Chavez,Tiffany Shaw,85,High,2,83,9,0.0,2.0,60.2,Low
+DEAL-1136,CUST-047,"Morse, Oconnor and Barker Workflow Automation",Data Migration,Green,Healthy,Build,2026-02-12,2026-10-26,3,Tracy Jones,Lauren Terry,89,Medium,2,59,8,0.0,2.0,55.900000000000006,Low
+DEAL-1137,CUST-031,"Moore, West and Fischer Data Migration",API Modernization,Red,Critical,UAT,2026-01-28,2026-10-03,33,Barbara Hancock,Aaron Bailey,48,Critical,13,50,44,10.0,8.0,467.20000000000005,Critical
+DEAL-1138,CUST-013,"Taylor, Hoffman and Barnes Workflow Automation",Data Migration,Yellow,At-Risk,Testing,2026-03-05,2026-11-21,8,Danielle Floyd,Ann Carter,56,Low,5,85,38,0.0,6.0,193.8,Critical
+DEAL-1139,CUST-034,Crosby-Rowland API Modernization,Data Migration,Red,Critical,Go-Live,2026-02-27,2026-08-03,39,Dave Rice,Billy Brock,30,Critical,9,45,37,9.0,5.0,425.3,Critical
+DEAL-1140,CUST-015,Carpenter Group Data Migration,ERP Integration,Yellow,At-Risk,UAT,2025-11-17,2026-07-23,20,Frederick Taylor,Shannon Luna,55,High,5,55,31,0.0,11.0,224.0,Critical
+DEAL-1141,CUST-025,Shannon-Nichols API Modernization,ERP Integration,Red,Critical,Testing,2025-12-20,2026-05-26,44,Stephen Ellis,Gregory Meyer,21,Medium,11,42,59,9.0,4.0,487.0,Critical
+DEAL-1142,CUST-019,Caldwell Inc Data Migration,CRM Implementation,Red,Critical,Discovery,2026-03-26,2026-08-13,51,Adam Mcgee,Matthew Richmond,50,Low,10,56,56,9.0,5.0,450.2,Critical
+DEAL-1143,CUST-014,Wilson Inc Data Migration,ERP Integration,Yellow,At-Risk,Testing,2026-02-01,2026-07-31,14,John Myers,Cesar Castillo,71,High,7,47,27,0.0,4.0,171.0,High
+DEAL-1144,CUST-004,Brown-Porter ERP Integration,ERP Integration,Green,Healthy,UAT,2026-01-03,2026-10-02,5,Stephen Reese,Lori Wiley,94,Low,2,80,17,0.0,4.0,75.3,Medium
+DEAL-1145,CUST-033,Obrien-Moses Data Migration,ERP Integration,Yellow,At-Risk,Go-Live,2026-01-14,2026-08-12,17,Brenda Brown,Katelyn Shaw,64,Medium,4,76,29,0.0,1.0,147.70000000000002,High
+DEAL-1146,CUST-027,"Steele, Campbell and Heath API Modernization",ERP Integration,Green,Healthy,Go-Live,2025-11-22,2026-08-08,5,Lisa Flowers,Jessica Campbell,96,Low,0,64,11,0.0,3.0,42.7,Low
+DEAL-1147,CUST-031,"Moore, West and Fischer Workflow Automation",ERP Integration,Green,Healthy,Testing,2026-02-12,2026-06-29,3,Emma Owens,Carl Diaz,88,High,1,55,15,0.0,5.0,74.7,Medium
+DEAL-1148,CUST-047,"Morse, Oconnor and Barker API Modernization",Cloud Migration,Yellow,At-Risk,Discovery,2026-02-06,2026-09-04,7,Austin Johnson,Kenneth Zavala,78,High,7,92,27,0.0,4.0,153.5,High
+DEAL-1149,CUST-042,May-Watkins Workflow Automation,Cloud Migration,Green,Healthy,Build,2026-03-11,2026-07-25,5,Alison Williams,Jared Green,95,Critical,1,42,15,0.0,3.0,58.0,Low
+DEAL-1150,CUST-019,Caldwell Inc API Modernization,CRM Implementation,Green,Healthy,UAT,2026-01-17,2026-10-03,1,Joshua Quinn,Amanda Khan,90,Critical,0,56,15,0.0,2.0,46.7,Low
+DEAL-1151,CUST-003,Parker Inc ERP Integration,Workflow Automation,Yellow,At-Risk,Testing,2025-12-14,2026-06-21,9,David Shepard Jr.,Jessica Nelson,66,Low,5,91,32,0.0,4.0,163.0,High
+DEAL-1152,CUST-024,Gardner PLC Data Migration,API Modernization,Green,Healthy,Build,2026-02-25,2026-10-30,3,Brian Owens,Courtney Burns,94,Critical,2,63,14,0.0,5.0,73.39999999999999,Medium
+DEAL-1153,CUST-034,Crosby-Rowland ERP Integration,Data Migration,Green,Healthy,Go-Live,2026-02-16,2026-08-01,0,Maria Mcintyre,Dana Alvarado,93,High,2,60,18,0.0,2.0,62.1,Low
+DEAL-1154,CUST-007,Mueller-Cohen Data Migration,CRM Implementation,Green,Healthy,UAT,2026-02-19,2026-07-31,5,Kaitlyn Beck,Teresa Henry,89,Critical,1,62,18,0.0,6.0,85.3,Medium
+DEAL-1155,CUST-029,Bryant-Moreno API Modernization,Workflow Automation,Green,Healthy,Discovery,2026-03-18,2026-08-04,2,Jim Dean,Dwayne Wright,93,Critical,2,63,16,0.0,2.0,61.5,Low
+DEAL-1156,CUST-033,Obrien-Moses Cloud Migration,CRM Implementation,Yellow,At-Risk,UAT,2026-03-17,2026-07-23,16,David Snyder,Donald Cox,55,Medium,4,44,28,0.0,6.0,181.7,Critical
+DEAL-1157,CUST-016,"Banks, Fields and Mcconnell CRM Implementation",ERP Integration,Yellow,At-Risk,Go-Live,2026-01-06,2026-06-14,11,Elizabeth Dennis,David Wade,67,Critical,5,63,28,0.0,4.0,158.1,High
+DEAL-1158,CUST-024,Gardner PLC CRM Implementation,API Modernization,Green,Healthy,UAT,2025-11-18,2026-06-06,0,Darren Martin,Brian Thomas,84,High,2,55,12,0.0,7.0,89.8,Medium
+DEAL-1159,CUST-008,Sanchez LLC Data Migration,CRM Implementation,Green,Healthy,Discovery,2025-12-06,2026-06-11,1,Jessica Greer,Emma Munoz,96,High,1,85,10,0.0,3.0,44.400000000000006,Low
+DEAL-1160,CUST-029,Bryant-Moreno Cloud Migration,ERP Integration,Green,Healthy,Build,2026-03-13,2026-07-29,4,Carrie Brown,Elizabeth Vasquez,95,Critical,1,51,10,0.0,3.0,49.3,Low
+DEAL-1161,CUST-046,"Alexander, Travis and Bush Workflow Automation",API Modernization,Green,Healthy,Discovery,2025-11-14,2026-08-01,0,Jennifer Kane,Angelica Martinez,90,High,2,97,24,0.0,3.0,80.0,Medium
+DEAL-1162,CUST-020,Nguyen LLC Cloud Migration,ERP Integration,Red,Critical,Build,2025-11-30,2026-05-04,32,Thomas Mccormick,Elizabeth Murphy,52,Medium,13,90,63,12.0,5.0,504.29999999999995,Critical
+DEAL-1163,CUST-032,Stewart PLC Data Migration,CRM Implementation,Green,Healthy,Build,2025-11-20,2026-08-23,4,Steven Roberts,Virginia Ross,91,Low,2,44,18,0.0,4.0,79.5,Medium
+DEAL-1164,CUST-020,Nguyen LLC CRM Implementation,Data Migration,Green,Healthy,UAT,2026-03-04,2026-11-26,5,Justin Green,Justin Hodge,95,Low,2,48,15,0.0,1.0,56.0,Low
+DEAL-1165,CUST-021,Carson-Rush CRM Implementation,API Modernization,Yellow,At-Risk,Build,2026-03-11,2026-11-27,13,Erica Martin,Amy Holland,76,Medium,6,89,42,0.0,6.0,187.8,Critical
+DEAL-1166,CUST-009,Saunders PLC Cloud Migration,API Modernization,Green,Healthy,Build,2025-11-16,2026-04-26,0,Sara Berry,Nicole Brown,96,High,0,85,15,0.0,2.0,37.7,Low
+DEAL-1167,CUST-015,Carpenter Group API Modernization,Cloud Migration,Green,Healthy,Go-Live,2026-02-21,2026-08-30,4,Kathryn Williams,John Perez,82,Medium,1,80,6,0.0,5.0,70.2,Medium
+DEAL-1168,CUST-020,Nguyen LLC Cloud Migration,CRM Implementation,Yellow,At-Risk,Go-Live,2025-11-14,2026-04-22,7,Tim Gonzalez,Lacey Young,75,Medium,7,82,36,0.0,2.0,160.9,High
+DEAL-1169,CUST-040,Chapman Ltd ERP Integration,ERP Integration,Yellow,At-Risk,Discovery,2025-11-24,2026-04-04,15,Kristen Jones,Amanda Harris,73,High,5,81,22,0.0,4.0,146.1,High
+DEAL-1170,CUST-014,Wilson Inc ERP Integration,Data Migration,Yellow,At-Risk,Go-Live,2025-11-29,2026-06-11,12,Brandy Ruiz,Connie Morris,75,High,7,70,44,0.0,3.0,183.9,Critical
+DEAL-1171,CUST-016,"Banks, Fields and Mcconnell Data Migration",ERP Integration,Yellow,At-Risk,Discovery,2025-11-17,2026-04-26,16,Kevin Garcia,Megan Cunningham,64,Critical,6,66,27,0.0,4.0,174.5,High
+DEAL-1172,CUST-031,"Moore, West and Fischer API Modernization",Workflow Automation,Green,Healthy,Testing,2025-12-26,2026-07-22,2,Kimberly Lowery,Francisco Ayala,84,Critical,2,48,14,0.0,3.0,75.2,Medium
+DEAL-1173,CUST-049,"Hines, Cobb and Cook Cloud Migration",Data Migration,Green,Healthy,Discovery,2026-03-26,2026-09-30,4,Steven Dougherty,Antonio Morris,90,Critical,0,55,18,0.0,4.0,64.8,Low
+DEAL-1174,CUST-010,"Jones, Brock and Brown Cloud Migration",Cloud Migration,Green,Healthy,Testing,2026-03-24,2026-12-16,2,Michael Stewart,Melissa Gutierrez,93,High,1,52,12,0.0,3.0,52.5,Low
+DEAL-1175,CUST-049,"Hines, Cobb and Cook API Modernization",Data Migration,Green,Healthy,Discovery,2026-02-16,2026-07-09,4,Mario Reyes,Benjamin Carter,95,Critical,1,72,8,0.0,5.0,56.3,Low
+DEAL-1176,CUST-030,"Weaver, Bryant and Ramirez ERP Integration",API Modernization,Red,Critical,UAT,2025-11-25,2026-08-24,34,Sue Collins,Kenneth Briggs,23,Critical,13,58,53,9.0,2.0,469.40000000000003,Critical
+DEAL-1177,CUST-035,Hebert Inc API Modernization,Workflow Automation,Green,Healthy,Testing,2026-02-09,2026-09-20,0,Margaret Mcmillan,Adrian Williams,84,High,1,42,13,0.0,4.0,68.3,Low
+DEAL-1178,CUST-026,"Duffy, Castro and Sanchez CRM Implementation",API Modernization,Green,Healthy,Discovery,2025-11-07,2026-06-13,4,Jason Flores,Michael Davis,91,Critical,0,88,15,0.0,4.0,59.0,Low
+DEAL-1179,CUST-036,Martin-Russell Cloud Migration,ERP Integration,Green,Healthy,UAT,2025-12-21,2026-07-24,4,Tonya Daniels,Isaac Montgomery,83,High,2,75,13,0.0,6.0,92.4,Medium
+DEAL-1180,CUST-024,Gardner PLC Data Migration,CRM Implementation,Yellow,At-Risk,Discovery,2025-11-15,2026-03-26,9,Kara Johnson,Jessica Johnson,71,Low,7,48,43,0.0,4.0,189.0,Critical
+DEAL-1181,CUST-046,"Alexander, Travis and Bush Cloud Migration",CRM Implementation,Green,Healthy,Go-Live,2026-03-31,2026-09-02,3,Vincent Knight,Tammy Sanchez,94,High,2,79,14,0.0,2.0,58.400000000000006,Low
+DEAL-1182,CUST-021,Carson-Rush CRM Implementation,API Modernization,Green,Healthy,Go-Live,2026-01-28,2026-10-05,4,Joshua French,Wanda Walters,89,Critical,2,85,8,0.0,5.0,72.1,Medium
+DEAL-1183,CUST-037,Thompson and Sons Workflow Automation,ERP Integration,Green,Healthy,UAT,2026-02-28,2026-11-24,0,Jason Schmidt,Jeremiah Rivas,90,High,1,90,18,0.0,5.0,73.0,Medium
+DEAL-1184,CUST-047,"Morse, Oconnor and Barker Workflow Automation",CRM Implementation,Red,Critical,Go-Live,2026-01-26,2026-07-23,22,Janet Baird,Misty Gross,36,Low,15,77,55,8.0,5.0,457.09999999999997,Critical
+DEAL-1185,CUST-031,"Moore, West and Fischer Cloud Migration",Workflow Automation,Green,Healthy,Build,2025-12-19,2026-04-26,5,James Knight,Billy Larsen,92,Low,2,52,15,0.0,4.0,74.9,Medium
+DEAL-1186,CUST-002,"Castro, King and Martin Workflow Automation",Cloud Migration,Green,Healthy,UAT,2025-11-04,2026-07-10,3,Ronald Watson,Christina Haynes,93,Critical,0,95,7,0.0,4.0,43.2,Low
+DEAL-1187,CUST-048,Hill-Hanson Cloud Migration,CRM Implementation,Yellow,At-Risk,Testing,2025-11-08,2026-08-24,17,James Knight,Karen Tran,71,Critical,4,73,29,0.0,6.0,163.60000000000002,High
+DEAL-1188,CUST-025,Shannon-Nichols API Modernization,CRM Implementation,Green,Healthy,Testing,2025-11-23,2026-09-12,1,James Ayers,Andrew Rasmussen,97,High,1,79,9,0.0,2.0,36.6,Low
+DEAL-1189,CUST-031,"Moore, West and Fischer API Modernization",Cloud Migration,Green,Healthy,Testing,2026-03-17,2026-09-26,1,Andrew Espinoza,Kimberly Garcia,97,Medium,1,84,8,0.0,5.0,50.1,Low
+DEAL-1190,CUST-046,"Alexander, Travis and Bush Workflow Automation",API Modernization,Green,Healthy,Testing,2026-03-08,2026-08-06,3,Christopher Keith,Lori Smith,97,Critical,1,97,15,0.0,3.0,53.0,Low
+DEAL-1191,CUST-026,"Duffy, Castro and Sanchez ERP Integration",API Modernization,Yellow,At-Risk,Discovery,2026-02-16,2026-09-12,18,Lindsay Johnson,Kristin Fox,64,Critical,4,81,26,0.0,4.0,159.4,High
+DEAL-1192,CUST-017,Rogers-Padilla API Modernization,CRM Implementation,Yellow,At-Risk,Testing,2026-01-20,2026-06-24,9,Ronald Munoz,Valerie Smith,72,Low,4,79,35,0.0,2.0,141.7,High
+DEAL-1193,CUST-048,Hill-Hanson CRM Implementation,Cloud Migration,Yellow,At-Risk,Build,2026-02-09,2026-06-22,9,Robert Williams,Karen Hayden,76,Low,3,66,35,0.0,0.0,118.5,Medium
+DEAL-1194,CUST-022,"Mendez, Mcintosh and Russell CRM Implementation",Cloud Migration,Yellow,At-Risk,UAT,2026-01-31,2026-11-14,7,Michael Wells,Amber Adams,55,Critical,4,70,33,0.0,4.0,168.4,High
+DEAL-1195,CUST-042,May-Watkins Workflow Automation,ERP Integration,Green,Healthy,Discovery,2026-01-08,2026-10-21,2,Michael Hill,Darlene Fuentes,89,Medium,1,74,17,0.0,5.0,75.2,Medium
+DEAL-1196,CUST-048,Hill-Hanson Data Migration,Cloud Migration,Yellow,At-Risk,Discovery,2026-02-20,2026-09-29,20,Donna Long,Mary Jones,60,Critical,3,51,29,0.0,9.0,188.5,Critical
+DEAL-1197,CUST-048,Hill-Hanson API Modernization,CRM Implementation,Red,Critical,Go-Live,2025-12-15,2026-05-11,39,Elizabeth Perez,John Hernandez,20,High,8,58,59,8.0,5.0,448.3,Critical
+DEAL-1198,CUST-030,"Weaver, Bryant and Ramirez CRM Implementation",Data Migration,Red,Critical,Testing,2025-12-22,2026-06-09,55,Brent White,Bethany Heath,28,Low,15,61,53,8.0,2.0,489.1,Critical
+DEAL-1199,CUST-011,"Benson, Murphy and Chapman Cloud Migration",ERP Integration,Yellow,At-Risk,Testing,2026-01-31,2026-08-14,16,Rachel Baker,Debbie Lamb,77,Medium,5,51,28,0.0,5.0,156.1,High
+DEAL-1200,CUST-040,Chapman Ltd API Modernization,ERP Integration,Red,Critical,UAT,2026-01-20,2026-11-07,46,Francis Smith,Felicia Lawrence,52,Low,14,51,54,4.0,3.0,385.6,Critical

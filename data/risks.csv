@@ -1,0 +1,801 @@
+risk_id,deal_id,identified_date,risk_category,likelihood,impact,mitigation_plan,current_status
+RISK-401,DEAL-1197,2026-04-21,Testing Instability,Low,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-402,DEAL-1059,2026-02-07,Integration Failure,Low,Critical,Dedicated integration remediation task force.,Open
+RISK-403,DEAL-1054,2026-02-09,Security Delay,Medium,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-404,DEAL-1139,2026-03-10,Integration Failure,Low,Critical,Additional regression testing cycles.,Open
+RISK-405,DEAL-1113,2026-04-14,Testing Instability,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-406,DEAL-1137,2026-02-15,Security Delay,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-407,DEAL-1173,2026-03-26,Security Delay,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-408,DEAL-1141,2026-02-15,Integration Failure,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-409,DEAL-1117,2026-03-22,Testing Instability,Medium,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-410,DEAL-1011,2026-02-14,Testing Instability,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-411,DEAL-1097,2026-03-12,Testing Instability,Medium,High,Weekly executive escalation meetings.,Open
+RISK-412,DEAL-1099,2026-04-22,Security Delay,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-413,DEAL-1171,2026-03-10,Client Dependency,Low,Critical,Weekly executive escalation meetings.,Open
+RISK-414,DEAL-1036,2026-04-15,Security Delay,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-415,DEAL-1025,2026-02-26,Client Dependency,Low,High,Dedicated integration remediation task force.,Open
+RISK-416,DEAL-1147,2026-03-12,Resource Constraint,Low,Medium,Additional regression testing cycles.,Open
+RISK-417,DEAL-1138,2026-03-10,Integration Failure,High,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-418,DEAL-1128,2026-02-19,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-419,DEAL-1086,2026-03-12,Integration Failure,High,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-420,DEAL-1190,2026-04-15,Integration Failure,High,High,Dedicated integration remediation task force.,Open
+RISK-421,DEAL-1089,2026-04-11,Resource Constraint,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-422,DEAL-1034,2026-03-14,Resource Constraint,High,Critical,Weekly executive escalation meetings.,Open
+RISK-423,DEAL-1040,2026-04-16,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-424,DEAL-1004,2026-02-28,Testing Instability,Medium,High,Additional regression testing cycles.,Open
+RISK-425,DEAL-1002,2026-04-25,Resource Constraint,Medium,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-426,DEAL-1181,2026-03-12,Testing Instability,High,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-427,DEAL-1058,2026-03-19,Resource Constraint,Low,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-428,DEAL-1106,2026-02-14,Resource Constraint,Medium,Critical,Additional regression testing cycles.,Open
+RISK-429,DEAL-1062,2026-03-29,Resource Constraint,Low,High,Dedicated integration remediation task force.,Monitoring
+RISK-430,DEAL-1023,2026-03-17,Security Delay,High,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-431,DEAL-1183,2026-04-20,Security Delay,Low,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-432,DEAL-1112,2026-02-17,Integration Failure,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-433,DEAL-1018,2026-02-27,Testing Instability,High,Medium,Additional regression testing cycles.,Mitigated
+RISK-434,DEAL-1173,2026-01-31,Integration Failure,Low,Critical,Additional regression testing cycles.,Mitigated
+RISK-435,DEAL-1108,2026-03-06,Client Dependency,High,Critical,Additional regression testing cycles.,Open
+RISK-436,DEAL-1028,2026-03-27,Resource Constraint,Low,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-437,DEAL-1102,2026-03-16,Resource Constraint,High,High,Dedicated integration remediation task force.,Monitoring
+RISK-438,DEAL-1149,2026-03-09,Security Delay,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-439,DEAL-1159,2026-02-09,Integration Failure,High,Critical,Dedicated integration remediation task force.,Open
+RISK-440,DEAL-1088,2026-04-15,Resource Constraint,High,Medium,Dedicated integration remediation task force.,Open
+RISK-441,DEAL-1038,2026-02-28,Client Dependency,Low,Medium,Dedicated integration remediation task force.,Open
+RISK-442,DEAL-1154,2026-02-02,Resource Constraint,High,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-443,DEAL-1041,2026-04-08,Security Delay,Low,Critical,Weekly executive escalation meetings.,Open
+RISK-444,DEAL-1173,2026-02-26,Integration Failure,Medium,Critical,Additional regression testing cycles.,Open
+RISK-445,DEAL-1061,2026-02-09,Client Dependency,Low,Critical,Additional regression testing cycles.,Mitigated
+RISK-446,DEAL-1032,2026-04-08,Client Dependency,High,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-447,DEAL-1195,2026-02-23,Testing Instability,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-448,DEAL-1125,2026-04-19,Testing Instability,Low,High,Dedicated integration remediation task force.,Mitigated
+RISK-449,DEAL-1024,2026-03-01,Integration Failure,High,High,Dedicated integration remediation task force.,Mitigated
+RISK-450,DEAL-1122,2026-03-21,Integration Failure,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-451,DEAL-1034,2026-04-16,Resource Constraint,High,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-452,DEAL-1015,2026-02-10,Resource Constraint,Low,High,Additional regression testing cycles.,Monitoring
+RISK-453,DEAL-1153,2026-03-08,Client Dependency,Low,High,Dedicated integration remediation task force.,Monitoring
+RISK-454,DEAL-1190,2026-03-17,Resource Constraint,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-455,DEAL-1062,2026-03-29,Testing Instability,Low,Medium,Dedicated integration remediation task force.,Open
+RISK-456,DEAL-1040,2026-04-23,Testing Instability,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-457,DEAL-1156,2026-04-22,Integration Failure,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-458,DEAL-1196,2026-02-02,Security Delay,Medium,Critical,Additional regression testing cycles.,Mitigated
+RISK-459,DEAL-1017,2026-04-10,Resource Constraint,Medium,High,Additional regression testing cycles.,Open
+RISK-460,DEAL-1139,2026-03-28,Resource Constraint,Medium,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-461,DEAL-1110,2026-02-10,Resource Constraint,Medium,Critical,Weekly executive escalation meetings.,Open
+RISK-462,DEAL-1107,2026-04-26,Security Delay,High,Medium,Additional regression testing cycles.,Monitoring
+RISK-463,DEAL-1197,2026-03-18,Resource Constraint,Medium,High,Dedicated integration remediation task force.,Open
+RISK-464,DEAL-1161,2026-03-24,Client Dependency,Low,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-465,DEAL-1017,2026-03-13,Client Dependency,High,Medium,Dedicated integration remediation task force.,Open
+RISK-466,DEAL-1039,2026-03-23,Testing Instability,High,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-467,DEAL-1013,2026-04-14,Integration Failure,Medium,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-468,DEAL-1106,2026-02-14,Resource Constraint,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-469,DEAL-1039,2026-02-08,Resource Constraint,High,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-470,DEAL-1156,2026-02-22,Integration Failure,Low,High,Additional regression testing cycles.,Mitigated
+RISK-471,DEAL-1145,2026-02-19,Client Dependency,Medium,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-472,DEAL-1165,2026-04-23,Resource Constraint,High,High,Dedicated integration remediation task force.,Monitoring
+RISK-473,DEAL-1122,2026-03-11,Client Dependency,Medium,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-474,DEAL-1123,2026-03-19,Security Delay,Low,Critical,Additional regression testing cycles.,Open
+RISK-475,DEAL-1140,2026-02-07,Integration Failure,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-476,DEAL-1042,2026-04-08,Security Delay,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-477,DEAL-1030,2026-04-15,Security Delay,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-478,DEAL-1142,2026-04-26,Client Dependency,Low,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-479,DEAL-1056,2026-02-04,Integration Failure,High,High,Weekly executive escalation meetings.,Monitoring
+RISK-480,DEAL-1037,2026-03-03,Security Delay,Low,High,Dedicated integration remediation task force.,Monitoring
+RISK-481,DEAL-1051,2026-04-11,Testing Instability,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-482,DEAL-1080,2026-03-08,Client Dependency,High,High,Additional regression testing cycles.,Monitoring
+RISK-483,DEAL-1131,2026-03-16,Resource Constraint,Low,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-484,DEAL-1010,2026-04-07,Testing Instability,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-485,DEAL-1058,2026-02-02,Testing Instability,Medium,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-486,DEAL-1150,2026-01-31,Client Dependency,High,Critical,Dedicated integration remediation task force.,Open
+RISK-487,DEAL-1147,2026-03-16,Security Delay,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-488,DEAL-1116,2026-04-22,Testing Instability,High,High,Dedicated integration remediation task force.,Mitigated
+RISK-489,DEAL-1186,2026-04-16,Security Delay,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-490,DEAL-1005,2026-04-26,Security Delay,Low,Critical,Dedicated integration remediation task force.,Open
+RISK-491,DEAL-1087,2026-04-26,Resource Constraint,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-492,DEAL-1170,2026-03-02,Resource Constraint,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-493,DEAL-1111,2026-02-25,Security Delay,High,Medium,Additional regression testing cycles.,Open
+RISK-494,DEAL-1170,2026-03-30,Client Dependency,High,Critical,Dedicated integration remediation task force.,Open
+RISK-495,DEAL-1071,2026-04-30,Resource Constraint,Low,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-496,DEAL-1199,2026-03-26,Security Delay,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-497,DEAL-1018,2026-03-30,Security Delay,High,Medium,Dedicated integration remediation task force.,Open
+RISK-498,DEAL-1098,2026-04-17,Testing Instability,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-499,DEAL-1169,2026-02-04,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-500,DEAL-1137,2026-04-17,Client Dependency,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-501,DEAL-1077,2026-04-09,Integration Failure,High,Critical,Dedicated integration remediation task force.,Open
+RISK-502,DEAL-1040,2026-04-30,Integration Failure,High,High,Weekly executive escalation meetings.,Monitoring
+RISK-503,DEAL-1048,2026-04-23,Testing Instability,Medium,High,Weekly executive escalation meetings.,Open
+RISK-504,DEAL-1049,2026-04-29,Testing Instability,High,Medium,Additional regression testing cycles.,Mitigated
+RISK-505,DEAL-1030,2026-03-13,Security Delay,Low,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-506,DEAL-1011,2026-04-11,Integration Failure,High,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-507,DEAL-1005,2026-01-31,Client Dependency,Medium,High,Weekly executive escalation meetings.,Open
+RISK-508,DEAL-1167,2026-03-21,Integration Failure,High,Medium,Weekly executive escalation meetings.,Open
+RISK-509,DEAL-1008,2026-03-17,Resource Constraint,High,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-510,DEAL-1113,2026-02-27,Security Delay,Medium,Critical,Dedicated integration remediation task force.,Open
+RISK-511,DEAL-1111,2026-02-09,Security Delay,Low,Medium,Additional regression testing cycles.,Mitigated
+RISK-512,DEAL-1057,2026-04-21,Security Delay,High,High,Additional regression testing cycles.,Monitoring
+RISK-513,DEAL-1027,2026-03-17,Integration Failure,Medium,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-514,DEAL-1026,2026-04-07,Security Delay,High,Medium,Additional regression testing cycles.,Monitoring
+RISK-515,DEAL-1165,2026-03-31,Client Dependency,Low,Medium,Additional regression testing cycles.,Open
+RISK-516,DEAL-1051,2026-02-05,Integration Failure,High,High,Dedicated integration remediation task force.,Monitoring
+RISK-517,DEAL-1137,2026-02-25,Security Delay,Medium,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-518,DEAL-1048,2026-02-01,Security Delay,High,High,Dedicated integration remediation task force.,Mitigated
+RISK-519,DEAL-1004,2026-04-13,Resource Constraint,High,High,Additional regression testing cycles.,Open
+RISK-520,DEAL-1125,2026-04-24,Resource Constraint,High,High,Weekly executive escalation meetings.,Monitoring
+RISK-521,DEAL-1089,2026-02-17,Client Dependency,High,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-522,DEAL-1182,2026-02-02,Security Delay,Medium,High,Weekly executive escalation meetings.,Monitoring
+RISK-523,DEAL-1163,2026-04-24,Testing Instability,High,Medium,Dedicated integration remediation task force.,Open
+RISK-524,DEAL-1131,2026-03-11,Testing Instability,Low,High,Dedicated integration remediation task force.,Monitoring
+RISK-525,DEAL-1182,2026-03-25,Testing Instability,Medium,High,Additional regression testing cycles.,Open
+RISK-526,DEAL-1152,2026-03-25,Security Delay,Medium,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-527,DEAL-1157,2026-04-19,Security Delay,High,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-528,DEAL-1089,2026-03-29,Testing Instability,Low,High,Dedicated integration remediation task force.,Open
+RISK-529,DEAL-1120,2026-04-30,Client Dependency,Medium,High,Dedicated integration remediation task force.,Monitoring
+RISK-530,DEAL-1189,2026-02-24,Security Delay,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-531,DEAL-1160,2026-03-23,Testing Instability,High,Medium,Additional regression testing cycles.,Open
+RISK-532,DEAL-1144,2026-03-13,Resource Constraint,Low,Critical,Additional regression testing cycles.,Open
+RISK-533,DEAL-1121,2026-04-06,Testing Instability,Medium,Medium,Weekly executive escalation meetings.,Open
+RISK-534,DEAL-1127,2026-04-09,Security Delay,Low,High,Dedicated integration remediation task force.,Monitoring
+RISK-535,DEAL-1037,2026-04-16,Resource Constraint,Low,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-536,DEAL-1140,2026-04-24,Client Dependency,High,Medium,Weekly executive escalation meetings.,Open
+RISK-537,DEAL-1024,2026-04-19,Client Dependency,Low,Critical,Additional regression testing cycles.,Monitoring
+RISK-538,DEAL-1126,2026-04-12,Testing Instability,Medium,Critical,Additional regression testing cycles.,Open
+RISK-539,DEAL-1112,2026-03-05,Security Delay,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-540,DEAL-1130,2026-02-11,Testing Instability,High,Critical,Additional regression testing cycles.,Monitoring
+RISK-541,DEAL-1016,2026-03-02,Testing Instability,Low,High,Additional regression testing cycles.,Open
+RISK-542,DEAL-1123,2026-02-11,Testing Instability,Medium,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-543,DEAL-1059,2026-02-16,Resource Constraint,Low,Critical,Dedicated integration remediation task force.,Open
+RISK-544,DEAL-1143,2026-03-24,Client Dependency,Medium,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-545,DEAL-1168,2026-02-28,Client Dependency,High,High,Dedicated integration remediation task force.,Open
+RISK-546,DEAL-1138,2026-02-26,Client Dependency,Medium,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-547,DEAL-1032,2026-04-26,Testing Instability,Medium,Medium,Additional regression testing cycles.,Mitigated
+RISK-548,DEAL-1076,2026-03-15,Security Delay,High,High,Additional regression testing cycles.,Open
+RISK-549,DEAL-1107,2026-04-14,Security Delay,High,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-550,DEAL-1046,2026-02-03,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-551,DEAL-1058,2026-04-20,Security Delay,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-552,DEAL-1157,2026-04-14,Testing Instability,Low,Medium,Additional regression testing cycles.,Open
+RISK-553,DEAL-1075,2026-02-19,Client Dependency,Low,High,Additional regression testing cycles.,Mitigated
+RISK-554,DEAL-1141,2026-03-16,Testing Instability,High,Medium,Additional regression testing cycles.,Mitigated
+RISK-555,DEAL-1144,2026-02-17,Client Dependency,Low,Medium,Dedicated integration remediation task force.,Open
+RISK-556,DEAL-1064,2026-04-26,Client Dependency,Low,Critical,Weekly executive escalation meetings.,Open
+RISK-557,DEAL-1091,2026-03-31,Testing Instability,High,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-558,DEAL-1084,2026-02-28,Client Dependency,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-559,DEAL-1134,2026-02-09,Security Delay,Medium,Medium,Additional regression testing cycles.,Open
+RISK-560,DEAL-1199,2026-03-09,Testing Instability,High,Medium,Dedicated integration remediation task force.,Open
+RISK-561,DEAL-1067,2026-03-07,Testing Instability,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-562,DEAL-1199,2026-04-08,Client Dependency,High,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-563,DEAL-1195,2026-04-22,Client Dependency,Medium,Medium,Weekly executive escalation meetings.,Open
+RISK-564,DEAL-1073,2026-02-10,Integration Failure,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-565,DEAL-1067,2026-04-14,Integration Failure,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-566,DEAL-1016,2026-04-25,Security Delay,Medium,High,Additional regression testing cycles.,Open
+RISK-567,DEAL-1101,2026-02-06,Security Delay,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-568,DEAL-1068,2026-02-01,Client Dependency,High,High,Additional regression testing cycles.,Mitigated
+RISK-569,DEAL-1171,2026-02-15,Client Dependency,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-570,DEAL-1065,2026-04-22,Resource Constraint,Low,Medium,Dedicated integration remediation task force.,Open
+RISK-571,DEAL-1049,2026-03-27,Resource Constraint,Medium,High,Additional regression testing cycles.,Monitoring
+RISK-572,DEAL-1137,2026-03-22,Testing Instability,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-573,DEAL-1028,2026-04-07,Resource Constraint,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-574,DEAL-1072,2026-03-13,Testing Instability,High,High,Additional regression testing cycles.,Mitigated
+RISK-575,DEAL-1106,2026-04-25,Testing Instability,High,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-576,DEAL-1096,2026-03-24,Client Dependency,Medium,High,Weekly executive escalation meetings.,Monitoring
+RISK-577,DEAL-1122,2026-03-21,Security Delay,Medium,High,Weekly executive escalation meetings.,Mitigated
+RISK-578,DEAL-1194,2026-04-03,Security Delay,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-579,DEAL-1075,2026-02-04,Integration Failure,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-580,DEAL-1167,2026-03-11,Client Dependency,High,High,Dedicated integration remediation task force.,Monitoring
+RISK-581,DEAL-1006,2026-03-09,Testing Instability,Low,Critical,Additional regression testing cycles.,Monitoring
+RISK-582,DEAL-1039,2026-03-25,Security Delay,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-583,DEAL-1092,2026-02-11,Testing Instability,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-584,DEAL-1175,2026-04-14,Testing Instability,High,Medium,Additional regression testing cycles.,Mitigated
+RISK-585,DEAL-1126,2026-04-28,Security Delay,Medium,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-586,DEAL-1005,2026-03-04,Resource Constraint,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-587,DEAL-1130,2026-02-06,Resource Constraint,Medium,High,Weekly executive escalation meetings.,Open
+RISK-588,DEAL-1055,2026-03-23,Resource Constraint,Low,High,Dedicated integration remediation task force.,Open
+RISK-589,DEAL-1177,2026-04-03,Integration Failure,Medium,High,Dedicated integration remediation task force.,Monitoring
+RISK-590,DEAL-1094,2026-03-04,Security Delay,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-591,DEAL-1042,2026-04-14,Client Dependency,High,High,Additional regression testing cycles.,Monitoring
+RISK-592,DEAL-1181,2026-02-23,Integration Failure,Low,High,Additional regression testing cycles.,Monitoring
+RISK-593,DEAL-1135,2026-03-25,Resource Constraint,High,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-594,DEAL-1189,2026-04-08,Integration Failure,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-595,DEAL-1017,2026-02-16,Resource Constraint,Low,High,Additional regression testing cycles.,Mitigated
+RISK-596,DEAL-1057,2026-04-08,Security Delay,Low,Medium,Dedicated integration remediation task force.,Open
+RISK-597,DEAL-1165,2026-04-16,Integration Failure,High,High,Additional regression testing cycles.,Open
+RISK-598,DEAL-1071,2026-04-19,Client Dependency,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-599,DEAL-1189,2026-02-27,Security Delay,Low,High,Additional regression testing cycles.,Monitoring
+RISK-600,DEAL-1058,2026-04-06,Integration Failure,High,High,Dedicated integration remediation task force.,Mitigated
+RISK-601,DEAL-1154,2026-02-08,Client Dependency,High,High,Weekly executive escalation meetings.,Mitigated
+RISK-602,DEAL-1103,2026-03-19,Security Delay,Medium,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-603,DEAL-1169,2026-03-02,Client Dependency,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-604,DEAL-1120,2026-03-06,Resource Constraint,High,Medium,Weekly executive escalation meetings.,Open
+RISK-605,DEAL-1056,2026-03-07,Resource Constraint,High,Medium,Additional regression testing cycles.,Open
+RISK-606,DEAL-1126,2026-03-01,Security Delay,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-607,DEAL-1057,2026-03-01,Resource Constraint,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-608,DEAL-1117,2026-02-19,Resource Constraint,Low,Critical,Additional regression testing cycles.,Monitoring
+RISK-609,DEAL-1099,2026-03-25,Resource Constraint,High,High,Additional regression testing cycles.,Monitoring
+RISK-610,DEAL-1085,2026-04-05,Client Dependency,Low,High,Dedicated integration remediation task force.,Open
+RISK-611,DEAL-1160,2026-03-08,Integration Failure,Low,High,Additional regression testing cycles.,Mitigated
+RISK-612,DEAL-1134,2026-02-28,Testing Instability,Low,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-613,DEAL-1115,2026-02-15,Resource Constraint,High,High,Additional regression testing cycles.,Open
+RISK-614,DEAL-1196,2026-02-19,Resource Constraint,Low,Critical,Weekly executive escalation meetings.,Open
+RISK-615,DEAL-1103,2026-03-27,Client Dependency,Medium,High,Weekly executive escalation meetings.,Open
+RISK-616,DEAL-1180,2026-02-24,Resource Constraint,Low,Critical,Additional regression testing cycles.,Open
+RISK-617,DEAL-1034,2026-04-02,Resource Constraint,Medium,Critical,Additional regression testing cycles.,Monitoring
+RISK-618,DEAL-1166,2026-02-01,Integration Failure,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-619,DEAL-1110,2026-04-06,Security Delay,High,High,Additional regression testing cycles.,Monitoring
+RISK-620,DEAL-1096,2026-04-20,Security Delay,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-621,DEAL-1005,2026-04-27,Integration Failure,Medium,High,Weekly executive escalation meetings.,Mitigated
+RISK-622,DEAL-1003,2026-03-05,Resource Constraint,Medium,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-623,DEAL-1131,2026-04-16,Security Delay,High,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-624,DEAL-1017,2026-04-25,Integration Failure,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-625,DEAL-1034,2026-04-21,Client Dependency,High,High,Dedicated integration remediation task force.,Monitoring
+RISK-626,DEAL-1128,2026-04-19,Integration Failure,High,Critical,Dedicated integration remediation task force.,Open
+RISK-627,DEAL-1186,2026-04-22,Resource Constraint,High,High,Weekly executive escalation meetings.,Open
+RISK-628,DEAL-1045,2026-03-21,Testing Instability,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-629,DEAL-1110,2026-04-16,Testing Instability,Low,Medium,Dedicated integration remediation task force.,Open
+RISK-630,DEAL-1001,2026-02-15,Security Delay,High,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-631,DEAL-1046,2026-02-05,Testing Instability,Medium,High,Additional regression testing cycles.,Monitoring
+RISK-632,DEAL-1179,2026-03-04,Integration Failure,Medium,Medium,Additional regression testing cycles.,Open
+RISK-633,DEAL-1093,2026-04-25,Resource Constraint,Medium,High,Additional regression testing cycles.,Monitoring
+RISK-634,DEAL-1104,2026-02-14,Testing Instability,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-635,DEAL-1140,2026-04-14,Resource Constraint,Low,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-636,DEAL-1051,2026-02-25,Resource Constraint,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-637,DEAL-1183,2026-03-23,Client Dependency,Low,High,Dedicated integration remediation task force.,Monitoring
+RISK-638,DEAL-1117,2026-01-31,Integration Failure,Medium,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-639,DEAL-1115,2026-02-03,Integration Failure,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-640,DEAL-1081,2026-02-05,Resource Constraint,High,High,Weekly executive escalation meetings.,Open
+RISK-641,DEAL-1175,2026-03-24,Integration Failure,Low,Critical,Additional regression testing cycles.,Mitigated
+RISK-642,DEAL-1120,2026-03-01,Security Delay,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-643,DEAL-1069,2026-03-19,Integration Failure,High,High,Weekly executive escalation meetings.,Open
+RISK-644,DEAL-1106,2026-04-23,Integration Failure,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-645,DEAL-1029,2026-04-29,Resource Constraint,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-646,DEAL-1105,2026-04-11,Resource Constraint,Low,High,Weekly executive escalation meetings.,Open
+RISK-647,DEAL-1030,2026-04-18,Client Dependency,Low,Medium,Additional regression testing cycles.,Open
+RISK-648,DEAL-1121,2026-04-13,Integration Failure,Medium,High,Dedicated integration remediation task force.,Monitoring
+RISK-649,DEAL-1014,2026-02-25,Security Delay,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-650,DEAL-1064,2026-03-14,Integration Failure,Medium,Medium,Weekly executive escalation meetings.,Open
+RISK-651,DEAL-1043,2026-02-05,Security Delay,Low,High,Additional regression testing cycles.,Monitoring
+RISK-652,DEAL-1037,2026-03-24,Client Dependency,High,High,Weekly executive escalation meetings.,Monitoring
+RISK-653,DEAL-1067,2026-03-05,Testing Instability,High,Critical,Additional regression testing cycles.,Monitoring
+RISK-654,DEAL-1163,2026-03-31,Client Dependency,Low,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-655,DEAL-1093,2026-04-25,Testing Instability,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-656,DEAL-1028,2026-03-31,Client Dependency,Low,Critical,Additional regression testing cycles.,Mitigated
+RISK-657,DEAL-1067,2026-03-01,Testing Instability,Low,High,Dedicated integration remediation task force.,Mitigated
+RISK-658,DEAL-1025,2026-02-17,Integration Failure,Medium,High,Additional regression testing cycles.,Open
+RISK-659,DEAL-1158,2026-03-03,Resource Constraint,Low,High,Additional regression testing cycles.,Open
+RISK-660,DEAL-1083,2026-02-24,Client Dependency,High,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-661,DEAL-1038,2026-02-06,Resource Constraint,High,High,Additional regression testing cycles.,Open
+RISK-662,DEAL-1126,2026-04-15,Security Delay,Low,Critical,Dedicated integration remediation task force.,Open
+RISK-663,DEAL-1050,2026-03-02,Client Dependency,Medium,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-664,DEAL-1104,2026-02-10,Client Dependency,Medium,Medium,Weekly executive escalation meetings.,Open
+RISK-665,DEAL-1129,2026-03-09,Testing Instability,High,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-666,DEAL-1116,2026-03-14,Client Dependency,High,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-667,DEAL-1107,2026-04-16,Resource Constraint,High,Critical,Dedicated integration remediation task force.,Open
+RISK-668,DEAL-1030,2026-02-10,Resource Constraint,High,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-669,DEAL-1019,2026-04-09,Client Dependency,Medium,High,Dedicated integration remediation task force.,Monitoring
+RISK-670,DEAL-1127,2026-04-08,Client Dependency,High,Medium,Weekly executive escalation meetings.,Open
+RISK-671,DEAL-1109,2026-02-15,Testing Instability,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-672,DEAL-1099,2026-04-30,Resource Constraint,High,High,Dedicated integration remediation task force.,Mitigated
+RISK-673,DEAL-1138,2026-02-26,Client Dependency,Low,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-674,DEAL-1165,2026-03-20,Integration Failure,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-675,DEAL-1049,2026-03-11,Resource Constraint,High,High,Additional regression testing cycles.,Monitoring
+RISK-676,DEAL-1185,2026-03-29,Resource Constraint,High,Critical,Additional regression testing cycles.,Monitoring
+RISK-677,DEAL-1187,2026-03-10,Testing Instability,Low,Critical,Additional regression testing cycles.,Open
+RISK-678,DEAL-1014,2026-02-28,Security Delay,High,Critical,Additional regression testing cycles.,Open
+RISK-679,DEAL-1195,2026-02-25,Integration Failure,Low,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-680,DEAL-1008,2026-02-06,Testing Instability,Low,High,Dedicated integration remediation task force.,Monitoring
+RISK-681,DEAL-1043,2026-03-16,Integration Failure,High,Critical,Dedicated integration remediation task force.,Open
+RISK-682,DEAL-1080,2026-02-13,Testing Instability,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-683,DEAL-1053,2026-03-30,Security Delay,Low,Medium,Dedicated integration remediation task force.,Open
+RISK-684,DEAL-1142,2026-04-19,Integration Failure,Medium,Critical,Additional regression testing cycles.,Monitoring
+RISK-685,DEAL-1179,2026-03-08,Security Delay,Low,High,Dedicated integration remediation task force.,Mitigated
+RISK-686,DEAL-1135,2026-03-26,Client Dependency,High,Medium,Additional regression testing cycles.,Monitoring
+RISK-687,DEAL-1024,2026-03-02,Client Dependency,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-688,DEAL-1102,2026-03-10,Integration Failure,Medium,High,Weekly executive escalation meetings.,Monitoring
+RISK-689,DEAL-1180,2026-02-13,Testing Instability,Low,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-690,DEAL-1028,2026-02-03,Testing Instability,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-691,DEAL-1023,2026-02-28,Security Delay,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-692,DEAL-1187,2026-04-27,Resource Constraint,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-693,DEAL-1122,2026-04-27,Integration Failure,Low,High,Additional regression testing cycles.,Monitoring
+RISK-694,DEAL-1059,2026-02-06,Testing Instability,High,Critical,Weekly executive escalation meetings.,Open
+RISK-695,DEAL-1010,2026-02-02,Client Dependency,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-696,DEAL-1032,2026-02-04,Integration Failure,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-697,DEAL-1015,2026-04-25,Integration Failure,High,High,Additional regression testing cycles.,Mitigated
+RISK-698,DEAL-1030,2026-02-05,Security Delay,Low,High,Weekly executive escalation meetings.,Open
+RISK-699,DEAL-1182,2026-02-28,Client Dependency,High,Medium,Additional regression testing cycles.,Monitoring
+RISK-700,DEAL-1142,2026-04-21,Resource Constraint,Low,Medium,Dedicated integration remediation task force.,Open
+RISK-701,DEAL-1052,2026-04-18,Client Dependency,High,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-702,DEAL-1196,2026-02-04,Security Delay,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-703,DEAL-1171,2026-02-26,Testing Instability,High,Medium,Weekly executive escalation meetings.,Open
+RISK-704,DEAL-1132,2026-03-06,Integration Failure,Low,High,Weekly executive escalation meetings.,Open
+RISK-705,DEAL-1077,2026-04-29,Security Delay,Low,High,Weekly executive escalation meetings.,Open
+RISK-706,DEAL-1118,2026-04-30,Security Delay,Medium,High,Weekly executive escalation meetings.,Monitoring
+RISK-707,DEAL-1147,2026-04-04,Testing Instability,Low,Critical,Additional regression testing cycles.,Open
+RISK-708,DEAL-1176,2026-02-05,Security Delay,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-709,DEAL-1139,2026-02-28,Integration Failure,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-710,DEAL-1031,2026-04-27,Integration Failure,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-711,DEAL-1132,2026-04-27,Integration Failure,Low,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-712,DEAL-1137,2026-02-05,Integration Failure,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-713,DEAL-1191,2026-02-01,Client Dependency,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-714,DEAL-1156,2026-03-22,Testing Instability,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-715,DEAL-1010,2026-03-18,Resource Constraint,Medium,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-716,DEAL-1029,2026-03-04,Testing Instability,Medium,High,Additional regression testing cycles.,Open
+RISK-717,DEAL-1142,2026-04-03,Testing Instability,High,High,Weekly executive escalation meetings.,Monitoring
+RISK-718,DEAL-1069,2026-02-12,Client Dependency,Low,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-719,DEAL-1162,2026-03-30,Resource Constraint,High,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-720,DEAL-1070,2026-02-25,Security Delay,Low,Critical,Dedicated integration remediation task force.,Open
+RISK-721,DEAL-1084,2026-03-24,Security Delay,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-722,DEAL-1082,2026-04-22,Testing Instability,Medium,High,Weekly executive escalation meetings.,Open
+RISK-723,DEAL-1083,2026-04-25,Testing Instability,Medium,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-724,DEAL-1154,2026-02-20,Resource Constraint,High,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-725,DEAL-1147,2026-04-11,Client Dependency,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-726,DEAL-1122,2026-04-07,Resource Constraint,High,Critical,Dedicated integration remediation task force.,Open
+RISK-727,DEAL-1148,2026-02-22,Testing Instability,High,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-728,DEAL-1197,2026-03-31,Testing Instability,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-729,DEAL-1100,2026-04-20,Resource Constraint,Low,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-730,DEAL-1153,2026-04-30,Testing Instability,Low,High,Dedicated integration remediation task force.,Open
+RISK-731,DEAL-1034,2026-03-19,Client Dependency,High,Critical,Dedicated integration remediation task force.,Open
+RISK-732,DEAL-1005,2026-04-01,Security Delay,Low,High,Additional regression testing cycles.,Mitigated
+RISK-733,DEAL-1050,2026-03-21,Client Dependency,High,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-734,DEAL-1059,2026-03-14,Client Dependency,Low,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-735,DEAL-1052,2026-03-11,Integration Failure,Medium,High,Weekly executive escalation meetings.,Mitigated
+RISK-736,DEAL-1037,2026-03-11,Resource Constraint,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-737,DEAL-1060,2026-04-05,Resource Constraint,Medium,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-738,DEAL-1179,2026-03-14,Integration Failure,High,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-739,DEAL-1037,2026-02-02,Testing Instability,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-740,DEAL-1092,2026-04-27,Resource Constraint,High,Critical,Additional regression testing cycles.,Open
+RISK-741,DEAL-1200,2026-04-13,Client Dependency,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-742,DEAL-1125,2026-02-28,Testing Instability,Low,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-743,DEAL-1172,2026-03-17,Client Dependency,Low,Critical,Additional regression testing cycles.,Mitigated
+RISK-744,DEAL-1167,2026-03-03,Testing Instability,Medium,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-745,DEAL-1004,2026-03-31,Security Delay,High,High,Additional regression testing cycles.,Open
+RISK-746,DEAL-1019,2026-02-08,Client Dependency,High,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-747,DEAL-1137,2026-04-13,Client Dependency,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-748,DEAL-1124,2026-03-25,Integration Failure,High,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-749,DEAL-1060,2026-04-16,Client Dependency,High,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-750,DEAL-1025,2026-02-11,Testing Instability,High,High,Weekly executive escalation meetings.,Mitigated
+RISK-751,DEAL-1049,2026-02-02,Integration Failure,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-752,DEAL-1063,2026-02-27,Security Delay,High,High,Weekly executive escalation meetings.,Mitigated
+RISK-753,DEAL-1078,2026-02-23,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-754,DEAL-1143,2026-03-23,Testing Instability,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-755,DEAL-1168,2026-04-29,Testing Instability,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-756,DEAL-1087,2026-02-25,Testing Instability,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-757,DEAL-1005,2026-03-18,Testing Instability,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-758,DEAL-1112,2026-03-29,Resource Constraint,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-759,DEAL-1089,2026-04-21,Integration Failure,Medium,High,Dedicated integration remediation task force.,Open
+RISK-760,DEAL-1198,2026-02-08,Security Delay,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-761,DEAL-1009,2026-03-25,Resource Constraint,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-762,DEAL-1105,2026-02-06,Resource Constraint,Medium,Medium,Weekly executive escalation meetings.,Open
+RISK-763,DEAL-1149,2026-04-22,Resource Constraint,Low,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-764,DEAL-1009,2026-02-07,Client Dependency,Medium,High,Weekly executive escalation meetings.,Open
+RISK-765,DEAL-1121,2026-04-17,Client Dependency,High,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-766,DEAL-1179,2026-04-20,Security Delay,High,Medium,Additional regression testing cycles.,Mitigated
+RISK-767,DEAL-1119,2026-03-25,Resource Constraint,Low,Medium,Additional regression testing cycles.,Open
+RISK-768,DEAL-1100,2026-04-28,Testing Instability,Low,High,Weekly executive escalation meetings.,Open
+RISK-769,DEAL-1133,2026-03-07,Security Delay,Low,Medium,Additional regression testing cycles.,Open
+RISK-770,DEAL-1051,2026-04-21,Resource Constraint,Medium,Critical,Additional regression testing cycles.,Open
+RISK-771,DEAL-1185,2026-03-10,Testing Instability,High,Critical,Additional regression testing cycles.,Open
+RISK-772,DEAL-1126,2026-03-13,Security Delay,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-773,DEAL-1066,2026-02-15,Resource Constraint,High,Critical,Weekly executive escalation meetings.,Open
+RISK-774,DEAL-1043,2026-04-03,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-775,DEAL-1002,2026-02-12,Integration Failure,Low,Critical,Additional regression testing cycles.,Open
+RISK-776,DEAL-1158,2026-02-27,Testing Instability,Medium,Medium,Additional regression testing cycles.,Mitigated
+RISK-777,DEAL-1151,2026-03-19,Security Delay,Medium,High,Additional regression testing cycles.,Monitoring
+RISK-778,DEAL-1094,2026-03-10,Integration Failure,High,High,Dedicated integration remediation task force.,Open
+RISK-779,DEAL-1043,2026-04-16,Integration Failure,Low,High,Dedicated integration remediation task force.,Open
+RISK-780,DEAL-1025,2026-04-17,Security Delay,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-781,DEAL-1173,2026-04-20,Client Dependency,Low,High,Dedicated integration remediation task force.,Monitoring
+RISK-782,DEAL-1048,2026-02-01,Testing Instability,Medium,Medium,Weekly executive escalation meetings.,Open
+RISK-783,DEAL-1114,2026-03-26,Testing Instability,Medium,High,Weekly executive escalation meetings.,Mitigated
+RISK-784,DEAL-1188,2026-02-22,Testing Instability,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-785,DEAL-1028,2026-04-29,Testing Instability,Low,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-786,DEAL-1081,2026-04-18,Integration Failure,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-787,DEAL-1015,2026-04-18,Testing Instability,Medium,High,Weekly executive escalation meetings.,Monitoring
+RISK-788,DEAL-1185,2026-04-20,Client Dependency,Medium,Medium,Additional regression testing cycles.,Mitigated
+RISK-789,DEAL-1101,2026-03-18,Integration Failure,High,Medium,Additional regression testing cycles.,Open
+RISK-790,DEAL-1056,2026-04-04,Client Dependency,Low,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-791,DEAL-1194,2026-04-06,Resource Constraint,Low,High,Additional regression testing cycles.,Mitigated
+RISK-792,DEAL-1097,2026-04-05,Integration Failure,High,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-793,DEAL-1121,2026-03-10,Integration Failure,Low,High,Dedicated integration remediation task force.,Monitoring
+RISK-794,DEAL-1066,2026-02-23,Security Delay,Medium,Critical,Additional regression testing cycles.,Open
+RISK-795,DEAL-1019,2026-04-22,Security Delay,High,Critical,Additional regression testing cycles.,Open
+RISK-796,DEAL-1106,2026-04-08,Client Dependency,Low,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-797,DEAL-1110,2026-03-23,Client Dependency,Low,High,Dedicated integration remediation task force.,Open
+RISK-798,DEAL-1157,2026-04-22,Resource Constraint,Medium,High,Dedicated integration remediation task force.,Open
+RISK-799,DEAL-1154,2026-02-07,Testing Instability,High,Critical,Weekly executive escalation meetings.,Open
+RISK-800,DEAL-1080,2026-04-14,Client Dependency,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-801,DEAL-1046,2026-04-17,Integration Failure,Medium,High,Weekly executive escalation meetings.,Open
+RISK-802,DEAL-1003,2026-02-03,Testing Instability,Low,Critical,Additional regression testing cycles.,Mitigated
+RISK-803,DEAL-1049,2026-02-28,Security Delay,Medium,Critical,Additional regression testing cycles.,Open
+RISK-804,DEAL-1069,2026-03-24,Resource Constraint,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-805,DEAL-1071,2026-03-12,Integration Failure,Low,High,Additional regression testing cycles.,Mitigated
+RISK-806,DEAL-1158,2026-03-11,Security Delay,High,Critical,Dedicated integration remediation task force.,Open
+RISK-807,DEAL-1108,2026-03-31,Testing Instability,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-808,DEAL-1068,2026-04-23,Client Dependency,Medium,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-809,DEAL-1187,2026-04-01,Integration Failure,High,High,Additional regression testing cycles.,Mitigated
+RISK-810,DEAL-1197,2026-02-17,Integration Failure,Low,Medium,Additional regression testing cycles.,Open
+RISK-811,DEAL-1097,2026-02-11,Security Delay,Low,Critical,Weekly executive escalation meetings.,Open
+RISK-812,DEAL-1062,2026-03-28,Security Delay,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-813,DEAL-1103,2026-02-07,Testing Instability,Low,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-814,DEAL-1054,2026-04-25,Integration Failure,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-815,DEAL-1177,2026-04-17,Security Delay,Low,High,Additional regression testing cycles.,Monitoring
+RISK-816,DEAL-1094,2026-04-12,Client Dependency,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-817,DEAL-1093,2026-03-30,Resource Constraint,High,High,Weekly executive escalation meetings.,Open
+RISK-818,DEAL-1142,2026-04-20,Testing Instability,High,High,Weekly executive escalation meetings.,Mitigated
+RISK-819,DEAL-1013,2026-02-20,Testing Instability,Low,Medium,Additional regression testing cycles.,Mitigated
+RISK-820,DEAL-1023,2026-02-01,Client Dependency,High,High,Dedicated integration remediation task force.,Mitigated
+RISK-821,DEAL-1196,2026-04-02,Integration Failure,Low,High,Dedicated integration remediation task force.,Open
+RISK-822,DEAL-1012,2026-02-11,Resource Constraint,Medium,Critical,Weekly executive escalation meetings.,Open
+RISK-823,DEAL-1067,2026-01-31,Security Delay,High,Critical,Dedicated integration remediation task force.,Open
+RISK-824,DEAL-1022,2026-03-05,Testing Instability,High,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-825,DEAL-1042,2026-02-14,Security Delay,Medium,High,Weekly executive escalation meetings.,Monitoring
+RISK-826,DEAL-1029,2026-03-05,Client Dependency,Medium,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-827,DEAL-1104,2026-03-21,Client Dependency,Low,Critical,Dedicated integration remediation task force.,Open
+RISK-828,DEAL-1180,2026-02-27,Security Delay,High,Medium,Additional regression testing cycles.,Open
+RISK-829,DEAL-1130,2026-03-21,Resource Constraint,Medium,High,Additional regression testing cycles.,Open
+RISK-830,DEAL-1151,2026-02-06,Client Dependency,High,High,Dedicated integration remediation task force.,Monitoring
+RISK-831,DEAL-1196,2026-04-26,Testing Instability,Medium,Critical,Dedicated integration remediation task force.,Open
+RISK-832,DEAL-1049,2026-02-04,Integration Failure,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-833,DEAL-1062,2026-04-03,Resource Constraint,Low,Medium,Additional regression testing cycles.,Mitigated
+RISK-834,DEAL-1196,2026-02-23,Testing Instability,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-835,DEAL-1120,2026-03-13,Testing Instability,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-836,DEAL-1165,2026-04-12,Security Delay,Medium,High,Dedicated integration remediation task force.,Open
+RISK-837,DEAL-1199,2026-02-26,Testing Instability,Medium,High,Additional regression testing cycles.,Open
+RISK-838,DEAL-1017,2026-04-02,Client Dependency,Medium,High,Additional regression testing cycles.,Open
+RISK-839,DEAL-1166,2026-02-21,Client Dependency,Medium,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-840,DEAL-1079,2026-02-20,Client Dependency,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-841,DEAL-1110,2026-03-07,Integration Failure,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-842,DEAL-1140,2026-02-26,Security Delay,High,Critical,Additional regression testing cycles.,Monitoring
+RISK-843,DEAL-1073,2026-04-10,Integration Failure,Low,Medium,Additional regression testing cycles.,Mitigated
+RISK-844,DEAL-1139,2026-03-07,Client Dependency,Low,High,Dedicated integration remediation task force.,Mitigated
+RISK-845,DEAL-1188,2026-02-23,Security Delay,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-846,DEAL-1151,2026-04-17,Resource Constraint,Medium,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-847,DEAL-1102,2026-02-17,Testing Instability,Low,Medium,Additional regression testing cycles.,Mitigated
+RISK-848,DEAL-1096,2026-02-28,Integration Failure,Medium,Critical,Dedicated integration remediation task force.,Open
+RISK-849,DEAL-1140,2026-03-02,Resource Constraint,Medium,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-850,DEAL-1144,2026-04-08,Testing Instability,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-851,DEAL-1006,2026-04-03,Integration Failure,High,High,Weekly executive escalation meetings.,Mitigated
+RISK-852,DEAL-1096,2026-02-22,Integration Failure,High,High,Additional regression testing cycles.,Open
+RISK-853,DEAL-1185,2026-02-03,Integration Failure,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-854,DEAL-1163,2026-02-24,Integration Failure,High,High,Dedicated integration remediation task force.,Open
+RISK-855,DEAL-1121,2026-04-26,Security Delay,High,Medium,Additional regression testing cycles.,Mitigated
+RISK-856,DEAL-1022,2026-04-07,Security Delay,High,Medium,Weekly executive escalation meetings.,Open
+RISK-857,DEAL-1059,2026-02-15,Security Delay,Medium,High,Weekly executive escalation meetings.,Open
+RISK-858,DEAL-1024,2026-03-06,Integration Failure,High,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-859,DEAL-1200,2026-02-27,Resource Constraint,Medium,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-860,DEAL-1101,2026-03-28,Resource Constraint,Medium,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-861,DEAL-1094,2026-03-06,Resource Constraint,Medium,High,Additional regression testing cycles.,Monitoring
+RISK-862,DEAL-1137,2026-04-22,Client Dependency,High,High,Additional regression testing cycles.,Monitoring
+RISK-863,DEAL-1069,2026-03-01,Client Dependency,High,High,Weekly executive escalation meetings.,Open
+RISK-864,DEAL-1148,2026-02-11,Resource Constraint,Medium,Critical,Additional regression testing cycles.,Monitoring
+RISK-865,DEAL-1023,2026-01-31,Integration Failure,Medium,High,Weekly executive escalation meetings.,Mitigated
+RISK-866,DEAL-1072,2026-04-19,Client Dependency,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-867,DEAL-1009,2026-03-02,Resource Constraint,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-868,DEAL-1158,2026-02-06,Integration Failure,High,High,Additional regression testing cycles.,Monitoring
+RISK-869,DEAL-1198,2026-04-07,Integration Failure,High,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-870,DEAL-1045,2026-02-16,Security Delay,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-871,DEAL-1017,2026-02-07,Resource Constraint,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-872,DEAL-1050,2026-03-25,Integration Failure,High,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-873,DEAL-1012,2026-03-11,Client Dependency,Medium,High,Dedicated integration remediation task force.,Open
+RISK-874,DEAL-1158,2026-03-07,Integration Failure,Low,High,Additional regression testing cycles.,Monitoring
+RISK-875,DEAL-1095,2026-03-23,Integration Failure,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-876,DEAL-1186,2026-04-09,Integration Failure,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-877,DEAL-1140,2026-02-18,Security Delay,High,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-878,DEAL-1176,2026-02-21,Testing Instability,Medium,Medium,Additional regression testing cycles.,Mitigated
+RISK-879,DEAL-1099,2026-03-02,Client Dependency,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-880,DEAL-1011,2026-02-06,Client Dependency,Medium,Critical,Dedicated integration remediation task force.,Open
+RISK-881,DEAL-1101,2026-03-28,Testing Instability,Low,Critical,Additional regression testing cycles.,Monitoring
+RISK-882,DEAL-1013,2026-04-04,Client Dependency,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-883,DEAL-1178,2026-02-18,Resource Constraint,Medium,Critical,Additional regression testing cycles.,Open
+RISK-884,DEAL-1047,2026-03-01,Security Delay,Low,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-885,DEAL-1005,2026-02-25,Integration Failure,Medium,Critical,Dedicated integration remediation task force.,Open
+RISK-886,DEAL-1123,2026-03-02,Integration Failure,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-887,DEAL-1070,2026-04-19,Security Delay,High,Medium,Weekly executive escalation meetings.,Open
+RISK-888,DEAL-1169,2026-02-10,Client Dependency,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-889,DEAL-1184,2026-04-19,Integration Failure,High,Critical,Additional regression testing cycles.,Monitoring
+RISK-890,DEAL-1018,2026-03-27,Integration Failure,Low,High,Dedicated integration remediation task force.,Mitigated
+RISK-891,DEAL-1107,2026-04-01,Resource Constraint,Medium,Critical,Weekly executive escalation meetings.,Open
+RISK-892,DEAL-1184,2026-03-26,Resource Constraint,Low,High,Dedicated integration remediation task force.,Mitigated
+RISK-893,DEAL-1037,2026-03-05,Client Dependency,Low,High,Additional regression testing cycles.,Monitoring
+RISK-894,DEAL-1038,2026-04-30,Security Delay,Low,High,Additional regression testing cycles.,Open
+RISK-895,DEAL-1088,2026-03-29,Resource Constraint,Low,High,Additional regression testing cycles.,Open
+RISK-896,DEAL-1156,2026-03-06,Resource Constraint,Low,Critical,Dedicated integration remediation task force.,Open
+RISK-897,DEAL-1162,2026-04-24,Client Dependency,Medium,Critical,Additional regression testing cycles.,Mitigated
+RISK-898,DEAL-1140,2026-03-09,Client Dependency,Low,High,Additional regression testing cycles.,Open
+RISK-899,DEAL-1042,2026-02-01,Security Delay,Low,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-900,DEAL-1017,2026-04-24,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-901,DEAL-1182,2026-02-11,Testing Instability,Low,Critical,Additional regression testing cycles.,Monitoring
+RISK-902,DEAL-1155,2026-04-14,Resource Constraint,Medium,High,Dedicated integration remediation task force.,Monitoring
+RISK-903,DEAL-1076,2026-04-28,Resource Constraint,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-904,DEAL-1102,2026-04-29,Client Dependency,High,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-905,DEAL-1179,2026-04-06,Integration Failure,Medium,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-906,DEAL-1146,2026-02-24,Testing Instability,Low,High,Additional regression testing cycles.,Mitigated
+RISK-907,DEAL-1029,2026-03-08,Integration Failure,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-908,DEAL-1023,2026-03-19,Resource Constraint,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-909,DEAL-1044,2026-02-11,Security Delay,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-910,DEAL-1003,2026-02-07,Client Dependency,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-911,DEAL-1022,2026-04-23,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-912,DEAL-1087,2026-02-18,Resource Constraint,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-913,DEAL-1039,2026-04-29,Integration Failure,High,High,Dedicated integration remediation task force.,Monitoring
+RISK-914,DEAL-1178,2026-02-25,Testing Instability,High,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-915,DEAL-1159,2026-03-19,Security Delay,High,Critical,Weekly executive escalation meetings.,Open
+RISK-916,DEAL-1016,2026-02-08,Resource Constraint,Low,High,Additional regression testing cycles.,Open
+RISK-917,DEAL-1131,2026-02-15,Client Dependency,Medium,Critical,Additional regression testing cycles.,Monitoring
+RISK-918,DEAL-1154,2026-04-28,Client Dependency,High,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-919,DEAL-1034,2026-03-18,Client Dependency,Low,Critical,Additional regression testing cycles.,Open
+RISK-920,DEAL-1016,2026-03-05,Testing Instability,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-921,DEAL-1021,2026-02-15,Resource Constraint,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-922,DEAL-1126,2026-04-19,Security Delay,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-923,DEAL-1131,2026-04-06,Integration Failure,Medium,Critical,Weekly executive escalation meetings.,Open
+RISK-924,DEAL-1064,2026-03-02,Resource Constraint,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-925,DEAL-1174,2026-04-09,Resource Constraint,Medium,Critical,Dedicated integration remediation task force.,Open
+RISK-926,DEAL-1183,2026-03-21,Security Delay,Low,Medium,Additional regression testing cycles.,Open
+RISK-927,DEAL-1046,2026-02-14,Testing Instability,Medium,High,Weekly executive escalation meetings.,Open
+RISK-928,DEAL-1191,2026-03-03,Integration Failure,Medium,Medium,Additional regression testing cycles.,Open
+RISK-929,DEAL-1162,2026-04-03,Security Delay,High,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-930,DEAL-1152,2026-02-14,Integration Failure,Medium,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-931,DEAL-1139,2026-03-28,Integration Failure,Low,Critical,Weekly executive escalation meetings.,Open
+RISK-932,DEAL-1144,2026-02-09,Security Delay,Medium,High,Dedicated integration remediation task force.,Open
+RISK-933,DEAL-1031,2026-03-09,Testing Instability,Low,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-934,DEAL-1182,2026-04-14,Integration Failure,Low,High,Additional regression testing cycles.,Mitigated
+RISK-935,DEAL-1189,2026-02-12,Client Dependency,Medium,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-936,DEAL-1015,2026-03-20,Resource Constraint,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-937,DEAL-1030,2026-04-12,Integration Failure,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-938,DEAL-1029,2026-02-10,Security Delay,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-939,DEAL-1079,2026-04-20,Integration Failure,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-940,DEAL-1016,2026-03-10,Testing Instability,Medium,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-941,DEAL-1111,2026-02-09,Testing Instability,High,High,Dedicated integration remediation task force.,Monitoring
+RISK-942,DEAL-1081,2026-02-07,Integration Failure,Low,High,Dedicated integration remediation task force.,Monitoring
+RISK-943,DEAL-1123,2026-02-15,Resource Constraint,Low,Critical,Weekly executive escalation meetings.,Open
+RISK-944,DEAL-1068,2026-03-13,Integration Failure,High,Critical,Dedicated integration remediation task force.,Open
+RISK-945,DEAL-1138,2026-02-16,Client Dependency,Low,Critical,Additional regression testing cycles.,Monitoring
+RISK-946,DEAL-1022,2026-04-23,Security Delay,Medium,Medium,Weekly executive escalation meetings.,Open
+RISK-947,DEAL-1111,2026-02-27,Client Dependency,Medium,High,Weekly executive escalation meetings.,Mitigated
+RISK-948,DEAL-1177,2026-04-19,Integration Failure,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-949,DEAL-1038,2026-03-24,Testing Instability,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-950,DEAL-1042,2026-02-10,Client Dependency,Low,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-951,DEAL-1141,2026-03-21,Security Delay,Low,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-952,DEAL-1078,2026-03-08,Security Delay,High,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-953,DEAL-1138,2026-03-22,Testing Instability,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-954,DEAL-1174,2026-03-21,Client Dependency,High,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-955,DEAL-1059,2026-04-08,Client Dependency,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-956,DEAL-1151,2026-02-20,Integration Failure,Low,Critical,Dedicated integration remediation task force.,Open
+RISK-957,DEAL-1121,2026-03-25,Security Delay,High,High,Additional regression testing cycles.,Monitoring
+RISK-958,DEAL-1054,2026-02-02,Client Dependency,Medium,Medium,Weekly executive escalation meetings.,Open
+RISK-959,DEAL-1121,2026-02-05,Integration Failure,High,Medium,Dedicated integration remediation task force.,Open
+RISK-960,DEAL-1002,2026-04-13,Client Dependency,High,High,Dedicated integration remediation task force.,Open
+RISK-961,DEAL-1118,2026-03-20,Resource Constraint,Medium,High,Weekly executive escalation meetings.,Open
+RISK-962,DEAL-1118,2026-04-15,Integration Failure,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-963,DEAL-1136,2026-02-27,Testing Instability,Low,High,Weekly executive escalation meetings.,Open
+RISK-964,DEAL-1159,2026-02-28,Client Dependency,Low,Critical,Additional regression testing cycles.,Mitigated
+RISK-965,DEAL-1018,2026-03-11,Security Delay,Low,Critical,Additional regression testing cycles.,Open
+RISK-966,DEAL-1167,2026-02-27,Testing Instability,Medium,Critical,Dedicated integration remediation task force.,Open
+RISK-967,DEAL-1086,2026-03-14,Client Dependency,High,High,Additional regression testing cycles.,Mitigated
+RISK-968,DEAL-1044,2026-03-03,Security Delay,Low,High,Additional regression testing cycles.,Monitoring
+RISK-969,DEAL-1045,2026-03-24,Testing Instability,High,Critical,Dedicated integration remediation task force.,Open
+RISK-970,DEAL-1093,2026-04-06,Testing Instability,Low,Medium,Dedicated integration remediation task force.,Open
+RISK-971,DEAL-1156,2026-04-03,Security Delay,High,Medium,Additional regression testing cycles.,Monitoring
+RISK-972,DEAL-1001,2026-03-08,Resource Constraint,High,High,Additional regression testing cycles.,Open
+RISK-973,DEAL-1084,2026-03-26,Security Delay,Low,High,Dedicated integration remediation task force.,Open
+RISK-974,DEAL-1192,2026-02-12,Resource Constraint,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-975,DEAL-1179,2026-04-25,Client Dependency,High,Critical,Additional regression testing cycles.,Open
+RISK-976,DEAL-1035,2026-02-02,Testing Instability,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-977,DEAL-1085,2026-02-11,Security Delay,High,Critical,Weekly executive escalation meetings.,Open
+RISK-978,DEAL-1116,2026-03-11,Integration Failure,High,Medium,Additional regression testing cycles.,Monitoring
+RISK-979,DEAL-1034,2026-04-20,Testing Instability,Medium,Critical,Weekly executive escalation meetings.,Open
+RISK-980,DEAL-1029,2026-03-24,Client Dependency,High,Medium,Additional regression testing cycles.,Monitoring
+RISK-981,DEAL-1030,2026-03-05,Resource Constraint,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-982,DEAL-1200,2026-02-05,Testing Instability,Medium,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-983,DEAL-1108,2026-02-14,Resource Constraint,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-984,DEAL-1174,2026-02-19,Client Dependency,Medium,High,Dedicated integration remediation task force.,Monitoring
+RISK-985,DEAL-1183,2026-01-31,Resource Constraint,Low,High,Weekly executive escalation meetings.,Open
+RISK-986,DEAL-1070,2026-02-03,Testing Instability,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-987,DEAL-1097,2026-02-02,Testing Instability,High,Medium,Weekly executive escalation meetings.,Open
+RISK-988,DEAL-1007,2026-03-12,Integration Failure,High,High,Weekly executive escalation meetings.,Open
+RISK-989,DEAL-1004,2026-04-09,Client Dependency,Medium,Critical,Additional regression testing cycles.,Open
+RISK-990,DEAL-1076,2026-03-16,Security Delay,Medium,Medium,Additional regression testing cycles.,Mitigated
+RISK-991,DEAL-1119,2026-03-26,Client Dependency,High,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-992,DEAL-1183,2026-03-15,Testing Instability,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-993,DEAL-1007,2026-04-11,Resource Constraint,Medium,High,Weekly executive escalation meetings.,Mitigated
+RISK-994,DEAL-1137,2026-04-16,Resource Constraint,High,Medium,Weekly executive escalation meetings.,Open
+RISK-995,DEAL-1070,2026-04-24,Security Delay,Medium,Critical,Dedicated integration remediation task force.,Open
+RISK-996,DEAL-1093,2026-04-23,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-997,DEAL-1184,2026-03-01,Integration Failure,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-998,DEAL-1051,2026-04-05,Security Delay,Low,Medium,Additional regression testing cycles.,Mitigated
+RISK-999,DEAL-1146,2026-03-16,Security Delay,Medium,High,Weekly executive escalation meetings.,Mitigated
+RISK-1000,DEAL-1158,2026-04-30,Integration Failure,High,Critical,Weekly executive escalation meetings.,Open
+RISK-1001,DEAL-1128,2026-04-23,Integration Failure,Medium,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-1002,DEAL-1059,2026-02-02,Resource Constraint,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-1003,DEAL-1141,2026-04-21,Testing Instability,Low,High,Weekly executive escalation meetings.,Open
+RISK-1004,DEAL-1097,2026-04-06,Resource Constraint,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-1005,DEAL-1091,2026-04-16,Testing Instability,High,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-1006,DEAL-1134,2026-04-09,Testing Instability,Low,Medium,Additional regression testing cycles.,Mitigated
+RISK-1007,DEAL-1111,2026-04-23,Resource Constraint,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-1008,DEAL-1178,2026-01-31,Testing Instability,Medium,Medium,Additional regression testing cycles.,Mitigated
+RISK-1009,DEAL-1133,2026-04-19,Resource Constraint,High,Critical,Additional regression testing cycles.,Monitoring
+RISK-1010,DEAL-1088,2026-04-03,Security Delay,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-1011,DEAL-1149,2026-03-03,Security Delay,Low,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-1012,DEAL-1019,2026-04-11,Client Dependency,High,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-1013,DEAL-1045,2026-04-30,Client Dependency,High,Medium,Dedicated integration remediation task force.,Open
+RISK-1014,DEAL-1187,2026-02-13,Security Delay,High,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-1015,DEAL-1178,2026-03-18,Client Dependency,Medium,High,Dedicated integration remediation task force.,Open
+RISK-1016,DEAL-1088,2026-03-23,Integration Failure,Low,Critical,Weekly executive escalation meetings.,Open
+RISK-1017,DEAL-1110,2026-02-13,Client Dependency,Medium,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-1018,DEAL-1140,2026-02-21,Integration Failure,Low,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-1019,DEAL-1197,2026-04-19,Integration Failure,High,High,Weekly executive escalation meetings.,Open
+RISK-1020,DEAL-1106,2026-02-08,Resource Constraint,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-1021,DEAL-1191,2026-03-05,Client Dependency,High,High,Weekly executive escalation meetings.,Mitigated
+RISK-1022,DEAL-1165,2026-04-13,Integration Failure,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-1023,DEAL-1061,2026-02-11,Client Dependency,High,Critical,Additional regression testing cycles.,Open
+RISK-1024,DEAL-1118,2026-03-16,Testing Instability,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-1025,DEAL-1043,2026-04-25,Resource Constraint,Medium,High,Additional regression testing cycles.,Monitoring
+RISK-1026,DEAL-1059,2026-03-23,Integration Failure,Medium,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-1027,DEAL-1058,2026-03-21,Testing Instability,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-1028,DEAL-1162,2026-02-09,Resource Constraint,High,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-1029,DEAL-1143,2026-03-09,Security Delay,High,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-1030,DEAL-1008,2026-04-29,Testing Instability,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-1031,DEAL-1022,2026-03-12,Resource Constraint,Low,High,Dedicated integration remediation task force.,Open
+RISK-1032,DEAL-1023,2026-03-27,Testing Instability,Medium,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-1033,DEAL-1171,2026-04-27,Client Dependency,High,High,Additional regression testing cycles.,Monitoring
+RISK-1034,DEAL-1063,2026-03-19,Security Delay,Low,Critical,Additional regression testing cycles.,Mitigated
+RISK-1035,DEAL-1148,2026-02-02,Integration Failure,Medium,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-1036,DEAL-1186,2026-03-12,Testing Instability,Low,High,Dedicated integration remediation task force.,Mitigated
+RISK-1037,DEAL-1071,2026-04-14,Testing Instability,High,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-1038,DEAL-1067,2026-04-10,Integration Failure,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-1039,DEAL-1057,2026-03-08,Client Dependency,Low,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-1040,DEAL-1070,2026-02-12,Integration Failure,Low,High,Dedicated integration remediation task force.,Mitigated
+RISK-1041,DEAL-1039,2026-04-01,Security Delay,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-1042,DEAL-1064,2026-03-12,Client Dependency,Low,Medium,Dedicated integration remediation task force.,Open
+RISK-1043,DEAL-1162,2026-03-16,Client Dependency,High,High,Weekly executive escalation meetings.,Monitoring
+RISK-1044,DEAL-1028,2026-03-15,Client Dependency,Low,Critical,Additional regression testing cycles.,Monitoring
+RISK-1045,DEAL-1014,2026-02-06,Integration Failure,High,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-1046,DEAL-1138,2026-04-20,Integration Failure,High,Critical,Additional regression testing cycles.,Monitoring
+RISK-1047,DEAL-1078,2026-03-25,Integration Failure,Medium,High,Additional regression testing cycles.,Open
+RISK-1048,DEAL-1061,2026-03-04,Integration Failure,Low,High,Weekly executive escalation meetings.,Open
+RISK-1049,DEAL-1067,2026-04-06,Security Delay,High,Critical,Additional regression testing cycles.,Monitoring
+RISK-1050,DEAL-1196,2026-02-04,Integration Failure,High,High,Weekly executive escalation meetings.,Mitigated
+RISK-1051,DEAL-1061,2026-03-20,Testing Instability,Low,High,Additional regression testing cycles.,Open
+RISK-1052,DEAL-1068,2026-03-25,Integration Failure,High,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-1053,DEAL-1175,2026-02-22,Resource Constraint,High,High,Additional regression testing cycles.,Mitigated
+RISK-1054,DEAL-1100,2026-03-11,Client Dependency,Low,Critical,Additional regression testing cycles.,Mitigated
+RISK-1055,DEAL-1199,2026-04-16,Resource Constraint,Low,Critical,Weekly executive escalation meetings.,Open
+RISK-1056,DEAL-1040,2026-03-27,Integration Failure,Low,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-1057,DEAL-1143,2026-03-11,Client Dependency,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-1058,DEAL-1140,2026-04-03,Testing Instability,High,High,Weekly executive escalation meetings.,Monitoring
+RISK-1059,DEAL-1080,2026-03-07,Resource Constraint,High,High,Additional regression testing cycles.,Mitigated
+RISK-1060,DEAL-1002,2026-02-01,Resource Constraint,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-1061,DEAL-1070,2026-03-29,Testing Instability,High,High,Additional regression testing cycles.,Open
+RISK-1062,DEAL-1180,2026-02-25,Resource Constraint,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-1063,DEAL-1110,2026-03-18,Client Dependency,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-1064,DEAL-1012,2026-03-21,Client Dependency,High,High,Weekly executive escalation meetings.,Monitoring
+RISK-1065,DEAL-1157,2026-02-21,Client Dependency,Medium,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-1066,DEAL-1092,2026-02-25,Client Dependency,Medium,High,Weekly executive escalation meetings.,Open
+RISK-1067,DEAL-1184,2026-04-23,Testing Instability,Low,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-1068,DEAL-1191,2026-04-08,Client Dependency,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-1069,DEAL-1152,2026-04-12,Testing Instability,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-1070,DEAL-1007,2026-03-06,Resource Constraint,Low,High,Weekly executive escalation meetings.,Open
+RISK-1071,DEAL-1154,2026-03-30,Resource Constraint,High,High,Additional regression testing cycles.,Mitigated
+RISK-1072,DEAL-1187,2026-02-19,Resource Constraint,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-1073,DEAL-1172,2026-01-31,Security Delay,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-1074,DEAL-1184,2026-03-18,Integration Failure,Low,High,Additional regression testing cycles.,Monitoring
+RISK-1075,DEAL-1164,2026-04-14,Security Delay,Medium,Critical,Weekly executive escalation meetings.,Open
+RISK-1076,DEAL-1114,2026-04-27,Integration Failure,Medium,Critical,Additional regression testing cycles.,Open
+RISK-1077,DEAL-1152,2026-03-27,Testing Instability,Low,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-1078,DEAL-1042,2026-02-19,Testing Instability,High,High,Weekly executive escalation meetings.,Mitigated
+RISK-1079,DEAL-1083,2026-02-16,Resource Constraint,High,High,Weekly executive escalation meetings.,Mitigated
+RISK-1080,DEAL-1070,2026-04-17,Client Dependency,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-1081,DEAL-1074,2026-03-22,Security Delay,High,High,Weekly executive escalation meetings.,Mitigated
+RISK-1082,DEAL-1061,2026-03-17,Client Dependency,High,Critical,Additional regression testing cycles.,Open
+RISK-1083,DEAL-1194,2026-04-30,Integration Failure,High,Medium,Additional regression testing cycles.,Mitigated
+RISK-1084,DEAL-1167,2026-02-11,Client Dependency,Medium,High,Dedicated integration remediation task force.,Monitoring
+RISK-1085,DEAL-1093,2026-03-20,Client Dependency,High,Critical,Additional regression testing cycles.,Open
+RISK-1086,DEAL-1050,2026-04-20,Security Delay,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-1087,DEAL-1147,2026-03-01,Client Dependency,Low,High,Additional regression testing cycles.,Monitoring
+RISK-1088,DEAL-1136,2026-02-18,Resource Constraint,Low,High,Weekly executive escalation meetings.,Open
+RISK-1089,DEAL-1087,2026-01-31,Resource Constraint,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-1090,DEAL-1002,2026-03-14,Testing Instability,High,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-1091,DEAL-1155,2026-04-05,Integration Failure,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-1092,DEAL-1066,2026-04-24,Integration Failure,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-1093,DEAL-1156,2026-04-09,Resource Constraint,Medium,High,Dedicated integration remediation task force.,Monitoring
+RISK-1094,DEAL-1081,2026-04-02,Client Dependency,Medium,Medium,Dedicated integration remediation task force.,Monitoring
+RISK-1095,DEAL-1071,2026-04-19,Testing Instability,Low,Medium,Additional regression testing cycles.,Mitigated
+RISK-1096,DEAL-1093,2026-04-28,Testing Instability,High,High,Dedicated integration remediation task force.,Monitoring
+RISK-1097,DEAL-1032,2026-04-12,Testing Instability,Low,Critical,Additional regression testing cycles.,Monitoring
+RISK-1098,DEAL-1062,2026-03-06,Security Delay,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-1099,DEAL-1140,2026-03-02,Security Delay,Medium,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-1100,DEAL-1032,2026-03-06,Client Dependency,Medium,High,Additional regression testing cycles.,Open
+RISK-1101,DEAL-1134,2026-03-28,Client Dependency,High,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-1102,DEAL-1100,2026-03-22,Client Dependency,Medium,High,Weekly executive escalation meetings.,Mitigated
+RISK-1103,DEAL-1163,2026-02-08,Resource Constraint,Low,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-1104,DEAL-1106,2026-03-19,Integration Failure,Low,High,Dedicated integration remediation task force.,Monitoring
+RISK-1105,DEAL-1107,2026-04-06,Integration Failure,Low,High,Dedicated integration remediation task force.,Mitigated
+RISK-1106,DEAL-1127,2026-02-01,Integration Failure,Low,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-1107,DEAL-1067,2026-04-15,Testing Instability,Medium,Critical,Additional regression testing cycles.,Monitoring
+RISK-1108,DEAL-1107,2026-03-09,Security Delay,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-1109,DEAL-1161,2026-03-16,Security Delay,Low,Critical,Weekly executive escalation meetings.,Open
+RISK-1110,DEAL-1020,2026-04-27,Client Dependency,High,Medium,Weekly executive escalation meetings.,Open
+RISK-1111,DEAL-1011,2026-04-11,Security Delay,High,High,Additional regression testing cycles.,Monitoring
+RISK-1112,DEAL-1187,2026-02-09,Resource Constraint,Low,Medium,Additional regression testing cycles.,Open
+RISK-1113,DEAL-1128,2026-04-20,Resource Constraint,High,Critical,Weekly executive escalation meetings.,Open
+RISK-1114,DEAL-1177,2026-02-09,Integration Failure,High,High,Weekly executive escalation meetings.,Open
+RISK-1115,DEAL-1107,2026-03-30,Integration Failure,Medium,Critical,Dedicated integration remediation task force.,Open
+RISK-1116,DEAL-1077,2026-04-15,Security Delay,Low,Medium,Additional regression testing cycles.,Mitigated
+RISK-1117,DEAL-1009,2026-04-05,Resource Constraint,High,Medium,Weekly executive escalation meetings.,Open
+RISK-1118,DEAL-1017,2026-02-18,Security Delay,Medium,Medium,Additional regression testing cycles.,Open
+RISK-1119,DEAL-1192,2026-02-12,Client Dependency,Low,High,Weekly executive escalation meetings.,Mitigated
+RISK-1120,DEAL-1079,2026-03-08,Security Delay,High,Medium,Additional regression testing cycles.,Mitigated
+RISK-1121,DEAL-1160,2026-04-10,Resource Constraint,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-1122,DEAL-1169,2026-03-06,Security Delay,High,High,Weekly executive escalation meetings.,Open
+RISK-1123,DEAL-1082,2026-03-13,Security Delay,Medium,Medium,Additional regression testing cycles.,Open
+RISK-1124,DEAL-1133,2026-02-17,Client Dependency,Low,High,Weekly executive escalation meetings.,Open
+RISK-1125,DEAL-1095,2026-03-27,Resource Constraint,Medium,Critical,Additional regression testing cycles.,Monitoring
+RISK-1126,DEAL-1005,2026-02-16,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-1127,DEAL-1042,2026-03-23,Client Dependency,Low,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-1128,DEAL-1098,2026-04-22,Resource Constraint,Medium,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-1129,DEAL-1059,2026-02-11,Resource Constraint,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-1130,DEAL-1094,2026-02-10,Testing Instability,Low,High,Weekly executive escalation meetings.,Open
+RISK-1131,DEAL-1140,2026-03-09,Client Dependency,High,High,Dedicated integration remediation task force.,Mitigated
+RISK-1132,DEAL-1024,2026-02-13,Testing Instability,Low,High,Additional regression testing cycles.,Monitoring
+RISK-1133,DEAL-1076,2026-03-18,Testing Instability,Low,High,Additional regression testing cycles.,Mitigated
+RISK-1134,DEAL-1196,2026-02-14,Client Dependency,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-1135,DEAL-1023,2026-04-18,Client Dependency,High,Medium,Weekly executive escalation meetings.,Open
+RISK-1136,DEAL-1046,2026-02-23,Integration Failure,Medium,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-1137,DEAL-1083,2026-03-20,Resource Constraint,Medium,High,Dedicated integration remediation task force.,Open
+RISK-1138,DEAL-1092,2026-04-05,Integration Failure,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-1139,DEAL-1126,2026-03-31,Testing Instability,High,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-1140,DEAL-1126,2026-03-26,Resource Constraint,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-1141,DEAL-1114,2026-03-25,Security Delay,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-1142,DEAL-1058,2026-04-16,Security Delay,Medium,Medium,Additional regression testing cycles.,Monitoring
+RISK-1143,DEAL-1079,2026-02-12,Resource Constraint,High,Critical,Weekly executive escalation meetings.,Open
+RISK-1144,DEAL-1016,2026-03-14,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-1145,DEAL-1046,2026-04-06,Client Dependency,Low,Medium,Additional regression testing cycles.,Mitigated
+RISK-1146,DEAL-1097,2026-02-07,Client Dependency,Medium,High,Weekly executive escalation meetings.,Mitigated
+RISK-1147,DEAL-1172,2026-02-17,Resource Constraint,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-1148,DEAL-1076,2026-02-17,Testing Instability,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-1149,DEAL-1129,2026-04-20,Testing Instability,High,High,Weekly executive escalation meetings.,Monitoring
+RISK-1150,DEAL-1124,2026-04-22,Security Delay,Medium,High,Dedicated integration remediation task force.,Monitoring
+RISK-1151,DEAL-1020,2026-02-12,Resource Constraint,Medium,Medium,Dedicated integration remediation task force.,Open
+RISK-1152,DEAL-1074,2026-02-13,Integration Failure,High,Critical,Dedicated integration remediation task force.,Open
+RISK-1153,DEAL-1023,2026-03-15,Security Delay,Medium,High,Weekly executive escalation meetings.,Mitigated
+RISK-1154,DEAL-1018,2026-04-02,Integration Failure,High,High,Dedicated integration remediation task force.,Open
+RISK-1155,DEAL-1129,2026-02-05,Resource Constraint,High,Critical,Weekly executive escalation meetings.,Open
+RISK-1156,DEAL-1040,2026-04-15,Integration Failure,Low,Critical,Dedicated integration remediation task force.,Open
+RISK-1157,DEAL-1033,2026-02-01,Integration Failure,High,High,Weekly executive escalation meetings.,Mitigated
+RISK-1158,DEAL-1090,2026-04-04,Testing Instability,Low,Critical,Additional regression testing cycles.,Monitoring
+RISK-1159,DEAL-1196,2026-04-01,Security Delay,Low,Medium,Dedicated integration remediation task force.,Open
+RISK-1160,DEAL-1123,2026-02-15,Client Dependency,Low,Critical,Weekly executive escalation meetings.,Open
+RISK-1161,DEAL-1071,2026-03-15,Security Delay,High,Critical,Additional regression testing cycles.,Open
+RISK-1162,DEAL-1040,2026-04-27,Integration Failure,Low,High,Dedicated integration remediation task force.,Mitigated
+RISK-1163,DEAL-1161,2026-03-24,Security Delay,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-1164,DEAL-1054,2026-04-05,Testing Instability,Medium,High,Additional regression testing cycles.,Mitigated
+RISK-1165,DEAL-1146,2026-02-07,Integration Failure,Medium,Critical,Weekly executive escalation meetings.,Monitoring
+RISK-1166,DEAL-1026,2026-03-17,Client Dependency,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-1167,DEAL-1043,2026-04-07,Client Dependency,High,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-1168,DEAL-1194,2026-03-22,Resource Constraint,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-1169,DEAL-1042,2026-03-19,Security Delay,Medium,Critical,Dedicated integration remediation task force.,Open
+RISK-1170,DEAL-1106,2026-02-12,Integration Failure,Low,Critical,Dedicated integration remediation task force.,Open
+RISK-1171,DEAL-1045,2026-03-20,Security Delay,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-1172,DEAL-1019,2026-03-10,Security Delay,High,Critical,Additional regression testing cycles.,Open
+RISK-1173,DEAL-1043,2026-03-26,Security Delay,Medium,Critical,Additional regression testing cycles.,Open
+RISK-1174,DEAL-1175,2026-03-06,Testing Instability,Medium,High,Weekly executive escalation meetings.,Monitoring
+RISK-1175,DEAL-1021,2026-04-23,Integration Failure,Medium,Critical,Dedicated integration remediation task force.,Monitoring
+RISK-1176,DEAL-1015,2026-04-01,Client Dependency,High,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-1177,DEAL-1121,2026-02-25,Client Dependency,Medium,Medium,Weekly executive escalation meetings.,Open
+RISK-1178,DEAL-1026,2026-03-09,Testing Instability,Low,High,Weekly executive escalation meetings.,Monitoring
+RISK-1179,DEAL-1113,2026-03-06,Testing Instability,Medium,High,Dedicated integration remediation task force.,Mitigated
+RISK-1180,DEAL-1175,2026-02-23,Testing Instability,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-1181,DEAL-1195,2026-03-23,Security Delay,High,Medium,Weekly executive escalation meetings.,Monitoring
+RISK-1182,DEAL-1105,2026-04-12,Testing Instability,High,High,Dedicated integration remediation task force.,Mitigated
+RISK-1183,DEAL-1101,2026-02-24,Testing Instability,Medium,Critical,Weekly executive escalation meetings.,Mitigated
+RISK-1184,DEAL-1189,2026-02-14,Resource Constraint,Low,High,Additional regression testing cycles.,Mitigated
+RISK-1185,DEAL-1086,2026-04-24,Client Dependency,Medium,Medium,Dedicated integration remediation task force.,Mitigated
+RISK-1186,DEAL-1065,2026-04-12,Security Delay,Low,Medium,Additional regression testing cycles.,Monitoring
+RISK-1187,DEAL-1030,2026-02-15,Integration Failure,Low,High,Additional regression testing cycles.,Monitoring
+RISK-1188,DEAL-1045,2026-04-23,Security Delay,High,Critical,Additional regression testing cycles.,Mitigated
+RISK-1189,DEAL-1052,2026-04-26,Client Dependency,High,High,Dedicated integration remediation task force.,Mitigated
+RISK-1190,DEAL-1021,2026-04-29,Integration Failure,Medium,High,Weekly executive escalation meetings.,Open
+RISK-1191,DEAL-1170,2026-04-16,Client Dependency,Medium,High,Weekly executive escalation meetings.,Monitoring
+RISK-1192,DEAL-1133,2026-04-19,Testing Instability,High,Medium,Dedicated integration remediation task force.,Open
+RISK-1193,DEAL-1004,2026-04-01,Resource Constraint,Medium,Medium,Weekly executive escalation meetings.,Mitigated
+RISK-1194,DEAL-1195,2026-02-23,Resource Constraint,Medium,Critical,Weekly executive escalation meetings.,Open
+RISK-1195,DEAL-1158,2026-03-03,Resource Constraint,Low,Critical,Dedicated integration remediation task force.,Mitigated
+RISK-1196,DEAL-1152,2026-03-21,Resource Constraint,High,High,Additional regression testing cycles.,Open
+RISK-1197,DEAL-1148,2026-04-16,Client Dependency,Low,Medium,Weekly executive escalation meetings.,Open
+RISK-1198,DEAL-1128,2026-04-05,Client Dependency,High,Critical,Additional regression testing cycles.,Open
+RISK-1199,DEAL-1190,2026-04-25,Client Dependency,Medium,High,Additional regression testing cycles.,Open
+RISK-1200,DEAL-1150,2026-04-16,Client Dependency,Medium,High,Weekly executive escalation meetings.,Mitigated

@@ -1,0 +1,51 @@
+customer_id,customer_name,industry,region,annual_revenue,account_tier,implementation_owner,contract_value,go_live_target
+CUST-001,Garrison-Martinez,Insurance,North America,4502387665,Strategic,Leah Morris,1127150,2026-11-29
+CUST-002,"Castro, King and Martin",Healthcare,Europe,3263119785,Mid-Market,Samuel Fisher,2387433,2027-01-05
+CUST-003,Parker Inc,Finance,LATAM,236505587,Enterprise,Elizabeth Davis,1017034,2027-01-30
+CUST-004,Brown-Porter,Healthcare,North America,2510529190,Mid-Market,Diana Boone,2825812,2026-07-02
+CUST-005,Hamilton LLC,Insurance,LATAM,1046785248,Mid-Market,Timothy Jordan,1266816,2027-04-22
+CUST-006,Rodriguez-Little,Telecommunications,North America,1915115025,Strategic,Samuel Figueroa,752128,2027-03-05
+CUST-007,Mueller-Cohen,Healthcare,APAC,538989805,Strategic,Ryan Fisher,505657,2027-03-17
+CUST-008,Sanchez LLC,Retail,APAC,2692983555,Enterprise,Adrian Mitchell,2026967,2026-10-08
+CUST-009,Saunders PLC,Manufacturing,North America,1725792787,Mid-Market,Andrew Douglas,1329678,2027-01-17
+CUST-010,"Jones, Brock and Brown",Telecommunications,APAC,2579708607,Mid-Market,Paul Pitts,391735,2026-11-10
+CUST-011,"Benson, Murphy and Chapman",Finance,Europe,3420303242,Enterprise,Stacy Jackson,1076395,2027-04-15
+CUST-012,"Robles, Richards and Adkins",Telecommunications,North America,1732629719,Strategic,Taylor Harris,2766253,2027-04-05
+CUST-013,"Taylor, Hoffman and Barnes",Telecommunications,APAC,798594025,Strategic,Kim Adams,978736,2026-07-10
+CUST-014,Wilson Inc,Insurance,APAC,4701638743,Mid-Market,Stephen Wheeler,817807,2026-12-06
+CUST-015,Carpenter Group,Manufacturing,Europe,801808367,Strategic,Joanna Fuentes,1232243,2026-08-07
+CUST-016,"Banks, Fields and Mcconnell",Insurance,Europe,3040395823,Enterprise,Logan Jordan,1060697,2026-09-18
+CUST-017,Rogers-Padilla,Telecommunications,North America,3557645390,Strategic,Julie Rocha,1222986,2026-12-08
+CUST-018,"Smith, Austin and Johnson",Finance,Europe,3183418319,Enterprise,Erin Thompson MD,2849109,2027-01-06
+CUST-019,Caldwell Inc,Technology,LATAM,2861027762,Enterprise,Joy Johnston,1210987,2027-01-28
+CUST-020,Nguyen LLC,Healthcare,Europe,2414889832,Mid-Market,Jennifer Webster,2551931,2027-02-15
+CUST-021,Carson-Rush,Technology,LATAM,1654762903,Enterprise,Traci Gibson,2237108,2026-12-29
+CUST-022,"Mendez, Mcintosh and Russell",Technology,North America,3346059658,Enterprise,Julian Rojas,741062,2026-09-14
+CUST-023,Cross LLC,Insurance,Europe,372849424,Strategic,Kelsey Stokes,2599337,2026-06-19
+CUST-024,Gardner PLC,Technology,APAC,4444277904,Mid-Market,James Castro,580464,2026-06-06
+CUST-025,Shannon-Nichols,Insurance,APAC,1561042543,Strategic,Jason Brooks,1923537,2027-03-15
+CUST-026,"Duffy, Castro and Sanchez",Healthcare,LATAM,4408905817,Mid-Market,Wendy Sullivan,1204733,2027-02-16
+CUST-027,"Steele, Campbell and Heath",Manufacturing,Europe,4851998300,Mid-Market,Nancy Guerra,1351768,2027-04-26
+CUST-028,White-Martin,Telecommunications,Europe,756439677,Enterprise,Michaela Foley,2362319,2026-11-15
+CUST-029,Bryant-Moreno,Telecommunications,North America,2672447412,Strategic,Sandra Morris,181691,2026-08-26
+CUST-030,"Weaver, Bryant and Ramirez",Finance,APAC,1420763135,Enterprise,Angela Brown,1110288,2026-07-07
+CUST-031,"Moore, West and Fischer",Manufacturing,North America,4762846057,Strategic,Craig Gibbs,390298,2027-04-16
+CUST-032,Stewart PLC,Telecommunications,Europe,4946404445,Strategic,James Jackson,2406043,2027-01-22
+CUST-033,Obrien-Moses,Healthcare,APAC,2705301030,Enterprise,Harry Rush,2361971,2026-06-13
+CUST-034,Crosby-Rowland,Telecommunications,Europe,3162092518,Strategic,Timothy Rojas,2917259,2027-03-04
+CUST-035,Hebert Inc,Insurance,APAC,2322971316,Enterprise,Jeremy Griffith,1139791,2027-03-19
+CUST-036,Martin-Russell,Healthcare,North America,1552066459,Mid-Market,Valerie Adams,2423315,2026-09-08
+CUST-037,Thompson and Sons,Healthcare,Europe,130884438,Mid-Market,Ryan Keller,2747037,2026-07-06
+CUST-038,Nelson-Carey,Finance,Europe,4684449478,Enterprise,Marcus Graham,1485917,2026-10-06
+CUST-039,"Hale, Harper and Smith",Finance,Europe,2184839399,Mid-Market,Robert Robinson,654956,2026-12-23
+CUST-040,Chapman Ltd,Insurance,LATAM,1848309234,Enterprise,Rebecca Carter,506557,2027-04-22
+CUST-041,Guerra-Velasquez,Insurance,LATAM,1621696479,Strategic,Amy Moore,2058843,2027-02-07
+CUST-042,May-Watkins,Telecommunications,North America,522701550,Strategic,Donna Dixon,1523138,2026-08-12
+CUST-043,"Gray, Williams and Hester",Telecommunications,North America,1167970820,Enterprise,Cynthia Fuentes,2349345,2027-03-24
+CUST-044,Ewing-Dunn,Technology,Europe,1911967841,Strategic,Joe Barnett,2040402,2026-10-01
+CUST-045,Ortiz LLC,Healthcare,North America,2463629219,Enterprise,Michael Lindsey,2835293,2027-01-27
+CUST-046,"Alexander, Travis and Bush",Manufacturing,North America,4261807235,Enterprise,Scott Brooks,797559,2027-01-20
+CUST-047,"Morse, Oconnor and Barker",Technology,LATAM,2167418686,Strategic,Brandon Scott,345934,2026-08-20
+CUST-048,Hill-Hanson,Healthcare,LATAM,4404224551,Strategic,Maurice Hudson,1212342,2026-11-27
+CUST-049,"Hines, Cobb and Cook",Telecommunications,LATAM,1325136114,Mid-Market,David Perez,2431061,2027-01-27
+CUST-050,Lopez PLC,Insurance,LATAM,764847319,Strategic,Evan Potter,1013103,2026-09-07
