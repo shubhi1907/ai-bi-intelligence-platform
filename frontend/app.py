@@ -4,6 +4,22 @@ import chromadb
 
 from sentence_transformers import SentenceTransformer
 from streamlit_option_menu import option_menu
+import os
+from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# =========================================================
+# OPENAI CLIENT SETUP
+# =========================================================
+
+api_key = os.getenv("OPENAI_API_KEY")
+
+if not api_key:
+    api_key = st.secrets["OPENAI_API_KEY"]
+
+client = OpenAI(api_key=api_key)
 
 # =========================================================
 # PAGE CONFIG
@@ -25,6 +41,69 @@ risks_df = pd.read_csv("data/risks.csv")
 escalations_df = pd.read_csv("data/escalations.csv")
 meetings_df = pd.read_csv("data/meeting_notes.csv")
 customers_df = pd.read_csv("data/customers.csv")
+
+# =========================================================
+# EXECUTIVE BRIEFING FUNCTION
+# =========================================================
+
+@st.cache_data
+def generate_executive_briefing():
+
+    risky_deals = deals_df.sort_values(
+        by=["health_score", "open_blockers", "estimated_delay_days"],
+        ascending=[True, False, False]
+    ).head(5)
+
+    context = ""
+
+    for _, deal in risky_deals.iterrows():
+
+        deal_id = deal["deal_id"]
+
+        related_risks = risks_df[
+            risks_df["deal_id"] == deal_id
+        ]
+
+        related_escalations = escalations_df[
+            escalations_df["deal_id"] == deal_id
+        ]
+
+        context += f"""
+        Deal: {deal_id}
+        Project: {deal['project_name']}
+        Health: {deal['health_profile']}
+        Blockers: {deal['open_blockers']}
+        Delay: {deal['estimated_delay_days']}
+
+        Risks:
+        {' '.join(related_risks['risk_category'].astype(str).tolist())}
+
+        Escalations:
+        {' '.join(related_escalations['escalation_reason'].astype(str).tolist())}
+        """
+
+    prompt = f"""
+    You are an enterprise operations executive assistant.
+
+    Analyze the portfolio below and provide:
+
+    1. Executive summary
+    2. Key risks
+    3. Escalation patterns
+    4. Recommended actions
+
+    Data:
+    {context}
+    """
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "user", "content": prompt}
+        ]
+    )
+
+    return response.choices[0].message.content
 
 # =========================================================
 # LOAD EMBEDDING MODEL
@@ -253,11 +332,10 @@ with st.sidebar:
 # =========================================================
 
 if selected_page == "Executive Summary":
-
     st.header("Executive AI Summary")
 
     st.write(
-        "AI-generated implementation intelligence summaries."
+        "AI-generated implementation intelligence and risk insights."
     )
 
     # =====================================================
@@ -267,74 +345,130 @@ if selected_page == "Executive Summary":
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-
-        st.metric(
-            label="Active Deals",
-            value=len(deals_df),
-            delta="+12"
-        )
+        st.metric("Active Deals", len(deals_df))
 
     with col2:
-
-        st.metric(
-            label="Open Risks",
-            value=len(risks_df),
-            delta="+35"
-        )
+        st.metric("Open Risks", len(risks_df))
 
     with col3:
-
-        st.metric(
-            label="Executive Escalations",
-            value=len(escalations_df),
-            delta="-8"
-        )
+        st.metric("Escalations", len(escalations_df))
 
     with col4:
-
-        st.metric(
-            label="Delivery Health",
-            value="82%",
-            delta="+3%"
-        )
+        st.metric("Avg Delay (Days)", int(deals_df["estimated_delay_days"].mean()))
 
     st.divider()
 
     # =====================================================
-    # DELIVERY HEALTH OVERVIEW
+    # TOP RISKY DEALS
     # =====================================================
 
-    st.subheader("Delivery Health Overview")
+    st.subheader("Top Risky Deals")
 
-    health_counts = deals_df[
-        "health_profile"
-    ].value_counts()
+    risky_deals = deals_df.sort_values(
+        by=["health_score", "open_blockers", "estimated_delay_days"],
+        ascending=[True, False, False]
+    ).head(5)
 
-    st.bar_chart(health_counts)
+    st.dataframe(
+        risky_deals[
+            [
+                "deal_id",
+                "project_name",
+                "health_profile",
+                "open_blockers",
+                "estimated_delay_days"
+            ]
+        ],
+        use_container_width=True
+    )
+    st.divider()
 
     # =====================================================
-    # RISK DISTRIBUTION
+    # AI RISK EXPLANATION
     # =====================================================
 
-    st.subheader("Risk Distribution")
+    st.subheader("Explain Deal Risk")
 
-    risk_counts = risks_df[
-        "impact"
-    ].value_counts()
+    selected_deal_for_ai = st.selectbox(
+        "Select Deal",
+        risky_deals["deal_id"]
+    )
 
-    st.bar_chart(risk_counts)
+    if st.button("Explain Risk"):
 
-    # =====================================================
-    # ESCALATION DISTRIBUTION
-    # =====================================================
+        deal_data = deals_df[
+            deals_df["deal_id"] == selected_deal_for_ai
+        ].iloc[0]
 
-    st.subheader("Escalation Severity")
+        related_tickets = tickets_df[
+            tickets_df["deal_id"] == selected_deal_for_ai
+        ]
+        
 
-    escalation_counts = escalations_df[
-        "severity"
-    ].value_counts()
+        related_risks = risks_df[
+            risks_df["deal_id"] == selected_deal_for_ai
+        ]
+    
 
-    st.bar_chart(escalation_counts)
+        related_escalations = escalations_df[
+            escalations_df["deal_id"] == selected_deal_for_ai
+        ]
+    
+
+        prompt = f"""
+        You are an enterprise delivery expert.
+        Explain why this deal is at risk.
+        Deal: {selected_deal_for_ai}
+
+        Project: {deal_data['project_name']}
+        Health: {deal_data['health_profile']}
+        Blockers: {deal_data['open_blockers']}
+        Delay: {deal_data['estimated_delay_days']}
+
+        Risks:
+        {related_risks[['risk_category','impact','likelihood']].to_dict()}
+
+        Escalations:
+        {related_escalations[['severity','escalation_reason']].to_dict()}
+
+        Tickets:
+        {related_tickets[['ticket_summary','priority','status']].head(10).to_dict()}
+
+        Provide:
+        - concise explanation
+        - main drivers of risk
+        - recommended action
+        """
+
+        with st.spinner("Analyzing deal risk..."):
+
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
+
+        st.info(response.choices[0].message.content)
+
+    st.divider()
+
+# =====================================================
+# EXECUTIVE BRIEFING UI
+# =====================================================
+
+st.subheader("AI Executive Portfolio Briefing")
+
+if "briefing" not in st.session_state:
+    st.session_state["briefing"] = None
+
+if st.button("Generate Executive Briefing"):
+
+    with st.spinner("Analyzing enterprise portfolio..."):
+        st.session_state["briefing"] = generate_executive_briefing()
+
+if st.session_state["briefing"]:
+    st.success(st.session_state["briefing"])
 
 # =========================================================
 # SEMANTIC SEARCH PAGE
