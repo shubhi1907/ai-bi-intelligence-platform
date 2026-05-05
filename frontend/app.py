@@ -446,12 +446,14 @@ with st.sidebar:
             "Executive Summary",
             "Semantic Search",
             "Deal Intelligence",
+            "AI Chat",
             "Graph Analytics"
         ],
         icons=[
             "bar-chart",
             "search",
             "briefcase",
+            "chat-dots",
             "diagram-3"
         ],
         menu_icon="cast",
@@ -825,3 +827,68 @@ elif selected_page == "Graph Analytics":
     st.bar_chart(
         graph_distribution.set_index("Entity")
     )
+
+# =========================================================
+# AI CHAT (CHATGPT STYLE)
+# =========================================================
+
+elif selected_page == "AI Chat":
+
+    st.header("AI Executive Chat")
+
+    st.write("Chat with your enterprise data")
+
+    # Initialize chat history
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+
+    # Display chat history
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    # Chat input
+    if prompt := st.chat_input("Ask about deals, risks, escalations..."):
+
+        # Store user message
+        st.session_state.messages.append({
+            "role": "user",
+            "content": prompt
+        })
+
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+        # Build context (top risky deals)
+        top_deals = calculate_risk_score().head(5)
+
+        context = ""
+        for _, deal in top_deals.iterrows():
+            context += f"""
+            Deal: {deal['deal_id']}
+            Project: {deal['project_name']}
+            Risk Score: {round(deal['risk_score'],2)}
+            Blockers: {deal['open_blockers']}
+            Delay: {deal['estimated_delay_days']}
+            """
+
+        # Generate response
+        with st.chat_message("assistant"):
+            with st.spinner("Thinking..."):
+
+                response = client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {"role": "system", "content": "You are an enterprise AI assistant."},
+                        {"role": "user", "content": f"{context}\n\nQuestion: {prompt}"}
+                    ]
+                )
+
+                reply = response.choices[0].message.content
+                st.markdown(reply)
+
+        # Save assistant response
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": reply
+        })
