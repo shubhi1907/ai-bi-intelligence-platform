@@ -86,6 +86,54 @@ def calculate_risk_score():
     return df.sort_values(by="risk_score", ascending=False)
 
 # =========================================================
+# ROOT CAUSE ANALYSIS
+# =========================================================
+
+def generate_root_cause_analysis():
+
+    # Top ticket issue categories
+    ticket_issues = tickets_df["issue_category"].value_counts().head(5)
+
+    # Top risk categories
+    risk_categories = risks_df["risk_category"].value_counts().head(5)
+
+    # Top escalation reasons
+    escalation_reasons = escalations_df["escalation_reason"].value_counts().head(5)
+
+    context = f"""
+    Ticket Issues:
+    {ticket_issues.to_dict()}
+
+    Risk Categories:
+    {risk_categories.to_dict()}
+
+    Escalation Reasons:
+    {escalation_reasons.to_dict()}
+    """
+
+    prompt = f"""
+    You are an enterprise operations analyst.
+
+    Analyze the following aggregated data and provide:
+
+    1. Top root causes of delivery risk
+    2. Key patterns across tickets, risks, and escalations
+    3. Strategic insights for leadership
+
+    Data:
+    {context}
+    """
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "user", "content": prompt}
+        ]
+    )
+
+    return response.choices[0].message.content
+
+# =========================================================
 # EXECUTIVE BRIEFING FUNCTION
 # =========================================================
 
@@ -430,6 +478,25 @@ if selected_page == "Executive Summary":
     st.bar_chart(
         scored_deals.set_index("deal_id")["risk_score"].head(20)
     )
+    st.divider()
+    # =====================================================
+    # ROOT CAUSE ANALYSIS
+    # =====================================================
+
+    st.subheader("Enterprise Root Cause Analysis")
+
+    if "root_cause" not in st.session_state:
+        st.session_state["root_cause"] = None
+
+    if st.button("Analyze Root Causes"):
+
+        with st.spinner("Analyzing enterprise patterns..."):
+            st.session_state["root_cause"] = generate_root_cause_analysis()
+
+    if st.session_state["root_cause"]:
+        st.info(st.session_state["root_cause"])
+
+    st.divider()
 
     # =====================================================
     # AI RISK EXPLANATION
