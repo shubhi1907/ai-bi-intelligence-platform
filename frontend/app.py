@@ -134,6 +134,67 @@ def generate_root_cause_analysis():
     return response.choices[0].message.content
 
 # =========================================================
+# AI RECOMMENDATIONS ENGINE
+# =========================================================
+
+def generate_recommendations():
+
+    # Get top risky deals
+    scored_deals = calculate_risk_score().head(5)
+
+    context = ""
+
+    for _, deal in scored_deals.iterrows():
+
+        deal_id = deal["deal_id"]
+
+        related_risks = risks_df[
+            risks_df["deal_id"] == deal_id
+        ]
+
+        related_escalations = escalations_df[
+            escalations_df["deal_id"] == deal_id
+        ]
+
+        context += f"""
+        Deal: {deal_id}
+        Risk Score: {round(deal['risk_score'], 2)}
+        Blockers: {deal['open_blockers']}
+        Delay: {deal['estimated_delay_days']}
+
+        Risks:
+        {' '.join(related_risks['risk_category'].astype(str).tolist())}
+
+        Escalations:
+        {' '.join(related_escalations['escalation_reason'].astype(str).tolist())}
+        """
+
+    prompt = f"""
+    You are a senior enterprise delivery leader.
+
+    Based on the portfolio data below, provide:
+
+    1. Top 3 strategic actions leadership should take immediately
+    2. Operational recommendations to reduce risk
+    3. Preventive actions to avoid future escalations
+
+    Keep recommendations concise and executive-friendly.
+
+    Data:
+    {context}
+    """
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "user", "content": prompt}
+        ]
+    )
+
+    return response.choices[0].message.content
+
+
+# =========================================================
 # EXECUTIVE BRIEFING FUNCTION
 # =========================================================
 
@@ -498,6 +559,24 @@ if selected_page == "Executive Summary":
 
     st.divider()
 
+    # =====================================================
+    # AI RECOMMENDATIONS
+    # =====================================================
+
+    st.subheader("AI Recommended Actions")
+
+    if "recommendations" not in st.session_state:
+        st.session_state["recommendations"] = None
+
+    if st.button("Generate Recommendations"):
+
+        with st.spinner("Generating strategic recommendations..."):
+            st.session_state["recommendations"] = generate_recommendations()
+
+    if st.session_state["recommendations"]:
+        st.success(st.session_state["recommendations"])
+
+    st.divider()
     # =====================================================
     # AI RISK EXPLANATION
     # =====================================================
