@@ -43,6 +43,50 @@ meetings_df = pd.read_csv("data/meeting_notes.csv")
 customers_df = pd.read_csv("data/customers.csv")
 
 # =========================================================
+# RISK SCORING FUNCTION
+# =========================================================
+
+def calculate_risk_score():
+
+    df = deals_df.copy()
+
+    # Count related entities
+    ticket_counts = tickets_df.groupby("deal_id").size().reset_index(name="ticket_count")
+    escalation_counts = escalations_df.groupby("deal_id").size().reset_index(name="escalation_count")
+    risk_counts = risks_df.groupby("deal_id").size().reset_index(name="risk_count")
+
+    df = df.merge(ticket_counts, on="deal_id", how="left")
+    df = df.merge(escalation_counts, on="deal_id", how="left")
+    df = df.merge(risk_counts, on="deal_id", how="left")
+
+    # Fill nulls
+    df[["ticket_count", "escalation_count", "risk_count"]] = df[
+        ["ticket_count", "escalation_count", "risk_count"]
+    ].fillna(0)
+
+    # Normalize values (simple scaling)
+    df["blocker_score"] = df["open_blockers"] * 5
+    df["delay_score"] = df["estimated_delay_days"] * 2
+    df["ticket_score"] = df["ticket_count"] * 1
+    df["escalation_score"] = df["escalation_count"] * 8
+    df["risk_score_component"] = df["risk_count"] * 6
+
+    # Final weighted score
+    df["risk_score"] = (
+        df["blocker_score"] * 0.25 +
+        df["delay_score"] * 0.20 +
+        df["ticket_score"] * 0.20 +
+        df["escalation_score"] * 0.20 +
+        df["risk_score_component"] * 0.15
+    )
+
+    # Normalize to 0–100
+    df["risk_score"] = (df["risk_score"] / df["risk_score"].max()) * 100
+
+    return df.sort_values(by="risk_score", ascending=False)
+scored_deals = calculate_risk_score()
+st.write(scored_deals.head())
+# =========================================================
 # EXECUTIVE BRIEFING FUNCTION
 # =========================================================
 
