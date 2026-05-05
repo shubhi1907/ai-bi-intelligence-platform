@@ -84,8 +84,7 @@ def calculate_risk_score():
     df["risk_score"] = (df["risk_score"] / df["risk_score"].max()) * 100
 
     return df.sort_values(by="risk_score", ascending=False)
-scored_deals = calculate_risk_score()
-st.write(scored_deals.head())
+
 # =========================================================
 # EXECUTIVE BRIEFING FUNCTION
 # =========================================================
