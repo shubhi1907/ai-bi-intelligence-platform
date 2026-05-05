@@ -92,10 +92,9 @@ def calculate_risk_score():
 @st.cache_data
 def generate_executive_briefing():
 
-    risky_deals = deals_df.sort_values(
-        by=["health_score", "open_blockers", "estimated_delay_days"],
-        ascending=[True, False, False]
-    ).head(5)
+    scored_deals = calculate_risk_score()
+
+    risky_deals = scored_deals.head(5)
 
     context = ""
 
@@ -407,10 +406,9 @@ if selected_page == "Executive Summary":
 
     st.subheader("Top Risky Deals")
 
-    risky_deals = deals_df.sort_values(
-        by=["health_score", "open_blockers", "estimated_delay_days"],
-        ascending=[True, False, False]
-    ).head(5)
+    scored_deals = calculate_risk_score()
+
+    risky_deals = scored_deals.head(5)
 
     st.dataframe(
         risky_deals[
@@ -418,6 +416,7 @@ if selected_page == "Executive Summary":
                 "deal_id",
                 "project_name",
                 "health_profile",
+                "risk_score",
                 "open_blockers",
                 "estimated_delay_days"
             ]
@@ -425,6 +424,12 @@ if selected_page == "Executive Summary":
         use_container_width=True
     )
     st.divider()
+
+    st.subheader("Risk Score Distribution")
+
+    st.bar_chart(
+        scored_deals.set_index("deal_id")["risk_score"].head(20)
+    )
 
     # =====================================================
     # AI RISK EXPLANATION
@@ -434,7 +439,7 @@ if selected_page == "Executive Summary":
 
     selected_deal_for_ai = st.selectbox(
         "Select Deal",
-        risky_deals["deal_id"]
+        scored_deals["deal_id"]
     )
 
     if st.button("Explain Risk"):
