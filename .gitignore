@@ -6,3 +6,7 @@ __pycache__/
 chroma/
 .DS_Store
 .streamlit/secrets.toml
+*.log
+*.err.log
+*.out.log
+meeting_brief_render/

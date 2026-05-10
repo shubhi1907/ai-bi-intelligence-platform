@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI BI Intelligence Platform</title>
+    <link rel="stylesheet" href="./decision_desk.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 2a14 14 0 1 0 0 28 14 14 0 0 0 0-28Zm7.8 8.2-6.2 6.2 7.7 7.6a11 11 0 0 1-17.6.1l7.9-7.8-6.3-6.2a11 11 0 0 1 14.5.1Z"/></svg>
+        </div>
+        <div>
+          <strong>AI BI</strong>
+          <strong>Intelligence Platform</strong>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-title">Control Center</div>
+        <label class="field-label" for="roleSelect">Role</label>
+        <div class="select-wrap">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5Z"/></svg>
+          <select id="roleSelect">
+            <option value="bk">BK - Head of EIS</option>
+            <option value="scott">Scott - Implementations Lead</option>
+            <option value="revenue">Revenue Leader</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <div class="field-label">Health</div>
+          <div class="chip-row" data-filter-group="health">
+            <button class="chip active" data-value="all">All</button>
+            <button class="chip" data-value="At Risk">At Risk</button>
+            <button class="chip" data-value="Off Track">Off Track</button>
+            <button class="chip" data-value="On Track">On Track</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="field-label">Region</div>
+          <div class="chip-row" data-filter-group="region">
+            <button class="chip active" data-value="all">All</button>
+            <button class="chip" data-value="North America">North America</button>
+            <button class="chip" data-value="Europe">Europe</button>
+            <button class="chip" data-value="APAC">APAC</button>
+            <button class="chip" data-value="LATAM">LATAM</button>
+          </div>
+        </div>
+
+        <button class="brief-button" id="briefButton" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 9.8 8.4 3 10l5.4 4.1L7.8 21l4.2-5.5 4.2 5.5-.6-6.9L21 10l-6.8-1.6L12 2Z"/></svg>
+          <span>Morning Brief</span>
+        </button>
+      </div>
+
+      <nav class="nav-list" aria-label="Primary">
+        <button class="nav-item active" type="button" data-view="Decision Hub"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v9h-5v-6H9v6H4v-9Z"/></svg>Decision Hub</button>
+        <button class="nav-item" type="button" data-view="Deals"><svg viewBox="0 0 24 24"><path d="M7 3h10v2h3v16H4V5h3V3Zm2 2v2h6V5H9Z"/></svg>Deals</button>
+        <button class="nav-item" type="button" data-view="Risks"><svg viewBox="0 0 24 24"><path d="M12 3 2 21h20L12 3Zm1 14h-2v-2h2v2Zm0-4h-2V8h2v5Z"/></svg>Risks</button>
+        <button class="nav-item" type="button" data-view="Tickets & SLA"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10h-2a8 8 0 1 1-8-8V2Zm1 5h-2v6l5 3 1-1.7-4-2.3V7Z"/></svg>Tickets & SLA</button>
+        <button class="nav-item" type="button" data-view="Financials"><svg viewBox="0 0 24 24"><path d="M5 19h3V9H5v10Zm5 0h3V5h-3v14Zm5 0h3v-7h-3v7Z"/></svg>Financials</button>
+        <button class="nav-item" type="button" data-view="AI Insights"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4 12.7V18h8v-3.3A7 7 0 0 0 12 2Zm-3 18h6v2H9v-2Z"/></svg>AI Insights</button>
+        <button class="nav-item" type="button" data-view="Reports"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6V2Zm8 1.5V8h4.5L14 3.5ZM8 13h8v2H8v-2Zm0 4h8v2H8v-2Z"/></svg>Reports</button>
+        <button class="nav-item" type="button" data-view="Evidence Library"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4V4Zm2 2v12h12V6H6Zm2 2h8v2H8V8Zm0 4h8v2H8v-2Z"/></svg>Evidence Library</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="refresh-status"><span></span>Data refreshed: <strong id="refreshTime">8:15 AM</strong></div>
+        <button class="nav-item subtle" type="button" data-view="Settings"><svg viewBox="0 0 24 24"><path d="M19.4 13.5a7.8 7.8 0 0 0 0-3l2-1.5-2-3.5-2.4 1a8 8 0 0 0-2.6-1.5L14 2h-4l-.4 3a8 8 0 0 0-2.6 1.5l-2.4-1-2 3.5 2 1.5a7.8 7.8 0 0 0 0 3l-2 1.5 2 3.5 2.4-1a8 8 0 0 0 2.6 1.5l.4 3h4l.4-3a8 8 0 0 0 2.6-1.5l2.4 1 2-3.5-2-1.5ZM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z"/></svg>Settings</button>
+        <button class="nav-item subtle" type="button" data-view="Help"><svg viewBox="0 0 24 24"><path d="M11 18h2v-2h-2v2Zm1-16a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-14a4 4 0 0 0-4 4h2a2 2 0 1 1 2 2h-1v3h2v-1.2A4 4 0 0 0 12 6Z"/></svg>Help</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="topbar">
+        <div>
+          <h1 id="greeting">Good morning, BK</h1>
+          <p id="subtitle">3 decisions need your attention today</p>
+        </div>
+        <div class="topbar-meta">
+          <div class="date-line">
+            <svg viewBox="0 0 24 24"><path d="M7 2h2v3h6V2h2v3h3v17H4V5h3V2Zm11 8H6v10h12V10Z"/></svg>
+            <span id="asOfDate">May 9, 2026</span>
+          </div>
+          <span>Data as of 8:00 AM</span>
+          <button class="icon-button" type="button" id="refreshButton" aria-label="Refresh data">
+            <svg viewBox="0 0 24 24"><path d="M17.7 6.3A8 8 0 0 0 4.3 10H2l3.5 3.5L9 10H6.4a6 6 0 0 1 10-2.3L14 10h8V2l-4.3 4.3ZM6.3 17.7A8 8 0 0 0 19.7 14H22l-3.5-3.5L15 14h2.6a6 6 0 0 1-10 2.3L10 14H2v8l4.3-4.3Z"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="decision-grid" id="decisionGrid"></section>
+      <section class="metric-grid" id="metricGrid"></section>
+
+      <section class="content-grid">
+        <article class="panel portfolio-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Portfolio Health <span class="info-dot">i</span></h2>
+              <div class="tabs">
+                <button class="active" type="button" data-table-view="risk">Top Risky Deals</button>
+                <button type="button" data-table-view="region">By Region</button>
+                <button type="button" data-table-view="health">By Health</button>
+                <button type="button" data-table-view="value">By Contract Value</button>
+              </div>
+            </div>
+          </div>
+          <table class="portfolio-table">
+            <thead>
+              <tr>
+                <th>Deal ID</th>
+                <th>Customer</th>
+                <th>Health</th>
+                <th>Delay</th>
+                <th>Risk Score</th>
+                <th>Contract Value</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="dealTable"></tbody>
+          </table>
+          <button class="link-button" type="button" data-command="view-all-deals">View all deals <span>&rsaquo;</span></button>
+        </article>
+
+        <article class="panel insight-panel">
+          <div class="insight-copy">
+            <h2><span class="spark">&#10022;</span> Why this matters</h2>
+            <p id="whyText"></p>
+            <ul id="whyList"></ul>
+            <div class="evidence-chips" id="evidenceChips"></div>
+          </div>
+          <div class="chart-card">
+            <h3>Risk by Region<br /><span>(Contract Value)</span></h3>
+            <div class="bar-chart" id="regionChart"></div>
+          </div>
+          <button class="link-button analysis-link" type="button" data-command="view-analysis">View full analysis <span>&rsaquo;</span></button>
+        </article>
+      </section>
+
+      <section class="ask-bar">
+        <div class="ask-icon">&#10022;</div>
+        <input id="askInput" aria-label="Ask AI" placeholder="Ask about revenue, delivery risk, or a specific deal..." />
+        <button class="round-button mic" type="button" aria-label="Voice input">
+          <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1a7 7 0 0 0 6-6.9h-2Z"/></svg>
+        </button>
+        <button class="round-button send" type="button" aria-label="Send">
+          <svg viewBox="0 0 24 24"><path d="m2 21 21-9L2 3v7l15 2-15 2v7Z"/></svg>
+        </button>
+        <span class="ask-status" id="askStatus" aria-live="polite"></span>
+      </section>
+    </main>
+
+    <aside class="evidence-panel">
+      <div class="evidence-header">
+        <h2 id="evidenceTitle">Evidence for DEAL-1019</h2>
+        <button class="close-button" type="button" aria-label="Close evidence panel">&times;</button>
+      </div>
+      <div id="evidenceCards"></div>
+      <div class="evidence-actions">
+        <button class="primary-action" type="button" data-evidence-action="copy">
+          <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6V2Zm8 1.5V8h4.5L14 3.5ZM8 13h8v2H8v-2Zm0 4h8v2H8v-2Z"/></svg>
+          Copy Brief
+        </button>
+        <button type="button" data-evidence-action="export">
+          <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6V2Zm8 1.5V8h4.5L14 3.5ZM8 13h8v2H8v-2Z"/></svg>
+          Export PDF
+        </button>
+        <button type="button" data-evidence-action="send">
+          <svg viewBox="0 0 24 24"><path d="M2 12 22 3l-4 18-5.5-6L9 19l1-6-8-1Zm8.8-.8 5.5 6 2.2-10-7.7 4Z"/></svg>
+          Send to Scott
+        </button>
+      </div>
+    </aside>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./decision_desk.js"></script>
+  </body>
+</html>

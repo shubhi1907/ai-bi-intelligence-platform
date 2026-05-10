@@ -26,7 +26,7 @@ client = OpenAI(api_key=api_key)
 # =========================================================
 
 st.set_page_config(
-    page_title="AI Executive Deal Intelligence",
+    page_title="AI BI Intelligence Platform",
     page_icon="📊",
     layout="wide"
 )
@@ -193,6 +193,35 @@ def generate_recommendations():
 
     return response.choices[0].message.content
 
+# =========================================================
+# PDF REPORT GENERATION
+# =========================================================
+
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.lib.styles import getSampleStyleSheet
+
+def generate_pdf_report(briefing, recommendations):
+
+    file_path = "executive_report.pdf"
+
+    doc = SimpleDocTemplate(file_path)
+    styles = getSampleStyleSheet()
+
+    content = []
+
+    content.append(Paragraph("AI BI Intelligence Platform Report", styles["Title"]))
+    content.append(Spacer(1, 12))
+
+    content.append(Paragraph("Executive Summary", styles["Heading2"]))
+    content.append(Paragraph(briefing, styles["BodyText"]))
+    content.append(Spacer(1, 12))
+
+    content.append(Paragraph("Recommendations", styles["Heading2"]))
+    content.append(Paragraph(recommendations, styles["BodyText"]))
+
+    doc.build(content)
+
+    return file_path
 
 # =========================================================
 # EXECUTIVE BRIEFING FUNCTION
@@ -419,7 +448,7 @@ def load_deal_vector_database():
 # =========================================================
 
 st.title(
-    "AI Executive Deal Intelligence Platform"
+    "AI BI Intelligence Platform"
 )
 
 st.markdown(
@@ -649,6 +678,7 @@ if selected_page == "Executive Summary":
 
     st.divider()
 
+
 # =====================================================
 # EXECUTIVE BRIEFING UI
 # =====================================================
@@ -665,6 +695,34 @@ if st.button("Generate Executive Briefing"):
 
 if st.session_state["briefing"]:
     st.success(st.session_state["briefing"])
+
+# =====================================================
+# DOWNLOAD REPORT
+# =====================================================
+
+st.subheader("Download Executive Report")
+
+if st.button("Generate & Download Report"):
+
+    if not st.session_state.get("briefing"):
+        st.warning("Please generate executive briefing first.")
+    elif not st.session_state.get("recommendations"):
+        st.warning("Please generate recommendations first.")
+    else:
+        with st.spinner("Generating report..."):
+                file_path = generate_pdf_report(
+                    st.session_state["briefing"],
+                    st.session_state["recommendations"]
+                )
+
+        with open(file_path, "rb") as file:
+                st.download_button(
+                        label="Download PDF",
+                        data=file,
+                        file_name="executive_report.pdf",
+                        mime="application/pdf"
+                    )
+    st.divider()
 
 # =========================================================
 # SEMANTIC SEARCH PAGE
