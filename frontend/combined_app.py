@@ -468,6 +468,8 @@ st.set_page_config(page_title="AI BI Intelligence", page_icon=":bar_chart:", lay
 
 st.markdown("""
 <style>
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
   /* ── Reset Streamlit chrome ───────────────────────── */
   #MainMenu, footer { visibility: hidden; }
   [data-testid="stHeader"] { background: transparent; }
