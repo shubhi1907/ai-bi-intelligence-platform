@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BI Intelligence Platform — Traffic Light View</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ─── TOP BAR ─────────────────────────────────────────────────── */
+  .top-bar {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.10);
+    padding: 0 24px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-shrink: 0;
+  }
+
+  .app-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .app-name .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #dc2626 33%, #d97706 33% 66%, #16a34a 66%);
+  }
+
+  .role-tabs {
+    display: flex;
+    gap: 4px;
+    background: #f1f3f5;
+    border-radius: 8px;
+    padding: 4px;
+  }
+  .role-tabs button {
+    border: none;
+    background: transparent;
+    padding: 6px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .role-tabs button.active {
+    background: #ffffff;
+    color: #1a1a2e;
+    box-shadow: 0 1px 4px rgba(0,0,0,.12);
+  }
+  .role-tabs button:hover:not(.active) { color: #1a1a2e; }
+
+  .top-date {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+  }
+
+  /* ─── MAIN LAYOUT ─────────────────────────────────────────────── */
+  .main-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .columns-area {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 20px 20px 8px 20px;
+    overflow-y: auto;
+    align-content: start;
+  }
+
+  /* ─── COLUMN HEADERS ──────────────────────────────────────────── */
+  .status-column {}
+
+  .col-header {
+    border-radius: 10px 10px 0 0;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+  }
+  .col-header .col-title {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .col-header .col-badge {
+    background: rgba(255,255,255,.22);
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .col-header.critical { background: #dc2626; }
+  .col-header.at-risk  { background: #d97706; }
+  .col-header.on-track { background: #16a34a; }
+
+  .col-body {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+  }
+
+  /* ─── DEAL CARDS ──────────────────────────────────────────────── */
+  .deal-card {
+    padding: 16px 18px;
+    border-bottom: 1px solid #f0f0f3;
+    cursor: pointer;
+    transition: background .15s;
+    position: relative;
+  }
+  .deal-card:last-child { border-bottom: none; }
+  .deal-card:hover { background: #fafafa; }
+  .deal-card.selected { background: #eff6ff; border-left: 3px solid #2563eb; }
+
+  .deal-card .customer-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+  }
+
+  .deal-card .delay-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+  .deal-card .delay-number {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .delay-number.critical { color: #dc2626; }
+  .delay-number.at-risk  { color: #d97706; }
+  .delay-number.on-track { color: #16a34a; }
+
+  .deal-card .delay-label {
+    font-size: 12px;
+    color: #9ca3af;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+  }
+
+  .deal-card .context-line {
+    font-size: 13px;
+    color: #4b5563;
+    line-height: 1.45;
+    margin-bottom: 8px;
+  }
+
+  .deal-card .view-link {
+    font-size: 12px;
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .deal-card .view-link:hover { text-decoration: underline; }
+
+  /* fade overlay for "more" */
+  .fade-more {
+    position: relative;
+  }
+  .fade-more::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 80px;
+    background: linear-gradient(transparent, rgba(255,255,255,.95));
+    pointer-events: none;
+  }
+  .more-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #d97706;
+    border-top: 1px dashed #fed7aa;
+    cursor: pointer;
+    background: #fffbeb;
+  }
+  .more-pill:hover { background: #fef3c7; }
+
+  /* on-track summary box */
+  .on-track-summary {
+    padding: 28px 20px;
+    text-align: center;
+  }
+  .on-track-check {
+    font-size: 52px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .on-track-count {
+    font-size: 42px;
+    font-weight: 800;
+    color: #16a34a;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .on-track-label {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .on-track-bullets {
+    text-align: left;
+    background: #f0fdf4;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+  }
+  .on-track-bullets li {
+    font-size: 13px;
+    color: #166534;
+    list-style: none;
+    padding: 3px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .on-track-bullets li::before { content: '✓'; font-weight: 700; flex-shrink: 0; }
+
+  .on-track-expand {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 20px;
+    background: #16a34a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .15s;
+  }
+  .on-track-expand:hover { background: #15803d; }
+
+  /* ─── RIGHT PANEL ─────────────────────────────────────────────── */
+  .right-panel {
+    width: 280px;
+    background: #ffffff;
+    border-left: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+
+  .panel-header {
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid #f0f0f3;
+  }
+  .panel-header h3 {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    color: #9ca3af;
+    margin-bottom: 6px;
+  }
+  .panel-customer {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+  .panel-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-top: 6px;
+  }
+  .badge-critical { background: #fee2e2; color: #dc2626; }
+
+  .panel-body { padding: 16px 18px; flex: 1; }
+
+  .detail-row {
+    margin-bottom: 16px;
+  }
+  .detail-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    color: #9ca3af;
+    margin-bottom: 3px;
+  }
+  .detail-value {
+    font-size: 14px;
+    color: #1a1a2e;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .detail-value.big-red {
+    font-size: 28px;
+    font-weight: 800;
+    color: #dc2626;
+    line-height: 1;
+  }
+
+  .blocker-tag {
+    display: inline-block;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 2px 3px 2px 0;
+  }
+
+  .ticket-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #dc2626;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-size: 12px;
+    color: #374151;
+    line-height: 1.5;
+  }
+
+  .ai-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: calc(100% - 36px);
+    margin: 0 18px 18px;
+    padding: 12px 0;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .15s;
+    letter-spacing: .2px;
+  }
+  .ai-button:hover { background: #1d4ed8; }
+  .ai-button svg { flex-shrink: 0; }
+
+  .panel-divider {
+    height: 1px;
+    background: #f0f0f3;
+    margin: 4px 0 16px;
+  }
+
+  /* ─── BOTTOM KPI STRIP ────────────────────────────────────────── */
+  .kpi-strip {
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 12px 20px;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    flex-shrink: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db transparent;
+  }
+  .kpi-strip::-webkit-scrollbar { height: 4px; }
+  .kpi-strip::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 2px; }
+
+  .kpi-card {
+    min-width: 180px;
+    border-radius: 8px;
+    padding: 12px 16px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .kpi-card.kpi-red    { background: #fee2e2; border: 1px solid #fca5a5; }
+  .kpi-card.kpi-amber  { background: #fef3c7; border: 1px solid #fcd34d; }
+  .kpi-card.kpi-green  { background: #dcfce7; border: 1px solid #86efac; }
+  .kpi-card.kpi-blue   { background: #dbeafe; border: 1px solid #93c5fd; }
+  .kpi-card.kpi-purple { background: #ede9fe; border: 1px solid #c4b5fd; }
+
+  .kpi-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    color: #6b7280;
+  }
+  .kpi-value {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+    color: #1a1a2e;
+  }
+  .kpi-sub {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 500;
+  }
+  .kpi-delta {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .delta-up   { color: #16a34a; }
+  .delta-down { color: #dc2626; }
+
+  /* ─── EMPTY PANEL STATE ───────────────────────────────────────── */
+  .panel-empty {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    text-align: center;
+    gap: 10px;
+  }
+  .panel-empty .panel-icon { font-size: 40px; }
+  .panel-empty p {
+    font-size: 13px;
+    color: #9ca3af;
+    line-height: 1.5;
+  }
+
+  /* scrollbar for columns */
+  .columns-area::-webkit-scrollbar { width: 5px; }
+  .columns-area::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+
+  /* selection ring on card */
+  .deal-card.selected::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: #2563eb;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ TOP BAR ═══════════════════════════════ -->
+<header class="top-bar">
+  <div class="app-name">
+    <div class="dot"></div>
+    BI Intelligence Platform
+  </div>
+  <div class="role-tabs">
+    <button class="active" onclick="switchRole(this,'BK')">BK</button>
+    <button onclick="switchRole(this,'Scott')">Scott</button>
+    <button onclick="switchRole(this,'Revenue')">Revenue</button>
+  </div>
+  <div class="top-date">Mon, 11 May 2026 &nbsp;·&nbsp; Q2 FY26 Week 6</div>
+</header>
+
+<!-- ═══════════════════════ MAIN LAYOUT ═══════════════════════════ -->
+<div class="main-layout">
+
+  <!-- ──────────── THREE COLUMNS ──────────── -->
+  <div class="columns-area">
+
+    <!-- ──── CRITICAL ──── -->
+    <div class="status-column">
+      <div class="col-header critical">
+        <div class="col-title">🔴 Critical</div>
+        <div class="col-badge">3 deals</div>
+      </div>
+      <div class="col-body">
+
+        <div class="deal-card selected" onclick="selectDeal(this,'critical-1')">
+          <div class="customer-name">Northgate Financial</div>
+          <div class="delay-row">
+            <div class="delay-number critical">47</div>
+            <div class="delay-label">days delayed</div>
+          </div>
+          <div class="context-line">Contract legal review stalled — compliance team awaiting GDPR addendum from client's EU counsel.</div>
+          <a href="#" class="view-link" onclick="return false;">View Details →</a>
+        </div>
+
+        <div class="deal-card" onclick="selectDeal(this,'critical-2')">
+          <div class="customer-name">Vantara Health Systems</div>
+          <div class="delay-row">
+            <div class="delay-number critical">31</div>
+            <div class="delay-label">days delayed</div>
+          </div>
+          <div class="context-line">Executive sponsor (CTO Dale Reeves) departed Q1. Replacement not yet confirmed. Deal in limbo.</div>
+          <a href="#" class="view-link" onclick="return false;">View Details →</a>
+        </div>
+
+        <div class="deal-card" onclick="selectDeal(this,'critical-3')">
+          <div class="customer-name">Meridian Logistics Group</div>
+          <div class="delay-row">
+            <div class="delay-number critical">28</div>
+            <div class="delay-label">days delayed</div>
+          </div>
+          <div class="context-line">POC results disputed. Client engineering claims benchmark data doesn't reflect production workloads.</div>
+          <a href="#" class="view-link" onclick="return false;">View Details →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ──── AT RISK ──── -->
+    <div class="status-column">
+      <div class="col-header at-risk">
+        <div class="col-title">🟡 At Risk</div>
+        <div class="col-badge">8 deals</div>
+      </div>
+      <div class="col-body">
+
+        <div class="deal-card" onclick="selectDeal(this,'risk-1')">
+          <div class="customer-name">Castellan Bancorp</div>
+          <div class="delay-row">
+            <div class="delay-number at-risk">14</div>
+            <div class="delay-label">days delayed</div>
+          </div>
+          <div class="context-line">Security questionnaire (800+ items) submitted 3 weeks ago — InfoSec team hasn't assigned a reviewer.</div>
+          <a href="#" class="view-link" onclick="return false;">View Details →</a>
+        </div>
+
+        <div class="deal-card" onclick="selectDeal(this,'risk-2')">
+          <div class="customer-name">Orion Pharma Ltd.</div>
+          <div class="delay-row">
+            <div class="delay-number at-risk">11</div>
+            <div class="delay-label">days delayed</div>
+          </div>
+          <div class="context-line">Procurement freeze: CFO-mandated Q2 spend review affects all new vendor contracts above $250K.</div>
+          <a href="#" class="view-link" onclick="return false;">View Details →</a>
+        </div>
+
+        <div class="deal-card" onclick="selectDeal(this,'risk-3')">
+          <div class="customer-name">Summit Energy Partners</div>
+          <div class="delay-row">
+            <div class="delay-number at-risk">9</div>
+            <div class="delay-label">days delayed</div>
+          </div>
+          <div class="context-line">Competing vendor (Palantir) re-entered at last minute with aggressive pricing. Stakeholder alignment unclear.</div>
+          <a href="#" class="view-link" onclick="return false;">View Details →</a>
+        </div>
+
+        <div class="fade-more">
+          <div class="deal-card" style="opacity:.4;pointer-events:none;">
+            <div class="customer-name">Redwood Capital Mgmt.</div>
+            <div class="delay-row">
+              <div class="delay-number at-risk">7</div>
+              <div class="delay-label">days delayed</div>
+            </div>
+            <div class="context-line">Implementation timeline concerns raised by client's internal IT team.</div>
+          </div>
+        </div>
+        <div class="more-pill" onclick="alert('Expanding full At Risk list (prototype interaction)')">
+          ↓ 5 more at-risk deals — click to expand
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ──── ON TRACK ──── -->
+    <div class="status-column">
+      <div class="col-header on-track">
+        <div class="col-title">🟢 On Track</div>
+        <div class="col-badge">139 deals</div>
+      </div>
+      <div class="col-body">
+        <div class="on-track-summary">
+          <div class="on-track-check">✅</div>
+          <div class="on-track-count">139</div>
+          <div class="on-track-label">deals proceeding on schedule</div>
+
+          <ul class="on-track-bullets">
+            <li>94 deals in active negotiation or contracting</li>
+            <li>31 deals in technical POC or pilot phase</li>
+            <li>14 deals closed — awaiting onboarding kickoff</li>
+            <li>Avg. deal velocity: 38 days (↑ 4 days vs. Q1)</li>
+            <li>Top rep: Sarah Chen — 22 deals, $18.4M pipeline</li>
+            <li>Largest deal: Axiom Insurance ($4.2M ARR) — due EOM</li>
+          </ul>
+
+          <button class="on-track-expand" onclick="alert('Opens full 139-deal list (prototype interaction)')">
+            View All 139 Deals →
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /columns-area -->
+
+  <!-- ──────────── RIGHT PANEL ──────────── -->
+  <aside class="right-panel" id="right-panel">
+
+    <!-- Populated by JS; default state: Northgate Financial selected -->
+    <div class="panel-header">
+      <h3>Deal Details</h3>
+      <div class="panel-customer" id="pd-customer">Northgate Financial</div>
+      <div class="panel-status-badge badge-critical" id="pd-badge">🔴 Critical</div>
+    </div>
+
+    <div class="panel-body" id="pd-body">
+
+      <div class="detail-row">
+        <div class="detail-label">Current Phase</div>
+        <div class="detail-value" id="pd-phase">Legal Review &amp; Contracting</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Delay</div>
+        <div class="detail-value big-red" id="pd-delay">47 days</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Deal Value</div>
+        <div class="detail-value" id="pd-value">$3.1M ARR &nbsp;·&nbsp; 3-yr term</div>
+      </div>
+
+      <div class="panel-divider"></div>
+
+      <div class="detail-row">
+        <div class="detail-label">Blockers</div>
+        <div id="pd-blockers">
+          <span class="blocker-tag">GDPR Addendum</span>
+          <span class="blocker-tag">EU Counsel Unresponsive</span>
+          <span class="blocker-tag">Legal Approval Needed</span>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Top Open Ticket</div>
+        <div class="ticket-box" id="pd-ticket">
+          <strong>LEGAL-2847</strong> — GDPR DPA addendum review<br>
+          Assigned: Rachel Torres (Legal)<br>
+          Opened: 14 Apr 2026 &nbsp;·&nbsp; <span style="color:#dc2626;font-weight:700;">32 days open</span>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Last Meeting</div>
+        <div class="detail-value" id="pd-meeting">29 Apr — call with Northgate GC Marcus Webb. Confirmed EU counsel review ETA: "uncertain." Escalation to our VP Legal recommended.</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Account Owner</div>
+        <div class="detail-value" id="pd-owner">Brian Kim &nbsp;·&nbsp; <span style="color:#9ca3af;">Sr. Account Executive</span></div>
+      </div>
+
+    </div>
+
+    <button class="ai-button" id="ai-btn" onclick="triggerAI()">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+      </svg>
+      Ask AI About This Deal
+    </button>
+
+  </aside>
+
+</div><!-- /main-layout -->
+
+<!-- ═══════════════════════ KPI STRIP ════════════════════════════ -->
+<div class="kpi-strip">
+
+  <div class="kpi-card kpi-red">
+    <div class="kpi-label">Critical Deals</div>
+    <div class="kpi-value">3</div>
+    <div class="kpi-sub">$7.8M ARR at risk</div>
+    <div class="kpi-delta delta-down">▲ +1 vs. last week</div>
+  </div>
+
+  <div class="kpi-card kpi-amber">
+    <div class="kpi-label">At-Risk Deals</div>
+    <div class="kpi-value">8</div>
+    <div class="kpi-sub">$21.3M ARR at risk</div>
+    <div class="kpi-delta delta-down">▲ +3 vs. last week</div>
+  </div>
+
+  <div class="kpi-card kpi-green">
+    <div class="kpi-label">Q2 Pipeline</div>
+    <div class="kpi-value">$147M</div>
+    <div class="kpi-sub">Weighted: $89.4M</div>
+    <div class="kpi-delta delta-up">▲ +$12M vs. Q1 close</div>
+  </div>
+
+  <div class="kpi-card kpi-blue">
+    <div class="kpi-label">Forecast Attainment</div>
+    <div class="kpi-value">74%</div>
+    <div class="kpi-sub">Target: $62M by EOM</div>
+    <div class="kpi-delta delta-down">▼ 6pts behind pace</div>
+  </div>
+
+  <div class="kpi-card kpi-purple">
+    <div class="kpi-label">Avg. Deal Velocity</div>
+    <div class="kpi-value">38d</div>
+    <div class="kpi-sub">vs. 42d target</div>
+    <div class="kpi-delta delta-up">▲ 4d faster than Q1</div>
+  </div>
+
+  <div class="kpi-card kpi-green">
+    <div class="kpi-label">Deals Closed Q2</div>
+    <div class="kpi-value">22</div>
+    <div class="kpi-sub">$18.7M ARR booked</div>
+    <div class="kpi-delta delta-up">▲ +4 vs. Q2 last year</div>
+  </div>
+
+  <div class="kpi-card kpi-amber">
+    <div class="kpi-label">Open Escalations</div>
+    <div class="kpi-value">11</div>
+    <div class="kpi-sub">Avg. age: 19 days</div>
+    <div class="kpi-delta delta-down">▲ +2 this week</div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════ JAVASCRIPT ═══════════════════════════ -->
+<script>
+const dealData = {
+  'critical-1': {
+    customer: 'Northgate Financial',
+    badge: '🔴 Critical',
+    badgeClass: 'badge-critical',
+    phase: 'Legal Review &amp; Contracting',
+    delay: '47 days',
+    delayClass: 'big-red',
+    value: '$3.1M ARR &nbsp;·&nbsp; 3-yr term',
+    blockers: ['GDPR Addendum', 'EU Counsel Unresponsive', 'Legal Approval Needed'],
+    blockersColor: 'blocker-tag',
+    ticket: '<strong>LEGAL-2847</strong> — GDPR DPA addendum review<br>Assigned: Rachel Torres (Legal)<br>Opened: 14 Apr 2026 &nbsp;·&nbsp; <span style="color:#dc2626;font-weight:700;">32 days open</span>',
+    meeting: '29 Apr — call with Northgate GC Marcus Webb. Confirmed EU counsel review ETA: "uncertain." Escalation to our VP Legal recommended.',
+    owner: 'Brian Kim &nbsp;·&nbsp; <span style="color:#9ca3af;">Sr. Account Executive</span>'
+  },
+  'critical-2': {
+    customer: 'Vantara Health Systems',
+    badge: '🔴 Critical',
+    badgeClass: 'badge-critical',
+    phase: 'Executive Alignment / Champion Re-Build',
+    delay: '31 days',
+    delayClass: 'big-red',
+    value: '$2.4M ARR &nbsp;·&nbsp; 3-yr term',
+    blockers: ['Executive Sponsor Void', 'CTO Vacancy', 'Board Approval Required'],
+    blockersColor: 'blocker-tag',
+    ticket: '<strong>ACCT-4401</strong> — Identify new CTO sponsor<br>Assigned: Priya Nair (Strategic Accounts)<br>Opened: 02 Apr 2026 &nbsp;·&nbsp; <span style="color:#dc2626;font-weight:700;">39 days open</span>',
+    meeting: '06 May — intro call with interim CTO Wendy Park. Not yet empowered to sign. Formal authority expected mid-June.',
+    owner: 'Priya Nair &nbsp;·&nbsp; <span style="color:#9ca3af;">Strategic Account Director</span>'
+  },
+  'critical-3': {
+    customer: 'Meridian Logistics Group',
+    badge: '🔴 Critical',
+    badgeClass: 'badge-critical',
+    phase: 'POC Evaluation &amp; Validation',
+    delay: '28 days',
+    delayClass: 'big-red',
+    value: '$2.3M ARR &nbsp;·&nbsp; 2-yr term',
+    blockers: ['POC Results Disputed', 'Benchmark Methodology Gap', 'Engineering Signoff Blocked'],
+    blockersColor: 'blocker-tag',
+    ticket: '<strong>ENG-0912</strong> — Re-run benchmark on production data clone<br>Assigned: Tom Schaefer (Solutions Engineering)<br>Opened: 08 Apr 2026 &nbsp;·&nbsp; <span style="color:#dc2626;font-weight:700;">33 days open</span>',
+    meeting: '08 May — technical deep-dive with Meridian VP Engineering. They will accept new benchmark if re-run on provided data snapshot by May 22.',
+    owner: 'James Holloway &nbsp;·&nbsp; <span style="color:#9ca3af;">Enterprise Account Executive</span>'
+  },
+  'risk-1': {
+    customer: 'Castellan Bancorp',
+    badge: '🟡 At Risk',
+    badgeClass: 'badge-atrisk',
+    phase: 'Security &amp; Compliance Review',
+    delay: '14 days',
+    delayClass: 'big-amber',
+    value: '$1.8M ARR &nbsp;·&nbsp; 2-yr term',
+    blockers: ['Security Questionnaire Unassigned', 'InfoSec Bandwidth'],
+    blockersColor: 'blocker-tag-amber',
+    ticket: '<strong>SEC-3301</strong> — 813-item security questionnaire response<br>Assigned: Unassigned (InfoSec queue)<br>Opened: 20 Apr 2026 &nbsp;·&nbsp; <span style="color:#d97706;font-weight:700;">21 days open</span>',
+    meeting: '01 May — status call with Castellan IT Director Amy Liang. Escalated to InfoSec VP; response promised within 10 business days.',
+    owner: 'Kevin Park &nbsp;·&nbsp; <span style="color:#9ca3af;">Account Executive</span>'
+  },
+  'risk-2': {
+    customer: 'Orion Pharma Ltd.',
+    badge: '🟡 At Risk',
+    badgeClass: 'badge-atrisk',
+    phase: 'Procurement &amp; Commercial Approval',
+    delay: '11 days',
+    delayClass: 'big-amber',
+    value: '$2.7M ARR &nbsp;·&nbsp; 3-yr term',
+    blockers: ['CFO Spend Freeze', 'Q2 Procurement Hold', 'VP Finance Approval Needed'],
+    blockersColor: 'blocker-tag-amber',
+    ticket: '<strong>PROC-5540</strong> — CFO exception request for new vendor approval<br>Assigned: Sarah Chen (Account Executive)<br>Opened: 27 Apr 2026 &nbsp;·&nbsp; <span style="color:#d97706;font-weight:700;">14 days open</span>',
+    meeting: '09 May — executive briefing with Orion CFO Janet Mercer. Freeze review board meets May 21; exception request submitted.',
+    owner: 'Sarah Chen &nbsp;·&nbsp; <span style="color:#9ca3af;">Sr. Account Executive</span>'
+  },
+  'risk-3': {
+    customer: 'Summit Energy Partners',
+    badge: '🟡 At Risk',
+    badgeClass: 'badge-atrisk',
+    phase: 'Commercial Negotiation',
+    delay: '9 days',
+    delayClass: 'big-amber',
+    value: '$1.5M ARR &nbsp;·&nbsp; 2-yr term',
+    blockers: ['Competitive Re-entry (Palantir)', 'Stakeholder Misalignment', 'Pricing Pressure'],
+    blockersColor: 'blocker-tag-amber',
+    ticket: '<strong>COMP-0088</strong> — Competitive displacement response — Palantir<br>Assigned: Marcus Liu (Competitive Intelligence)<br>Opened: 05 May 2026 &nbsp;·&nbsp; <span style="color:#d97706;font-weight:700;">6 days open</span>',
+    meeting: '10 May — strategy call with our RVP. Palantir offering 20% below our price. Executive sponsor Chris Daly still favors us — need C-level reinforcement.',
+    owner: 'Marcus Liu &nbsp;·&nbsp; <span style="color:#9ca3af;">Account Executive</span>'
+  }
+};
+
+function selectDeal(el, dealId) {
+  document.querySelectorAll('.deal-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  populatePanel(dealId);
+}
+
+function populatePanel(id) {
+  const d = dealData[id];
+  if (!d) return;
+
+  document.getElementById('pd-customer').textContent = d.customer;
+
+  const badge = document.getElementById('pd-badge');
+  badge.textContent = d.badge;
+  badge.className = 'panel-status-badge ' + d.badgeClass;
+
+  document.getElementById('pd-phase').innerHTML = d.phase;
+  document.getElementById('pd-value').innerHTML = d.value;
+
+  const delayEl = document.getElementById('pd-delay');
+  delayEl.textContent = d.delay;
+  delayEl.className = 'detail-value ' + d.delayClass;
+
+  const blockersEl = document.getElementById('pd-blockers');
+  blockersEl.innerHTML = d.blockers.map(b =>
+    `<span class="${d.blockersColor}">${b}</span>`
+  ).join('');
+
+  document.getElementById('pd-ticket').innerHTML = d.ticket;
+  document.getElementById('pd-meeting').textContent = d.meeting;
+  document.getElementById('pd-owner').innerHTML = d.owner;
+}
+
+function switchRole(btn, role) {
+  document.querySelectorAll('.role-tabs button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  // In a real app this would filter pipeline; here it's a visual prototype
+}
+
+function triggerAI() {
+  const customer = document.getElementById('pd-customer').textContent;
+  alert(`AI Assistant (prototype)\n\n"Tell me what's blocking the ${customer} deal and what actions should I take this week to unblock it."\n\n[In the live product, this opens an AI chat panel pre-loaded with deal context, CRM history, open tickets, and last meeting notes.]`);
+}
+
+// Inject dynamic styles for amber badge / blocker
+const style = document.createElement('style');
+style.textContent = `
+  .badge-atrisk { background:#fef3c7; color:#b45309; }
+  .blocker-tag-amber { display:inline-block; background:#fef3c7; color:#92400e; border-radius:4px; padding:2px 7px; font-size:12px; font-weight:600; margin:2px 3px 2px 0; }
+  .big-amber { font-size:28px; font-weight:800; color:#d97706; line-height:1; }
+`;
+document.head.appendChild(style);
+
+// Initialize with first critical card already selected
+populatePanel('critical-1');
+</script>
+</body>
+</html>

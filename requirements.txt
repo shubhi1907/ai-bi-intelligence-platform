@@ -1,5 +1,5 @@
 streamlit
 pandas
-openai
+anthropic
 python-dotenv
 numpy==1.26.4

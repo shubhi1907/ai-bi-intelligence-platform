@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Daily Briefing — BI Intelligence Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:      #0a0f1e;
+    --blue:      #1f5eff;
+    --blue-dark: #1448d8;
+    --blue-light:#e8eeff;
+    --red:       #c0392b;
+    --red-light: #fdf2f1;
+    --amber:     #b45309;
+    --amber-light:#fefce8;
+    --green:     #166534;
+    --green-light:#f0fdf4;
+    --bg:        #f4f6fa;
+    --card:      #ffffff;
+    --border:    #e2e6ef;
+    --text:      #0a0f1e;
+    --muted:     #6b7280;
+    --subtle:    #9ca3af;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  /* ─── TOP NAV ─── */
+  .topnav {
+    background: var(--navy);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 52px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--blue);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-logo-mark {
+    width: 28px;
+    height: 28px;
+    background: var(--blue);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-logo-mark svg {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+  }
+
+  .nav-logo-text {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.95;
+  }
+
+  .nav-logo-sub {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    margin-top: -1px;
+  }
+
+  .nav-greeting {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-greeting span {
+    color: rgba(255,255,255,0.5);
+    font-weight: 400;
+  }
+
+  .nav-date {
+    text-align: right;
+  }
+
+  .nav-date-main {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .nav-date-sub {
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ─── KPI STRIP ─── */
+  .kpi-strip {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .kpi-pill {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 28px 12px 0;
+    margin-right: 28px;
+    border-right: 1px solid var(--border);
+    min-width: 0;
+  }
+
+  .kpi-pill:last-child {
+    border-right: none;
+    margin-right: 0;
+  }
+
+  .kpi-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    white-space: nowrap;
+  }
+
+  .kpi-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-top: 2px;
+  }
+
+  .kpi-value.warn  { color: var(--amber); }
+  .kpi-value.alert { color: var(--red); }
+  .kpi-value.ok    { color: var(--blue); }
+
+  .kpi-delta {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--subtle);
+    margin-top: 1px;
+  }
+
+  .kpi-delta.up   { color: #16a34a; }
+  .kpi-delta.down { color: var(--red); }
+
+  /* ─── MAIN LAYOUT ─── */
+  .main-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 32px 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--subtle);
+  }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 65fr 35fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  /* ─── PRIORITY CARDS ─── */
+  .priority-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .p-card {
+    background: var(--card);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-left: 4px solid transparent;
+    padding: 20px 22px;
+    cursor: pointer;
+    transition: box-shadow 0.15s, transform 0.15s;
+    position: relative;
+  }
+
+  .p-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transform: translateY(-1px);
+  }
+
+  .p-card.selected {
+    box-shadow: 0 0 0 2px var(--blue), 0 4px 20px rgba(31,94,255,0.12);
+  }
+
+  .p-card.red    { border-left-color: var(--red); }
+  .p-card.amber  { border-left-color: #f59e0b; }
+  .p-card.green  { border-left-color: #22c55e; }
+
+  .p-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .p-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .p-eyebrow.red    { color: var(--red); }
+  .p-eyebrow.amber  { color: var(--amber); }
+  .p-eyebrow.green  { color: var(--green); }
+
+  .p-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+
+  .p-badge {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 100px;
+    background: var(--bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+
+  .p-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.25;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .p-reason {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.45;
+    margin-bottom: 16px;
+  }
+
+  .p-reason strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .p-meta {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 16px;
+  }
+
+  .p-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .p-meta-label {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--subtle);
+  }
+
+  .p-meta-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .p-meta-value.red   { color: var(--red); }
+  .p-meta-value.amber { color: var(--amber); }
+
+  .p-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: none;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background: var(--blue);
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background: var(--blue-dark);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--blue);
+    border: 1.5px solid var(--blue);
+  }
+
+  .btn-outline:hover {
+    background: var(--blue-light);
+  }
+
+  .btn-full {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  /* ─── DEAL DETAILS PANEL ─── */
+  .detail-panel {
+    background: var(--card);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    position: sticky;
+    top: 72px;
+  }
+
+  .detail-header {
+    background: var(--navy);
+    padding: 18px 22px 16px;
+    color: #fff;
+  }
+
+  .detail-eyebrow {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 5px;
+  }
+
+  .detail-customer {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .detail-sector {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 400;
+  }
+
+  .detail-body {
+    padding: 0 22px;
+  }
+
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--border);
+    gap: 12px;
+  }
+
+  .detail-row:last-child {
+    border-bottom: none;
+  }
+
+  .detail-row-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    flex-shrink: 0;
+    padding-top: 1px;
+    min-width: 90px;
+  }
+
+  .detail-row-value {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--text);
+    text-align: right;
+    line-height: 1.4;
+  }
+
+  .status-badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .status-badge.red    { background: #fee2e2; color: #991b1b; }
+  .status-badge.amber  { background: #fef3c7; color: #92400e; }
+  .status-badge.green  { background: #dcfce7; color: #166534; }
+  .status-badge.blue   { background: var(--blue-light); color: #1e40af; }
+
+  .blocker-tag {
+    display: inline-block;
+    background: #fff1f2;
+    border: 1px solid #fecdd3;
+    color: #be123c;
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 3px;
+  }
+
+  .detail-footer {
+    padding: 14px 22px 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ─── AI INSIGHT BOX ─── */
+  .ai-insight {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
+    border: 1px solid #c7d2fe;
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: 14px 0 0;
+  }
+
+  .ai-insight-label {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #3730a3;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .ai-insight-text {
+    font-size: 11.5px;
+    color: #1e40af;
+    line-height: 1.5;
+  }
+
+  /* ─── PORTFOLIO TABLE ─── */
+  .portfolio-section {
+    margin-top: 28px;
+  }
+
+  .portfolio-table-wrap {
+    background: var(--card);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .portfolio-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 22px 13px;
+    border-bottom: 1px solid var(--border);
+    background: var(--navy);
+  }
+
+  .portfolio-table-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .portfolio-table-meta {
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead th {
+    background: #f8fafc;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    padding: 9px 22px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  thead th.right { text-align: right; }
+  thead th.center { text-align: center; }
+
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+    cursor: pointer;
+  }
+
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: #f8fafc; }
+  tbody tr.selected-row { background: var(--blue-light); }
+
+  tbody td {
+    padding: 11px 22px;
+    font-size: 13px;
+    color: var(--text);
+    vertical-align: middle;
+  }
+
+  tbody td.right  { text-align: right; }
+  tbody td.center { text-align: center; }
+
+  .customer-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .customer-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+    letter-spacing: -0.02em;
+  }
+
+  .customer-name {
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 13px;
+  }
+
+  .customer-id {
+    font-size: 10.5px;
+    color: var(--subtle);
+    margin-top: 1px;
+  }
+
+  .delay-cell {
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .delay-cell.high   { color: var(--red); }
+  .delay-cell.medium { color: var(--amber); }
+  .delay-cell.low    { color: #16a34a; }
+
+  .priority-rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--navy);
+    color: #fff;
+  }
+
+  .priority-rank.p1 { background: var(--red); }
+  .priority-rank.p2 { background: #f59e0b; }
+  .priority-rank.p3 { background: #22c55e; }
+
+  .contract-val {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--navy);
+  }
+
+  .phase-tag {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--muted);
+    background: var(--bg);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  .action-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--muted);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+
+  .action-dot:hover {
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+
+  /* ─── PRINT FOOTER ─── */
+  .brief-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0 0;
+    border-top: 1px solid var(--border);
+    margin-top: 28px;
+  }
+
+  .brief-footer-left {
+    font-size: 10px;
+    color: var(--subtle);
+    letter-spacing: 0.06em;
+  }
+
+  .brief-footer-left strong {
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .brief-footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-link {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: var(--blue);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .footer-link:hover { text-decoration: underline; }
+
+  .confidential-stamp {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(192,57,43,0.45);
+    border: 1px solid rgba(192,57,43,0.25);
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+
+  @media print {
+    .topnav { position: static; }
+    .detail-panel { position: static; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ TOP NAV ═══════════════════ -->
+<nav class="topnav">
+  <div class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 16 16"><path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM9 9h5v5H9z" opacity=".4"/><path d="M2 2h5v5H2zM11.5 9a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"/></svg>
+    </div>
+    <div>
+      <div class="nav-logo-text">Meridian BI</div>
+      <div class="nav-logo-sub">Intelligence Platform</div>
+    </div>
+  </div>
+
+  <div class="nav-greeting">
+    <span>Good morning, </span>BK
+  </div>
+
+  <div class="nav-date">
+    <div class="nav-date-main">Sunday, 11 May 2026</div>
+    <div class="nav-date-sub">Daily Briefing &nbsp;·&nbsp; 07:42 BST</div>
+  </div>
+</nav>
+
+<!-- ═══════════════════ KPI STRIP ═══════════════════ -->
+<div class="kpi-strip">
+  <div class="kpi-pill">
+    <span class="kpi-label">Active Deals</span>
+    <span class="kpi-value ok">150</span>
+    <span class="kpi-delta up">+6 this week</span>
+  </div>
+  <div class="kpi-pill">
+    <span class="kpi-label">Contract Value</span>
+    <span class="kpi-value">$84.2M</span>
+    <span class="kpi-delta up">+$3.1M MTD</span>
+  </div>
+  <div class="kpi-pill">
+    <span class="kpi-label">Avg Delay</span>
+    <span class="kpi-value warn">18.4 days</span>
+    <span class="kpi-delta down">+2.1 vs target</span>
+  </div>
+  <div class="kpi-pill">
+    <span class="kpi-label">SLA Breaches</span>
+    <span class="kpi-value alert">47</span>
+    <span class="kpi-delta down">+9 this week</span>
+  </div>
+  <div class="kpi-pill">
+    <span class="kpi-label">Blocked Tasks</span>
+    <span class="kpi-value warn">23</span>
+    <span class="kpi-delta down">+4 since Friday</span>
+  </div>
+</div>
+
+<!-- ═══════════════════ MAIN CONTENT ═══════════════════ -->
+<div class="main-wrap">
+
+  <!-- Section label -->
+  <div class="section-header" style="margin-top:8px;">
+    <span class="section-title">Requires Executive Attention Today</span>
+    <div class="section-rule"></div>
+    <span class="section-title" style="white-space:nowrap;">3 of 150 deals flagged</span>
+  </div>
+
+  <div class="columns">
+
+    <!-- ─── LEFT: PRIORITY CARDS ─── -->
+    <div class="priority-stack">
+
+      <!-- CARD 1 — RED -->
+      <div class="p-card red selected" onclick="selectCard(this, 'precision')">
+        <div class="p-card-top">
+          <span class="p-eyebrow red">Priority 1 &nbsp;·&nbsp; Immediate Action</span>
+          <span class="p-badge">SLA Breach · Day 31</span>
+        </div>
+        <div class="p-title">Escalate — Precision Engineering Ltd</div>
+        <div class="p-reason">
+          Contract renewal stalled in legal review for <strong>31 days</strong>. Customer has signalled intent to benchmark competitors. CSAT dropped from 8.4 → 5.1 in Q1.
+        </div>
+        <div class="p-meta">
+          <div class="p-meta-item">
+            <span class="p-meta-label">Contract Value</span>
+            <span class="p-meta-value">$12.8M</span>
+          </div>
+          <div class="p-meta-item">
+            <span class="p-meta-label">Delay</span>
+            <span class="p-meta-value red">31 days</span>
+          </div>
+          <div class="p-meta-item">
+            <span class="p-meta-label">Phase</span>
+            <span class="p-meta-value">Legal Review</span>
+          </div>
+          <div class="p-meta-item">
+            <span class="p-meta-label">Account Mgr</span>
+            <span class="p-meta-value">S. Holloway</span>
+          </div>
+        </div>
+        <div class="p-actions">
+          <button class="btn btn-primary">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v5M6 6l3-3M6 6l-3-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h10" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Show Analysis
+          </button>
+          <button class="btn btn-outline">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#1f5eff" stroke-width="1.5"/><path d="M4.5 5c.166-.5.667-1 1.5-1s1.5.5 1.5 1.25c0 .75-.75 1.25-1.5 1.25V7.5M6 9h.006" stroke="#1f5eff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Ask AI
+          </button>
+        </div>
+      </div>
+
+      <!-- CARD 2 — AMBER -->
+      <div class="p-card amber" onclick="selectCard(this, 'global')">
+        <div class="p-card-top">
+          <span class="p-eyebrow amber">Priority 2 &nbsp;·&nbsp; Monitor Closely</span>
+          <span class="p-badge">Procurement Hold</span>
+        </div>
+        <div class="p-title">Review Scope — Global Retail Co.</div>
+        <div class="p-reason">
+          Phase 3 delivery blocked pending <strong>procurement sign-off</strong> from new CFO. $4.1M milestone payment overdue. Three open tickets unresolved &gt;14 days.
+        </div>
+        <div class="p-meta">
+          <div class="p-meta-item">
+            <span class="p-meta-label">Contract Value</span>
+            <span class="p-meta-value">$9.4M</span>
+          </div>
+          <div class="p-meta-item">
+            <span class="p-meta-label">Delay</span>
+            <span class="p-meta-value amber">22 days</span>
+          </div>
+          <div class="p-meta-item">
+            <span class="p-meta-label">Phase</span>
+            <span class="p-meta-value">Phase 3 / Delivery</span>
+          </div>
+          <div class="p-meta-item">
+            <span class="p-meta-label">Account Mgr</span>
+            <span class="p-meta-value">D. Chandra</span>
+          </div>
+        </div>
+        <div class="p-actions">
+          <button class="btn btn-primary">Show Analysis</button>
+          <button class="btn btn-outline">Ask AI</button>
+        </div>
+      </div>
+
+      <!-- CARD 3 — GREEN -->
+      <div class="p-card green" onclick="selectCard(this, 'medtech')">
+        <div class="p-card-top">
+          <span class="p-eyebrow green">Priority 3 &nbsp;·&nbsp; Opportunity</span>
+          <span class="p-badge">Upsell Window</span>
+        </div>
+        <div class="p-title">Accelerate — MedTech Solutions Inc.</div>
+        <div class="p-reason">
+          Q2 renewal on track. Customer expressed interest in <strong>Advanced Analytics module</strong> ($2.2M ACV uplift). Decision window closes 30 May — proposal not yet submitted.
+        </div>
+        <div class="p-meta">
+          <div class="p-meta-item">
+            <span class="p-meta-label">Current ACV</span>
+            <span class="p-meta-value">$7.1M</span>
+          </div>
+          <div class="p-meta-item">
+            <span class="p-meta-label">Delay</span>
+            <span class="p-meta-value" style="color:var(--green)">4 days</span>
+          </div>
+          <div class="p-meta-item">
+            <span class="p-meta-label">Phase</span>
+            <span class="p-meta-value">Renewal / Expand</span>
+          </div>
+          <div class="p-meta-item">
+            <span class="p-meta-label">Account Mgr</span>
+            <span class="p-meta-value">P. Okafor</span>
+          </div>
+        </div>
+        <div class="p-actions">
+          <button class="btn btn-primary">Show Analysis</button>
+          <button class="btn btn-outline">Ask AI</button>
+        </div>
+      </div>
+
+    </div><!-- /priority-stack -->
+
+    <!-- ─── RIGHT: DEAL DETAILS ─── -->
+    <div class="detail-panel" id="detail-panel">
+
+      <!-- Default: Precision Engineering -->
+      <div id="detail-precision">
+        <div class="detail-header">
+          <div class="detail-eyebrow">Deal Details — Selected Account</div>
+          <div class="detail-customer">Precision Engineering Ltd</div>
+          <div class="detail-sector">Industrial Automation &nbsp;·&nbsp; Enterprise Tier &nbsp;·&nbsp; EMEA</div>
+        </div>
+        <div class="detail-body">
+          <div class="detail-row">
+            <span class="detail-row-label">Status</span>
+            <span class="detail-row-value"><span class="status-badge red">SLA Breached</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Phase</span>
+            <span class="detail-row-value">Legal Review — Renewal</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Delay</span>
+            <span class="detail-row-value" style="color:var(--red);font-weight:700;">31 days overdue</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Blockers</span>
+            <div class="detail-row-value" style="text-align:right;">
+              <div><span class="blocker-tag">Legal sign-off pending</span></div>
+              <div><span class="blocker-tag">InfoSec addendum outstanding</span></div>
+            </div>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Last Meeting</span>
+            <span class="detail-row-value">28 Apr 2026 — QBR<br><span style="font-size:11px;color:var(--subtle);">Attended by S. Holloway, R. Patel (client)</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Open Ticket</span>
+            <span class="detail-row-value"><span style="color:var(--blue);font-weight:600;">TKT-20481</span><br><span style="font-size:11px;color:var(--subtle);">InfoSec review — day 14, no response</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Contract Value</span>
+            <span class="detail-row-value" style="font-weight:700;">$12.8M &nbsp;<span style="font-weight:400;color:var(--subtle);font-size:11px;">/ 3yr</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Risk Score</span>
+            <span class="detail-row-value"><span class="status-badge red">High — 82/100</span></span>
+          </div>
+        </div>
+        <div class="detail-footer">
+          <div class="ai-insight">
+            <div class="ai-insight-label">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="4.5" stroke="#4338ca" stroke-width="1"/><path d="M5 3v2.5L6.5 7" stroke="#4338ca" stroke-width="1" stroke-linecap="round"/></svg>
+              AI Risk Signal
+            </div>
+            <div class="ai-insight-text">Competitor RFI detected via intent signal (week of 5 May). Recommend escalation call before 14 May — window estimated at 10 days.</div>
+          </div>
+          <button class="btn btn-primary btn-full" style="margin-top:12px;">
+            Generate Executive Brief
+          </button>
+        </div>
+      </div>
+
+      <!-- Global Retail hidden by default -->
+      <div id="detail-global" style="display:none;">
+        <div class="detail-header">
+          <div class="detail-eyebrow">Deal Details — Selected Account</div>
+          <div class="detail-customer">Global Retail Co.</div>
+          <div class="detail-sector">Retail &amp; E-Commerce &nbsp;·&nbsp; Enterprise Tier &nbsp;·&nbsp; North America</div>
+        </div>
+        <div class="detail-body">
+          <div class="detail-row">
+            <span class="detail-row-label">Status</span>
+            <span class="detail-row-value"><span class="status-badge amber">Procurement Hold</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Phase</span>
+            <span class="detail-row-value">Phase 3 — Delivery</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Delay</span>
+            <span class="detail-row-value" style="color:var(--amber);font-weight:700;">22 days overdue</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Blockers</span>
+            <div class="detail-row-value" style="text-align:right;">
+              <div><span class="blocker-tag">CFO approval pending</span></div>
+              <div><span class="blocker-tag">PO not raised</span></div>
+            </div>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Last Meeting</span>
+            <span class="detail-row-value">2 May 2026 — Steering<br><span style="font-size:11px;color:var(--subtle);">D. Chandra, M. Tran (new CFO)</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Open Ticket</span>
+            <span class="detail-row-value"><span style="color:var(--blue);font-weight:600;">TKT-20614</span><br><span style="font-size:11px;color:var(--subtle);">Milestone invoice dispute — 3 open items</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Contract Value</span>
+            <span class="detail-row-value" style="font-weight:700;">$9.4M &nbsp;<span style="font-weight:400;color:var(--subtle);font-size:11px;">/ 2yr</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Risk Score</span>
+            <span class="detail-row-value"><span class="status-badge amber">Medium — 61/100</span></span>
+          </div>
+        </div>
+        <div class="detail-footer">
+          <div class="ai-insight">
+            <div class="ai-insight-label">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="4.5" stroke="#4338ca" stroke-width="1"/><path d="M5 3v2.5L6.5 7" stroke="#4338ca" stroke-width="1" stroke-linecap="round"/></svg>
+              AI Risk Signal
+            </div>
+            <div class="ai-insight-text">New CFO typically requires 30-day budget revalidation. Historical data: 68% of deals with new finance leadership experience phase delays &gt;3 weeks.</div>
+          </div>
+          <button class="btn btn-primary btn-full" style="margin-top:12px;">
+            Generate Executive Brief
+          </button>
+        </div>
+      </div>
+
+      <!-- MedTech hidden by default -->
+      <div id="detail-medtech" style="display:none;">
+        <div class="detail-header" style="background:var(--green);">
+          <div class="detail-eyebrow">Deal Details — Selected Account</div>
+          <div class="detail-customer">MedTech Solutions Inc.</div>
+          <div class="detail-sector">Healthcare Technology &nbsp;·&nbsp; Enterprise Tier &nbsp;·&nbsp; North America</div>
+        </div>
+        <div class="detail-body">
+          <div class="detail-row">
+            <span class="detail-row-label">Status</span>
+            <span class="detail-row-value"><span class="status-badge green">On Track</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Phase</span>
+            <span class="detail-row-value">Renewal + Expansion</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Delay</span>
+            <span class="detail-row-value" style="color:#16a34a;font-weight:700;">4 days (minor)</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Blockers</span>
+            <span class="detail-row-value" style="color:#16a34a;font-weight:500;">None critical</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Last Meeting</span>
+            <span class="detail-row-value">6 May 2026 — EBR<br><span style="font-size:11px;color:var(--subtle);">P. Okafor, Dr. K. Alabi (CTO)</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Open Ticket</span>
+            <span class="detail-row-value"><span style="color:var(--muted);font-weight:500;">TKT-20702</span><br><span style="font-size:11px;color:var(--subtle);">Feature request logged — low priority</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Upsell Target</span>
+            <span class="detail-row-value" style="font-weight:700;color:#16a34a;">+$2.2M ACV &nbsp;<span style="font-weight:400;color:var(--subtle);font-size:11px;">(Advanced Analytics)</span></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-row-label">Risk Score</span>
+            <span class="detail-row-value"><span class="status-badge green">Low — 18/100</span></span>
+          </div>
+        </div>
+        <div class="detail-footer">
+          <div class="ai-insight" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-color:#86efac;">
+            <div class="ai-insight-label" style="color:#166534;">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="4.5" stroke="#166534" stroke-width="1"/><path d="M3 5l1.5 1.5L7 3.5" stroke="#166534" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              AI Opportunity Signal
+            </div>
+            <div class="ai-insight-text" style="color:#166534;">Proposal not yet submitted. Decision window closes 30 May. Recommend submitting by 16 May to allow 2-week review cycle — probability of close est. 74%.</div>
+          </div>
+          <button class="btn btn-primary btn-full" style="margin-top:12px;">
+            Generate Executive Brief
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /detail-panel -->
+
+  </div><!-- /columns -->
+
+  <!-- ═══════════════════ PORTFOLIO TABLE ═══════════════════ -->
+  <div class="portfolio-section">
+    <div class="section-header">
+      <span class="section-title">Portfolio Overview</span>
+      <div class="section-rule"></div>
+      <span class="section-title" style="white-space:nowrap;">Priority Order &nbsp;·&nbsp; Top 8 of 150</span>
+    </div>
+
+    <div class="portfolio-table-wrap">
+      <div class="portfolio-table-header">
+        <span class="portfolio-table-title">Portfolio — Priority Order</span>
+        <span class="portfolio-table-meta">Sorted by: Risk Score DESC &nbsp;·&nbsp; Refreshed 07:30 BST</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:32px;" class="center">#</th>
+            <th>Customer</th>
+            <th>Status</th>
+            <th>Phase</th>
+            <th class="right">Delay (days)</th>
+            <th class="right">Contract Value</th>
+            <th class="right">Risk Score</th>
+            <th class="center"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="selected-row">
+            <td class="center"><span class="priority-rank p1">1</span></td>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:#c0392b;">PE</div>
+                <div>
+                  <div class="customer-name">Precision Engineering Ltd</div>
+                  <div class="customer-id">ACC-4421 &nbsp;·&nbsp; S. Holloway</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="status-badge red">SLA Breached</span></td>
+            <td><span class="phase-tag">Legal Review</span></td>
+            <td class="right"><span class="delay-cell high">31</span></td>
+            <td class="right"><span class="contract-val">$12.8M</span></td>
+            <td class="right"><span class="status-badge red">82</span></td>
+            <td class="center"><span class="action-dot">⋯</span></td>
+          </tr>
+          <tr>
+            <td class="center"><span class="priority-rank p2">2</span></td>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:#d97706;">GR</div>
+                <div>
+                  <div class="customer-name">Global Retail Co.</div>
+                  <div class="customer-id">ACC-3817 &nbsp;·&nbsp; D. Chandra</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="status-badge amber">Procurement Hold</span></td>
+            <td><span class="phase-tag">Phase 3 Delivery</span></td>
+            <td class="right"><span class="delay-cell high">22</span></td>
+            <td class="right"><span class="contract-val">$9.4M</span></td>
+            <td class="right"><span class="status-badge amber">61</span></td>
+            <td class="center"><span class="action-dot">⋯</span></td>
+          </tr>
+          <tr>
+            <td class="center"><span class="priority-rank p3">3</span></td>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:#166534;">MT</div>
+                <div>
+                  <div class="customer-name">MedTech Solutions Inc.</div>
+                  <div class="customer-id">ACC-5102 &nbsp;·&nbsp; P. Okafor</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="status-badge green">On Track</span></td>
+            <td><span class="phase-tag">Renewal / Expand</span></td>
+            <td class="right"><span class="delay-cell low">4</span></td>
+            <td class="right"><span class="contract-val">$7.1M</span></td>
+            <td class="right"><span class="status-badge green">18</span></td>
+            <td class="center"><span class="action-dot">⋯</span></td>
+          </tr>
+          <tr>
+            <td class="center"><span class="priority-rank" style="background:#475569;">4</span></td>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:#1f5eff;">AF</div>
+                <div>
+                  <div class="customer-name">Apex Financial Group</div>
+                  <div class="customer-id">ACC-2990 &nbsp;·&nbsp; L. Brennan</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="status-badge amber">Delayed</span></td>
+            <td><span class="phase-tag">Integration</span></td>
+            <td class="right"><span class="delay-cell medium">17</span></td>
+            <td class="right"><span class="contract-val">$6.3M</span></td>
+            <td class="right"><span class="status-badge amber">54</span></td>
+            <td class="center"><span class="action-dot">⋯</span></td>
+          </tr>
+          <tr>
+            <td class="center"><span class="priority-rank" style="background:#475569;">5</span></td>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:#7c3aed;">NL</div>
+                <div>
+                  <div class="customer-name">Nexlogic Systems</div>
+                  <div class="customer-id">ACC-4703 &nbsp;·&nbsp; R. Adeyemi</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="status-badge blue">In Review</span></td>
+            <td><span class="phase-tag">Commercials</span></td>
+            <td class="right"><span class="delay-cell medium">11</span></td>
+            <td class="right"><span class="contract-val">$5.7M</span></td>
+            <td class="right"><span class="status-badge blue">43</span></td>
+            <td class="center"><span class="action-dot">⋯</span></td>
+          </tr>
+          <tr>
+            <td class="center"><span class="priority-rank" style="background:#475569;">6</span></td>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:#0891b2;">CP</div>
+                <div>
+                  <div class="customer-name">ClearPath Logistics</div>
+                  <div class="customer-id">ACC-3344 &nbsp;·&nbsp; F. Torres</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="status-badge amber">Delayed</span></td>
+            <td><span class="phase-tag">UAT</span></td>
+            <td class="right"><span class="delay-cell medium">14</span></td>
+            <td class="right"><span class="contract-val">$4.9M</span></td>
+            <td class="right"><span class="status-badge amber">39</span></td>
+            <td class="center"><span class="action-dot">⋯</span></td>
+          </tr>
+          <tr>
+            <td class="center"><span class="priority-rank" style="background:#475569;">7</span></td>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:#0f766e;">VC</div>
+                <div>
+                  <div class="customer-name">Vertex Chemicals Corp.</div>
+                  <div class="customer-id">ACC-6011 &nbsp;·&nbsp; A. Mistry</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="status-badge green">On Track</span></td>
+            <td><span class="phase-tag">Onboarding</span></td>
+            <td class="right"><span class="delay-cell low">3</span></td>
+            <td class="right"><span class="contract-val">$4.2M</span></td>
+            <td class="right"><span class="status-badge green">21</span></td>
+            <td class="center"><span class="action-dot">⋯</span></td>
+          </tr>
+          <tr>
+            <td class="center"><span class="priority-rank" style="background:#475569;">8</span></td>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:#be185d;">PH</div>
+                <div>
+                  <div class="customer-name">Pinnacle Health Systems</div>
+                  <div class="customer-id">ACC-5580 &nbsp;·&nbsp; J. Whitmore</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="status-badge green">On Track</span></td>
+            <td><span class="phase-tag">Renewal</span></td>
+            <td class="right"><span class="delay-cell low">2</span></td>
+            <td class="right"><span class="contract-val">$3.8M</span></td>
+            <td class="right"><span class="status-badge green">14</span></td>
+            <td class="center"><span class="action-dot">⋯</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ─── FOOTER ─── -->
+  <div class="brief-footer">
+    <div class="brief-footer-left">
+      <strong>Meridian BI Intelligence Platform</strong> &nbsp;·&nbsp;
+      Daily Briefing &nbsp;·&nbsp;
+      Generated 11 May 2026, 07:30 BST &nbsp;·&nbsp;
+      Data sourced from CRM, Jira, Zendesk, and Contract Repository
+    </div>
+    <div class="brief-footer-right">
+      <span class="confidential-stamp">Confidential</span>
+      <a class="footer-link">Full Portfolio View</a>
+      <a class="footer-link">Export to PDF</a>
+      <a class="footer-link">Share Briefing</a>
+    </div>
+  </div>
+
+</div><!-- /main-wrap -->
+
+<script>
+  function selectCard(card, dealId) {
+    // Remove selected from all cards
+    document.querySelectorAll('.p-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+
+    // Hide all detail panels
+    ['precision','global','medtech'].forEach(id => {
+      const el = document.getElementById('detail-' + id);
+      if (el) el.style.display = 'none';
+    });
+
+    // Show selected detail panel
+    const target = document.getElementById('detail-' + dealId);
+    if (target) target.style.display = 'block';
+
+    // Highlight table row
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach(r => r.classList.remove('selected-row'));
+
+    const map = { precision: 0, global: 1, medtech: 2 };
+    const idx = map[dealId];
+    if (idx !== undefined && rows[idx]) rows[idx].classList.add('selected-row');
+  }
+</script>
+
+</body>
+</html>

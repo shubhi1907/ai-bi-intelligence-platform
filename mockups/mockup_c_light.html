@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI BI Intelligence — Executive Command (Light)</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #f4f6fb;
+      --card:      #ffffff;
+      --sidebar:   #f0f3f9;
+      --border:    #e1e7f0;
+      --blue:      #1f5eff;
+      --green:     #16a34a;
+      --red:       #dc2626;
+      --amber:     #d97706;
+      --purple:    #7c3aed;
+      --text-pri:  #0f172a;
+      --text-sec:  #475569;
+      --text-dim:  #94a3b8;
+      --header-h:  56px;
+      --sidebar-w: 200px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-pri);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* ── HEADER ─────────────────────────────────────────── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-h);
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 100;
+      gap: 0;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      width: var(--sidebar-w);
+      flex-shrink: 0;
+    }
+    .header-logo .logo-icon {
+      width: 28px; height: 28px;
+      background: var(--blue);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 800; color: #fff; letter-spacing: -0.5px;
+    }
+    .header-logo .logo-text {
+      font-size: 13px; font-weight: 700;
+      color: var(--text-pri);
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+    .header-logo .logo-text span { color: var(--blue); }
+
+    .header-greeting {
+      flex: 1;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-pri);
+      letter-spacing: 0.3px;
+    }
+    .header-greeting .time-label {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-left: 8px;
+      font-weight: 400;
+    }
+
+    .header-kpis {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .kpi-badge {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(31,94,255,0.06);
+      border: 1px solid rgba(31,94,255,0.16);
+      border-radius: 20px;
+      padding: 4px 11px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+    .kpi-badge .kpi-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+    .kpi-badge.green { color: var(--green); background: rgba(22,163,74,0.06); border-color: rgba(22,163,74,0.18); }
+    .kpi-badge.green .kpi-dot { background: var(--green); }
+    .kpi-badge.amber { color: var(--amber); background: rgba(217,119,6,0.06); border-color: rgba(217,119,6,0.18); }
+    .kpi-badge.amber .kpi-dot { background: var(--amber); }
+
+    /* ── LAYOUT ─────────────────────────────────────────── */
+    .layout {
+      display: flex;
+      margin-top: var(--header-h);
+      min-height: calc(100vh - var(--header-h));
+    }
+
+    /* ── SIDEBAR ────────────────────────────────────────── */
+    aside {
+      width: var(--sidebar-w);
+      background: var(--sidebar);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: var(--header-h);
+      bottom: 0;
+      left: 0;
+      overflow-y: auto;
+    }
+
+    .sidebar-profile {
+      padding: 20px 16px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .avatar {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+      border: 2px solid var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700; color: var(--blue);
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+    .profile-name { font-size: 13px; font-weight: 700; color: var(--text-pri); text-align: center; }
+    .profile-role { font-size: 10.5px; color: var(--text-dim); text-align: center; line-height: 1.3; }
+    .profile-status {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 10px; color: var(--green); font-weight: 500;
+    }
+    .profile-status::before {
+      content: ''; display: inline-block;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--green);
+    }
+
+    nav { padding: 12px 0; flex: 1; }
+    .nav-section-label {
+      font-size: 9.5px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--text-dim); padding: 6px 16px 4px; margin-top: 8px;
+    }
+    .nav-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 16px; cursor: pointer;
+      color: var(--text-sec); font-size: 13px; font-weight: 500;
+      transition: all 0.15s ease;
+      border-left: 3px solid transparent;
+      text-decoration: none; position: relative;
+    }
+    .nav-item:hover { background: rgba(31,94,255,0.05); color: var(--text-pri); }
+    .nav-item.active { color: var(--blue); background: rgba(31,94,255,0.08); border-left-color: var(--blue); }
+    .nav-icon { width: 16px; height: 16px; opacity: 0.7; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .nav-badge {
+      margin-left: auto; background: var(--red); color: #fff;
+      font-size: 9px; font-weight: 700; min-width: 17px; height: 17px;
+      border-radius: 9px; display: flex; align-items: center; justify-content: center; padding: 0 4px;
+    }
+    .nav-badge.blue { background: var(--blue); color: #fff; }
+
+    .sidebar-footer {
+      padding: 14px 16px;
+      border-top: 1px solid var(--border);
+    }
+    .sidebar-footer-label { font-size: 10px; color: var(--text-dim); margin-bottom: 4px; }
+    .sidebar-footer-date { font-size: 11px; color: var(--text-sec); font-weight: 500; }
+
+    /* ── MAIN ───────────────────────────────────────────── */
+    main {
+      margin-left: var(--sidebar-w);
+      flex: 1;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-width: 0;
+    }
+
+    .section-header {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: 12px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--text-dim);
+    }
+    .section-action { font-size: 11.5px; color: var(--blue); cursor: pointer; font-weight: 500; }
+
+    /* ── PRIORITY CARDS ─────────────────────────────────── */
+    .priority-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .priority-card {
+      background: var(--card);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+      padding: 16px 18px;
+      display: flex; flex-direction: column; gap: 8px;
+      position: relative; overflow: hidden;
+      transition: box-shadow 0.15s, border-color 0.15s;
+    }
+    .priority-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-color: rgba(31,94,255,0.3);
+    }
+    .priority-card::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+    }
+    .priority-card.red::before   { background: var(--red); }
+    .priority-card.amber::before { background: var(--amber); }
+    .priority-card.blue::before  { background: var(--blue); }
+
+    .priority-num { font-size: 10px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; }
+    .priority-card.red .priority-num   { color: var(--red); }
+    .priority-card.amber .priority-num { color: var(--amber); }
+    .priority-card.blue .priority-num  { color: var(--blue); }
+
+    .priority-company { font-size: 16px; font-weight: 700; color: var(--text-pri); line-height: 1.2; }
+    .priority-value { font-size: 12px; color: var(--text-dim); font-weight: 600; }
+    .priority-reason { font-size: 12px; color: var(--text-sec); line-height: 1.45; flex: 1; }
+    .priority-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+    .delay-tag {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px;
+    }
+    .delay-tag.red   { background: rgba(220,38,38,0.08);  color: var(--red); }
+    .delay-tag.amber { background: rgba(217,119,6,0.08);  color: var(--amber); }
+    .delay-tag.blue  { background: rgba(31,94,255,0.08);  color: var(--blue); }
+
+    .priority-actions { display: flex; gap: 7px; margin-top: 4px; }
+    .btn {
+      font-size: 11px; font-weight: 600; padding: 5px 11px;
+      border-radius: 5px; border: none; cursor: pointer; transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.8; }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-ghost {
+      background: transparent; border: 1px solid var(--border); color: var(--text-sec);
+    }
+    .btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
+    .btn-red   { background: rgba(220,38,38,0.08);  color: var(--red);   border: 1px solid rgba(220,38,38,0.2); }
+    .btn-amber { background: rgba(217,119,6,0.08);  color: var(--amber); border: 1px solid rgba(217,119,6,0.2); }
+
+    /* ── MIDDLE ROW ─────────────────────────────────────── */
+    .middle-row { display: grid; grid-template-columns: 60fr 40fr; gap: 14px; align-items: start; }
+
+    .panel {
+      background: var(--card);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+      overflow: hidden;
+    }
+    .panel-header {
+      padding: 13px 18px 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .panel-title { font-size: 12.5px; font-weight: 700; color: var(--text-pri); letter-spacing: 0.1px; }
+    .panel-subtitle { font-size: 11px; color: var(--text-dim); margin-top: 1px; }
+    .panel-badge {
+      font-size: 10.5px; font-weight: 600; color: var(--blue);
+      background: rgba(31,94,255,0.08); border-radius: 4px; padding: 2px 8px;
+    }
+
+    /* ── TABLE ──────────────────────────────────────────── */
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      padding: 9px 14px; text-align: left;
+      font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.6px; color: var(--text-dim);
+      border-bottom: 1px solid var(--border); white-space: nowrap;
+    }
+    thead th:last-child { text-align: right; }
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.1s;
+    }
+    tbody tr:nth-child(even) { background: rgba(244,246,251,0.7); }
+    tbody tr:hover { background: rgba(31,94,255,0.04); }
+    tbody td { padding: 10px 14px; font-size: 12.5px; color: var(--text-pri); vertical-align: middle; }
+    tbody td:last-child { text-align: right; }
+
+    .td-company { font-weight: 600; color: var(--text-pri); }
+    .td-exec { font-size: 11px; color: var(--text-dim); margin-top: 1px; }
+
+    .status-pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 10.5px; font-weight: 700; padding: 3px 8px;
+      border-radius: 20px; letter-spacing: 0.2px; white-space: nowrap;
+    }
+    .status-pill::before { content: ''; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+    .status-pill.critical  { background: rgba(220,38,38,0.08);  color: var(--red);    }
+    .status-pill.critical::before  { background: var(--red); }
+    .status-pill.at-risk   { background: rgba(217,119,6,0.08);  color: var(--amber);  }
+    .status-pill.at-risk::before   { background: var(--amber); }
+    .status-pill.on-track  { background: rgba(22,163,74,0.08);  color: var(--green);  }
+    .status-pill.on-track::before  { background: var(--green); }
+    .status-pill.review    { background: rgba(31,94,255,0.08);  color: var(--blue);   }
+    .status-pill.review::before    { background: var(--blue); }
+    .status-pill.stalled   { background: rgba(148,163,184,0.12); color: var(--text-sec); }
+    .status-pill.stalled::before   { background: var(--text-sec); }
+
+    .delay-val { font-weight: 700; }
+    .delay-val.red   { color: var(--red); }
+    .delay-val.amber { color: var(--amber); }
+    .delay-val.green { color: var(--green); }
+    .delay-val.dim   { color: var(--text-dim); }
+
+    .contract-val { font-weight: 700; font-size: 13px; font-variant-numeric: tabular-nums; }
+
+    /* ── AI PANEL ───────────────────────────────────────── */
+    .ai-panel { display: flex; flex-direction: column; height: 420px; }
+    .ai-panel .panel-header { flex-shrink: 0; }
+    .ai-status-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green); box-shadow: 0 0 6px rgba(22,163,74,0.5);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .ai-status-label { font-size: 10.5px; color: var(--green); font-weight: 600; }
+    .ai-header-right { display: flex; align-items: center; gap: 6px; }
+
+    .ai-messages {
+      flex: 1; overflow-y: auto; padding: 14px 16px;
+      display: flex; flex-direction: column; gap: 12px;
+      scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    }
+    .ai-messages::-webkit-scrollbar { width: 4px; }
+    .ai-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    .msg { display: flex; flex-direction: column; gap: 5px; max-width: 100%; }
+    .msg-meta { display: flex; align-items: center; gap: 6px; }
+    .msg-avatar {
+      width: 22px; height: 22px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 9px; font-weight: 800; flex-shrink: 0;
+    }
+    .msg-avatar.user { background: linear-gradient(135deg, #dbeafe, #bfdbfe); color: var(--blue); }
+    .msg-avatar.ai   { background: linear-gradient(135deg, #dcfce7, #bbf7d0); color: var(--green); }
+    .msg-name  { font-size: 10.5px; font-weight: 700; color: var(--text-dim); }
+    .msg-time  { font-size: 10px; color: var(--text-dim); margin-left: auto; }
+
+    .msg-bubble {
+      font-size: 12.5px; line-height: 1.55;
+      padding: 10px 13px; border-radius: 6px;
+    }
+    .msg-bubble.user {
+      background: rgba(31,94,255,0.06);
+      border: 1px solid rgba(31,94,255,0.12);
+      color: var(--text-pri);
+    }
+    .msg-bubble.ai {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      color: var(--text-sec);
+    }
+    .msg-bubble.ai strong { color: var(--text-pri); }
+    .msg-bubble.ai .highlight        { color: var(--red);   font-weight: 600; }
+    .msg-bubble.ai .highlight.amber  { color: var(--amber); }
+    .msg-bubble.ai .highlight.green  { color: var(--green); }
+    .msg-bubble.ai .highlight.blue   { color: var(--blue);  }
+
+    .ai-sources { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+    .ai-source-tag {
+      font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 3px;
+      background: rgba(31,94,255,0.05); color: var(--text-dim); border: 1px solid var(--border);
+    }
+
+    .ai-input-row {
+      display: flex; gap: 8px; padding: 12px 14px;
+      border-top: 1px solid var(--border); flex-shrink: 0; align-items: center;
+    }
+    .ai-input {
+      flex: 1; background: var(--bg); border: 1px solid var(--border);
+      border-radius: 6px; padding: 8px 12px; color: var(--text-pri);
+      font-size: 12px; font-family: inherit; outline: none; transition: border-color 0.15s;
+    }
+    .ai-input:focus { border-color: var(--blue); }
+    .ai-input::placeholder { color: var(--text-dim); }
+    .btn-ask {
+      background: var(--blue); color: #fff;
+      font-size: 11.5px; font-weight: 700; padding: 8px 14px;
+      border-radius: 6px; border: none; cursor: pointer;
+      white-space: nowrap; flex-shrink: 0; transition: opacity 0.15s;
+    }
+    .btn-ask:hover { opacity: 0.85; }
+
+    /* ── METRICS STRIP ──────────────────────────────────── */
+    .metrics-strip {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      overflow: hidden;
+    }
+    .metric-cell {
+      padding: 14px 18px; border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; gap: 5px; transition: background 0.15s;
+    }
+    .metric-cell:last-child { border-right: none; }
+    .metric-cell:hover { background: rgba(31,94,255,0.03); }
+    .metric-label {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.7px; color: var(--text-dim);
+    }
+    .metric-value {
+      font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
+      font-variant-numeric: tabular-nums; line-height: 1;
+    }
+    .metric-delta { font-size: 10.5px; font-weight: 600; display: flex; align-items: center; gap: 3px; }
+    .metric-delta.pos { color: var(--green); }
+    .metric-delta.neg { color: var(--red); }
+    .metric-delta.neu { color: var(--text-dim); }
+    .metric-bar { height: 3px; background: #e2e8f0; border-radius: 2px; overflow: hidden; margin-top: 2px; }
+    .metric-bar-fill { height: 100%; border-radius: 2px; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ HEADER -->
+<header>
+  <div class="header-logo">
+    <div class="logo-icon">AI</div>
+    <div class="logo-text">AI <span>BI</span> Intelligence</div>
+  </div>
+
+  <div class="header-greeting">
+    Good morning, BK
+    <span class="time-label">Monday · 09:14 EST</span>
+  </div>
+
+  <div class="header-kpis">
+    <div class="kpi-badge">
+      <span class="kpi-dot"></span>
+      150 Deals
+    </div>
+    <div class="kpi-badge green">
+      <span class="kpi-dot"></span>
+      $84.2M Pipeline
+    </div>
+    <div class="kpi-badge amber">
+      <span class="kpi-dot"></span>
+      18.4d Avg Delay
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════ LAYOUT -->
+<div class="layout">
+
+  <!-- ─── SIDEBAR ──────────────────────────────── -->
+  <aside>
+    <div class="sidebar-profile">
+      <div class="avatar">BK</div>
+      <div class="profile-name">Brian Kowalski</div>
+      <div class="profile-role">SVP, Enterprise Sales<br>North America</div>
+      <div class="profile-status">Active Session</div>
+    </div>
+
+    <nav>
+      <div class="nav-section-label">Workspace</div>
+
+      <a class="nav-item" href="#">
+        <div class="nav-icon">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M2 2h5v5H2V2zm0 7h5v5H2V9zm7-7h5v5H9V2zm0 7h5v5H9V9z"/>
+          </svg>
+        </div>
+        Portfolio
+        <span class="nav-badge blue">12</span>
+      </a>
+
+      <a class="nav-item active" href="#">
+        <div class="nav-icon">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.75 3.75v4a.75.75 0 01-1.5 0v-4a.75.75 0 011.5 0zM8 11a1 1 0 110 2 1 1 0 010-2z"/>
+          </svg>
+        </div>
+        Priorities
+        <span class="nav-badge">7</span>
+      </a>
+
+      <a class="nav-item" href="#">
+        <div class="nav-icon">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M2.5 3A1.5 1.5 0 001 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0115 5.293V4.5A1.5 1.5 0 0013.5 3h-11z"/>
+            <path d="M15 6.954L8.978 9.86a2.25 2.25 0 01-1.956 0L1 6.954V11.5A1.5 1.5 0 002.5 13h11a1.5 1.5 0 001.5-1.5V6.954z"/>
+          </svg>
+        </div>
+        Ask AI
+      </a>
+
+      <a class="nav-item" href="#">
+        <div class="nav-icon">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1 2.5A1.5 1.5 0 012.5 1h3A1.5 1.5 0 017 2.5V5a1.5 1.5 0 01-1.5 1.5h-.5V8a.5.5 0 00.5.5h3V8a1.5 1.5 0 011.5-1.5h3A1.5 1.5 0 0115 8v2.5a1.5 1.5 0 01-1.5 1.5h-3A1.5 1.5 0 019 10.5V10H5.5A1.5 1.5 0 014 8.5V7h-.5A1.5 1.5 0 012 5.5V2.5z"/>
+          </svg>
+        </div>
+        Deal Details
+      </a>
+
+      <div class="nav-section-label">Reports</div>
+
+      <a class="nav-item" href="#">
+        <div class="nav-icon">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1 2.5A.5.5 0 011.5 2h13a.5.5 0 010 1H1.5A.5.5 0 011 2.5zm0 4A.5.5 0 011.5 6h13a.5.5 0 010 1H1.5A.5.5 0 011 6.5zm0 4a.5.5 0 01.5-.5h13a.5.5 0 010 1H1.5a.5.5 0 01-.5-.5z"/>
+          </svg>
+        </div>
+        Weekly Digest
+      </a>
+
+      <a class="nav-item" href="#">
+        <div class="nav-icon">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v3a1 1 0 01-1 1H3a1 1 0 01-1-1v-3zm5-4a1 1 0 011-1h2a1 1 0 011 1v7a1 1 0 01-1 1H8a1 1 0 01-1-1V7zm5-5a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V2z"/>
+          </svg>
+        </div>
+        Revenue Trends
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-footer-label">Last sync</div>
+      <div class="sidebar-footer-date">Today, 09:12 EST</div>
+    </div>
+  </aside>
+
+  <!-- ─── MAIN ──────────────────────────────────── -->
+  <main>
+
+    <!-- PRIORITY ACTIONS -->
+    <div>
+      <div class="section-header">
+        <div class="section-title">Priority Actions — Today</div>
+        <div class="section-action">View all 7 →</div>
+      </div>
+
+      <div class="priority-row">
+
+        <div class="priority-card red">
+          <div class="priority-num">Priority 1 · Critical</div>
+          <div class="priority-company">Meridian Financial</div>
+          <div class="priority-value">$12.4M · Enterprise License</div>
+          <div class="priority-reason">
+            Contract renewal 3 days overdue. Legal review stalled — VP of Procurement out of office. Risk of auto-cancellation clause activating Friday.
+          </div>
+          <div class="priority-meta">
+            <span class="delay-tag red">+31 days overdue</span>
+          </div>
+          <div class="priority-actions">
+            <button class="btn btn-red">Escalate Now</button>
+            <button class="btn btn-ghost">View Deal</button>
+          </div>
+        </div>
+
+        <div class="priority-card amber">
+          <div class="priority-num">Priority 2 · At Risk</div>
+          <div class="priority-company">Hartwell Capital</div>
+          <div class="priority-value">$8.7M · Platform Expansion</div>
+          <div class="priority-reason">
+            No response from CTO for 11 days post-demo. Competitor (Palantir) confirmed in evaluation. Recommend executive outreach before end of week.
+          </div>
+          <div class="priority-meta">
+            <span class="delay-tag amber">+22 days delayed</span>
+          </div>
+          <div class="priority-actions">
+            <button class="btn btn-amber">Draft Outreach</button>
+            <button class="btn btn-ghost">Timeline</button>
+          </div>
+        </div>
+
+        <div class="priority-card blue">
+          <div class="priority-num">Priority 3 · Action Needed</div>
+          <div class="priority-company">Blackstone Logistics</div>
+          <div class="priority-value">$6.1M · Multi-Year SaaS</div>
+          <div class="priority-reason">
+            Procurement requested revised pricing model by Thursday 5pm EST. Internal approvals pending from Finance. Window is closing — needs same-day action.
+          </div>
+          <div class="priority-meta">
+            <span class="delay-tag blue">Due Thu 5pm EST</span>
+          </div>
+          <div class="priority-actions">
+            <button class="btn btn-primary">Open Proposal</button>
+            <button class="btn btn-ghost">Assign</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MIDDLE ROW: TABLE + AI -->
+    <div class="middle-row">
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">Enterprise Deal Tracker</div>
+            <div class="panel-subtitle">Sorted by risk score · 8 of 150 shown</div>
+          </div>
+          <div class="panel-badge">Live</div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Status</th>
+              <th>Delay</th>
+              <th>Contract Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="td-company">Meridian Financial Group</div><div class="td-exec">Lisa Hartman · VP Procurement</div></td>
+              <td><span class="status-pill critical">Critical</span></td>
+              <td><span class="delay-val red">+31d</span></td>
+              <td><span class="contract-val">$12,400,000</span></td>
+            </tr>
+            <tr>
+              <td><div class="td-company">Hartwell Capital Partners</div><div class="td-exec">David Chen · CTO</div></td>
+              <td><span class="status-pill at-risk">At Risk</span></td>
+              <td><span class="delay-val amber">+22d</span></td>
+              <td><span class="contract-val">$8,700,000</span></td>
+            </tr>
+            <tr>
+              <td><div class="td-company">Blackstone Logistics Inc.</div><div class="td-exec">Maria Torres · Head of IT</div></td>
+              <td><span class="status-pill review">In Review</span></td>
+              <td><span class="delay-val amber">+14d</span></td>
+              <td><span class="contract-val">$6,100,000</span></td>
+            </tr>
+            <tr>
+              <td><div class="td-company">Vanguard Systems LLC</div><div class="td-exec">Robert Kinsey · CFO</div></td>
+              <td><span class="status-pill at-risk">At Risk</span></td>
+              <td><span class="delay-val amber">+18d</span></td>
+              <td><span class="contract-val">$5,250,000</span></td>
+            </tr>
+            <tr>
+              <td><div class="td-company">Atlas Healthcare Network</div><div class="td-exec">Sandra Park · COO</div></td>
+              <td><span class="status-pill on-track">On Track</span></td>
+              <td><span class="delay-val green">−2d</span></td>
+              <td><span class="contract-val">$4,800,000</span></td>
+            </tr>
+            <tr>
+              <td><div class="td-company">NorthStar Energy Corp</div><div class="td-exec">James Wu · Procurement Lead</div></td>
+              <td><span class="status-pill stalled">Stalled</span></td>
+              <td><span class="delay-val red">+27d</span></td>
+              <td><span class="contract-val">$3,900,000</span></td>
+            </tr>
+            <tr>
+              <td><div class="td-company">Pinnacle Retail Group</div><div class="td-exec">Angela Brooks · SVP Tech</div></td>
+              <td><span class="status-pill on-track">On Track</span></td>
+              <td><span class="delay-val dim">+1d</span></td>
+              <td><span class="contract-val">$3,200,000</span></td>
+            </tr>
+            <tr>
+              <td><div class="td-company">Orion Defense Technologies</div><div class="td-exec">Col. Mark Ellis · IT Director</div></td>
+              <td><span class="status-pill review">In Review</span></td>
+              <td><span class="delay-val amber">+9d</span></td>
+              <td><span class="contract-val">$2,750,000</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- AI Assistant Panel -->
+      <div class="panel ai-panel">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">AI Assistant</div>
+            <div class="panel-subtitle">Powered by Claude · RAG-indexed</div>
+          </div>
+          <div class="ai-header-right">
+            <div class="ai-status-dot"></div>
+            <div class="ai-status-label">Ready</div>
+          </div>
+        </div>
+
+        <div class="ai-messages">
+          <div class="msg">
+            <div class="msg-meta">
+              <div class="msg-avatar user">BK</div>
+              <div class="msg-name">Brian Kowalski</div>
+              <div class="msg-time">09:08 EST</div>
+            </div>
+            <div class="msg-bubble user">
+              Which deals need my attention today, and is there anything that could blow up this week?
+            </div>
+          </div>
+
+          <div class="msg">
+            <div class="msg-meta">
+              <div class="msg-avatar ai">AI</div>
+              <div class="msg-name">AI BI Intelligence</div>
+              <div class="msg-time">09:08 EST</div>
+            </div>
+            <div class="msg-bubble ai">
+              <strong>Three deals require executive action today.</strong><br><br>
+              <span class="highlight">Meridian Financial (+31d)</span> is the most urgent — their auto-cancellation clause activates this Friday if the contract isn't countersigned. Lisa Hartman's team is blocked on legal; I recommend calling their General Counsel directly.<br><br>
+              <span class="highlight amber">Hartwell Capital</span> hasn't replied in 11 days post-demo. Intelligence suggests they may be close to a competing proposal. A C-level call this week could reframe the conversation before their board meeting Thursday.<br><br>
+              <span class="highlight green">Blackstone Logistics</span> is recoverable — they need a revised pricing tier with 3-year lock-in. Finance can turn this around today if you flag it as P1.
+            </div>
+            <div class="ai-sources">
+              <span class="ai-source-tag">CRM · 6 deals</span>
+              <span class="ai-source-tag">Email threads</span>
+              <span class="ai-source-tag">Contract DB</span>
+              <span class="ai-source-tag">Risk Model v2.1</span>
+            </div>
+          </div>
+
+          <div class="msg">
+            <div class="msg-meta">
+              <div class="msg-avatar user">BK</div>
+              <div class="msg-name">Brian Kowalski</div>
+              <div class="msg-time">09:11 EST</div>
+            </div>
+            <div class="msg-bubble user">
+              What's our win rate this quarter versus last?
+            </div>
+          </div>
+
+          <div class="msg">
+            <div class="msg-meta">
+              <div class="msg-avatar ai">AI</div>
+              <div class="msg-name">AI BI Intelligence</div>
+              <div class="msg-time">09:11 EST</div>
+            </div>
+            <div class="msg-bubble ai">
+              <strong>Q2 win rate: <span class="highlight green">41.2%</span></strong> — up from 34.7% in Q1. The improvement is driven by faster qualification cycles in the $1M–$5M segment. Deals over $10M still close at 22%, below the 28% target.<br><br>
+              The primary drag is legal turnaround time (+8.3 days vs. last quarter). Tightening legal SLAs projects a 3–5 point win-rate gain for enterprise tier.
+            </div>
+            <div class="ai-sources">
+              <span class="ai-source-tag">Q1 Actuals</span>
+              <span class="ai-source-tag">Q2 Forecast</span>
+              <span class="ai-source-tag">Pipeline Model</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-input-row">
+          <input class="ai-input" type="text" placeholder="Ask about any deal, customer, or trend…" />
+          <button class="btn-ask">Ask</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- METRICS STRIP -->
+    <div class="metrics-strip">
+      <div class="metric-cell">
+        <div class="metric-label">Pipeline Value</div>
+        <div class="metric-value" style="color: var(--blue);">$84.2M</div>
+        <div class="metric-bar"><div class="metric-bar-fill" style="width:68%; background:var(--blue);"></div></div>
+        <div class="metric-delta pos">▲ $6.1M vs last month</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-label">Q2 Win Rate</div>
+        <div class="metric-value" style="color: var(--green);">41.2%</div>
+        <div class="metric-bar"><div class="metric-bar-fill" style="width:41%; background:var(--green);"></div></div>
+        <div class="metric-delta pos">▲ +6.5pp vs Q1</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-label">Avg. Delay</div>
+        <div class="metric-value" style="color: var(--amber);">18.4d</div>
+        <div class="metric-bar"><div class="metric-bar-fill" style="width:55%; background:var(--amber);"></div></div>
+        <div class="metric-delta neg">▼ +2.1d vs target</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-label">At-Risk Value</div>
+        <div class="metric-value" style="color: var(--red);">$31.2M</div>
+        <div class="metric-bar"><div class="metric-bar-fill" style="width:37%; background:var(--red);"></div></div>
+        <div class="metric-delta neg">▼ 5 deals at risk</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-label">Deals Closing 30d</div>
+        <div class="metric-value" style="color: var(--text-pri);">23</div>
+        <div class="metric-bar"><div class="metric-bar-fill" style="width:23%; background:var(--text-dim);"></div></div>
+        <div class="metric-delta neu">— of 150 active deals</div>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-label">NorthStar Risk</div>
+        <div class="metric-value" style="color: var(--red);">HIGH</div>
+        <div class="metric-bar"><div class="metric-bar-fill" style="width:88%; background:var(--red);"></div></div>
+        <div class="metric-delta neg">▼ +27d stalled</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

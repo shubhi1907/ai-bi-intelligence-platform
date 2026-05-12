@@ -40,7 +40,7 @@ The app can run without an OpenAI key. If no key is configured, it will still sh
 For AI answer generation, configure this secret in Streamlit Cloud:
 
 ```toml
-OPENAI_API_KEY = "your-key"
+ANTHROPIC_API_KEY = "your-key"
 ```
 
 Do not commit real secrets to the repository.
