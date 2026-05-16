@@ -275,7 +275,12 @@ def _blocks_to_dicts(blocks):
 def ask_ai(question, portfolio_ctx, deal_evidence, role, data, enriched_deals):
     client = get_claude_client()
     if not client:
-        return "**API key not configured.** Add `ANTHROPIC_API_KEY` to your `.env` file."
+        return (
+            "**API key not configured.** "
+            "Locally: add `ANTHROPIC_API_KEY` to your `.env` file. "
+            "On Streamlit Cloud: open the app's **Settings → Secrets** and add "
+            "`ANTHROPIC_API_KEY = \"sk-ant-...\"`."
+        )
     messages = [{
         "role": "user",
         "content": [
