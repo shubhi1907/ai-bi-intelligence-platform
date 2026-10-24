@@ -508,7 +508,7 @@ function bindActions() {
     const action = button.dataset.evidenceAction;
     if (action === "copy") showAskStatus(`Brief copied for ${selected}.`);
     if (action === "export") showAskStatus(`PDF export prepared for ${selected}.`);
-    if (action === "send") showAskStatus(`Brief queued to Implementations for ${selected}.`);
+    if (action === "send") showAskStatus(`Brief queued to the implementations lead for ${selected}.`);
   });
 
   qs("#evidenceCards").addEventListener("click", (event) => {

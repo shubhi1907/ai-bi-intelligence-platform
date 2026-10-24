@@ -22,7 +22,7 @@ REGION_MAP = {
 
 ROLE_META = {
     "Head of Enterprise Intelligence":            {"initials": "HE", "display": "Executive",      "title": "Head of Enterprise Intelligence"},
-    "Implementations Lead": {"initials": "IL", "display": "Implementations", "title": "Implementations Lead"},
+    "Implementations Lead": {"initials": "IL", "display": "Implementations Lead", "title": "Implementations Lead"},
     "Revenue Leader":               {"initials": "RL", "display": "Revenue Lead",  "title": "Revenue & Growth"},
 }
 
