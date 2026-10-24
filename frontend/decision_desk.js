@@ -19,8 +19,8 @@ const icons = {
 };
 
 const roleConfigs = {
-  bk: {
-    name: "BK",
+  executive: {
+    name: "Executive",
     subtitle: "3 decisions need your attention today",
     brief: "Morning Brief",
     ask: "Ask about revenue, delivery risk, or a specific deal...",
@@ -60,8 +60,8 @@ const roleConfigs = {
       ],
     }),
   },
-  scott: {
-    name: "Scott",
+  implementations: {
+    name: "Implementations",
     subtitle: "3 delivery interventions are ready for your team",
     brief: "Delivery Standup",
     ask: "Ask which blockers my implementation team should clear first...",
@@ -86,7 +86,7 @@ const roleConfigs = {
       {
         tone: "info",
         icon: icons.doc,
-        title: `Prepare BK Update`,
+        title: `Prepare Executive Update`,
         body: `${data.top_deal} needs a crisp status on blockers, delay, and owner actions`,
         buttons: [["Draft Update", icons.doc, true]],
       },
@@ -97,7 +97,7 @@ const roleConfigs = {
       bullets: [
         `${data.portfolio.blocked_tasks.toLocaleString()} tasks are dependency-blocked and need owner follow-up.`,
         `${data.portfolio.top_issue} is the largest open issue pattern in the ticket base.`,
-        `${data.top_deal} is the right update to prepare for BK because it carries the highest delivery risk.`,
+        `${data.top_deal} is the right update to prepare for the executive because it carries the highest delivery risk.`,
       ],
     }),
   },
@@ -143,7 +143,7 @@ const roleConfigs = {
 
 let appData;
 let state = {
-  role: "bk",
+  role: "executive",
   health: "all",
   region: "all",
   tableView: "risk",
@@ -508,7 +508,7 @@ function bindActions() {
     const action = button.dataset.evidenceAction;
     if (action === "copy") showAskStatus(`Brief copied for ${selected}.`);
     if (action === "export") showAskStatus(`PDF export prepared for ${selected}.`);
-    if (action === "send") showAskStatus(`Brief queued to Scott for ${selected}.`);
+    if (action === "send") showAskStatus(`Brief queued to Implementations for ${selected}.`);
   });
 
   qs("#evidenceCards").addEventListener("click", (event) => {

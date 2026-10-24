@@ -21,8 +21,8 @@ REGION_MAP = {
 }
 
 ROLE_META = {
-    "BK - Head of EIS":            {"initials": "BK", "display": "BK",           "title": "Head of Enterprise Intelligence"},
-    "Scott - Implementations Lead": {"initials": "SC", "display": "Scott",        "title": "Implementations Lead"},
+    "Head of Enterprise Intelligence":            {"initials": "HE", "display": "Executive",      "title": "Head of Enterprise Intelligence"},
+    "Implementations Lead": {"initials": "IL", "display": "Implementations", "title": "Implementations Lead"},
     "Revenue Leader":               {"initials": "RL", "display": "Revenue Lead",  "title": "Revenue & Growth"},
 }
 
@@ -415,7 +415,7 @@ def role_config(role, filtered_deals, filtered_tickets, filtered_tasks, total_va
     crit_cnt  = filtered_deals[filtered_deals["health_profile"] == "Critical"].shape[0]
 
     configs = {
-        "BK - Head of EIS": {
+        "Head of Enterprise Intelligence": {
             "subtitle": "3 decisions need your attention today",
             "default_q": "What should I tell the executive team about portfolio risk and the next decision?",
             "decisions": [
@@ -431,7 +431,7 @@ def role_config(role, filtered_deals, filtered_tickets, filtered_tasks, total_va
             ],
             "table_title": "Portfolio — Priority Order",
         },
-        "Scott - Implementations Lead": {
+        "Implementations Lead": {
             "subtitle": "3 delivery actions are ready for your team",
             "default_q": "Which delivery blockers should my team tackle first this week?",
             "decisions": [
