@@ -4,7 +4,9 @@ A Streamlit prototype that turns a portfolio of enterprise implementation projec
 
 > **Status:** proof of concept built on synthetic data. It is not a production system and has not been evaluated with real users.
 
-<!-- TODO: add a 30-60 second demo GIF or screenshot here, e.g. ![Demo](docs/demo.gif) -->
+![Demo: switching between the three role views and scrolling the ranked portfolio](docs/demo.gif)
+
+*Recorded without an AI key, so it shows the dashboards and role views. The AI analyst and brief generator need an Anthropic key.*
 
 ## The problem
 
